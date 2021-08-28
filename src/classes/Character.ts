@@ -4,6 +4,7 @@ import Background from "./Background";
 import Eyes from "./Eyes";
 import Hair from "./Hair";
 import Name from "./Name";
+import Pronouns from "./Pronouns";
 import Sex from "./Sex";
 
 export default class Character implements ICharacter {
@@ -12,6 +13,7 @@ export default class Character implements ICharacter {
   eyes: Eyes;
   hair: Hair;
   name: Name;
+  pronouns: Pronouns;
   sex: Sex;
 
   constructor() {
@@ -20,6 +22,7 @@ export default class Character implements ICharacter {
     this.eyes = new Eyes();
     this.hair = new Hair();
     this.name = new Name();
+	this.pronouns = new Pronouns(this);
     this.sex = new Sex();
   }
 }

@@ -1,10 +1,5 @@
-import type Character from "./Character";
+import { ICharacter, IPronouns }  from "../../types/character";
 import { capitalize } from "../../lib/string";
-
-interface IPronouns {
-  /** The actor to whom the pronouns are assigned. */
-  character: Character;
-}
 
 const Subject = {
   male: "he",
@@ -49,10 +44,10 @@ const Noun = {
 };
 
 export default class Pronouns implements IPronouns {
-  character: Character;
+  character: ICharacter;
 
-  constructor(actor: Character) {
-    this.character = actor;
+  constructor(character: ICharacter) {
+    this.character = character;
   }
 
   get subject(): string {
