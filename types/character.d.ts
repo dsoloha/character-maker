@@ -1,5 +1,3 @@
-import Character from "../src/classes/Character";
-
 /** The base character class. */
 export declare class ICharacter {
   /** Properties pertaining to the character's age. */

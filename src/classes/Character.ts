@@ -22,7 +22,7 @@ export default class Character implements ICharacter {
     this.eyes = new Eyes();
     this.hair = new Hair();
     this.name = new Name();
-	this.pronouns = new Pronouns(this);
+    this.pronouns = new Pronouns(this);
     this.sex = new Sex();
   }
 }

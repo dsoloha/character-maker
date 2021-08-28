@@ -1,4 +1,4 @@
-import { ICharacter, IPronouns }  from "../../types/character";
+import { ICharacter, IPronouns } from "../../types/character";
 import { capitalize } from "../../lib/string";
 
 const Subject = {
