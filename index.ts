@@ -5,3 +5,9 @@ export function generate(): Character {
 
   return character;
 }
+
+const characterMaker = {
+  generate,
+}
+
+export default characterMaker;
