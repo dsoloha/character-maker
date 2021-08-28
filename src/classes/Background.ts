@@ -1,12 +1,12 @@
 interface IBackground {
-	/** Where the character was born. */
-	birthplace: string;
+  /** Where the character was born. */
+  birthplace: string;
 }
 
 export default class Background implements IBackground {
-	birthplace: string;
+  birthplace: string;
 
-	constructor() {
-		this.birthplace = null;
-	}
+  constructor() {
+    this.birthplace = null;
+  }
 }
