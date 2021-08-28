@@ -4,12 +4,15 @@
   "description": "A tool for creating realistic characters.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write --plugin-search-dir=. ."
   },
   "keywords": [
     "character",
     "maker"
   ],
   "author": "dsoloha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.3.2"
+  }
 }

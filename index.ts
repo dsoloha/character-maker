@@ -1,7 +1,7 @@
-import Character from './src/classes/Character';
+import Character from "./src/classes/Character";
 
 export function generate(): Character {
-	const character = new Character();
+  const character = new Character();
 
-	return character;
+  return character;
 }

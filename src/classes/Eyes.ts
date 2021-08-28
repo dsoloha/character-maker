@@ -1,7 +1,7 @@
 export default class Eyes {
-	color: string;
+  color: string;
 
-	constructor() {
-		this.color = null;
-	}
+  constructor() {
+    this.color = null;
+  }
 }
