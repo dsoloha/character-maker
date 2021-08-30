@@ -3,17 +3,11 @@
   "version": "0.0.2",
   "description": "A tool for creating realistic characters.",
   "main": "index.js",
-  "scripts": {
-    "format": "prettier --write --plugin-search-dir=. ."
-  },
   "keywords": [
     "character",
     "maker"
   ],
   "author": "dsoloha",
   "license": "ISC",
-  "devDependencies": {
-    "prettier": "^2.3.2"
-  },
   "esModuleInterop": true
 }

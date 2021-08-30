@@ -1,5 +1,5 @@
 /** The base character class. */
-export declare interface Character {
+export declare class Character {
   /** Properties pertaining to the character's age. */
   age: Age;
   /** Properties pertaining to the character's background. */
@@ -17,7 +17,7 @@ export declare interface Character {
 }
 
 /** A class containing properties related to the character's age. */
-export declare interface Age {
+export declare class Age {
   /** Properties pertaining to the character's birthtime. */
   birth: {
     /** The day of the month on which the character was born. */
@@ -30,19 +30,19 @@ export declare interface Age {
 }
 
 /** A class containing background information about the character. */
-export declare interface Background {
+export declare class Background {
   /** Where the character was born. */
   birthplace: string;
 }
 
 /** A class containing properties related to the character's eyes. */
-export declare interface Eyes {
+export declare class Eyes {
   /** The color of the character's eyes. */
   color: string;
 }
 
 /** A class containing properties related to the character's hair. */
-export declare interface Hair {
+export declare class Hair {
   /** The character's hair color. */
   color: string;
   /** How long the character's hair is. */
@@ -52,7 +52,7 @@ export declare interface Hair {
 }
 
 /** A class containing properties related to the character's name. */
-export declare interface Name {
+export declare class Name {
   /** The character's first name. */
   first: string;
   /** The character's middle name. */
@@ -64,7 +64,7 @@ export declare interface Name {
 }
 
 /** A class containing properties related to the character's pronouns. */
-export declare interface Pronouns {
+export declare class Pronouns {
   /** The character to assign the pronouns to. */
   character: Character;
   /** The noun form of the character's pronouns (i.e. "man", "woman"). */
@@ -85,10 +85,13 @@ export declare interface Pronouns {
 export type SexType = "male" | "female";
 
 /** A class containing properties related to the character's sex. */
-export declare interface Sex {
+export declare class Sex {
   /** Whether the character is male or female. */
   type: SexType;
 }
 
-/** Generates a new random character. */
-export declare function generate(): Character;
+/** The base generator class. */
+export declare class CharacterMaker {
+  /** Creates and returns a new character. */
+  generate(): Character;
+}
