@@ -1,4 +1,3 @@
-import { ICharacter, IPronouns } from "../../types/character";
 import { capitalize } from "../../lib/string";
 
 const Subject = {
@@ -43,170 +42,238 @@ const Noun = {
   neuter: "thing",
 };
 
-export default class Pronouns implements IPronouns {
-  character: ICharacter;
+export class Age {
+  constructor() {
+    this.birth = {
+      day: 1,
+      month: 1,
+      year: 1,
+    };
+  }
+}
 
-  constructor(character: ICharacter) {
+export class Background {
+  constructor() {
+    this.birthplace = null;
+  }
+}
+
+export class Eyes {
+  constructor() {
+    this.color = null;
+  }
+}
+
+export class Hair {
+  constructor() {
+    this.color = null;
+    this.length = null;
+    this.style = null;
+  }
+}
+
+export class Name {
+  constructor() {
+    this.first = null;
+    this.middle = null;
+    this.last = null;
+    this.nicknames = [];
+  }
+
+  /** Returns the character's full name. */
+  get full() {
+    const name = [];
+
+    if (this.first) name.push(this.first);
+    if (this.middle) name.push(this.middle);
+    if (this.last) name.push(this.last);
+
+    return name.join(" ");
+  }
+}
+
+export class Pronouns {
+  constructor(character) {
     this.character = character;
   }
 
-  get subject(): string {
+  get subject() {
     return Subject[this.character.sex.type];
   }
 
-  get object(): string {
+  get object() {
     return Object[this.character.sex.type];
   }
 
-  get possessive(): string {
+  get possessive() {
     return PossessiveDeterminer[this.character.sex.type];
   }
 
-  get possessivePronoun(): string {
+  get possessivePronoun() {
     return PossessivePronoun[this.character.sex.type];
   }
 
-  get noun(): string {
+  get noun() {
     return Noun[this.character.sex.type];
   }
 
-  get reflexive(): string {
+  get reflexive() {
     return Reflexive[this.character.sex.type];
   }
 
-  get he(): string {
+  get he() {
     return this.subject;
   }
 
-  get He(): string {
+  get He() {
     return capitalize(this.he);
   }
 
-  get him(): string {
+  get him() {
     return this.object;
   }
 
-  get Him(): string {
+  get Him() {
     return capitalize(this.him);
   }
 
-  get his(): string {
+  get his() {
     return this.possessive;
   }
 
-  get His(): string {
+  get His() {
     return capitalize(this.his);
   }
 
-  get himself(): string {
+  get himself() {
     return this.reflexive;
   }
 
-  get Himself(): string {
+  get Himself() {
     return capitalize(this.himself);
   }
 
-  get boy(): string {
+  get boy() {
     return this.noun;
   }
 
-  get she(): string {
+  get she() {
     return this.subject;
   }
 
-  get She(): string {
+  get She() {
     return capitalize(this.she);
   }
 
-  get her(): string {
+  get her() {
     return this.object;
   }
 
-  get Her(): string {
+  get Her() {
     return capitalize(this.her);
   }
 
-  get hers(): string {
+  get hers() {
     return this.possessive;
   }
 
-  get Hers(): string {
+  get Hers() {
     return capitalize(this.hers);
   }
 
-  get herself(): string {
+  get herself() {
     return this.reflexive;
   }
 
-  get Herself(): string {
+  get Herself() {
     return capitalize(this.herself);
   }
 
-  get girl(): string {
+  get girl() {
     return this.noun;
   }
 
-  get man(): string {
+  get man() {
     return this.noun === Noun.male ? "man" : "woman";
   }
 
-  get men(): string {
+  get men() {
     return this.noun === Noun.male ? "men" : "women";
   }
 
-  get woman(): string {
+  get woman() {
     return this.noun === Noun.female ? "woman" : "man";
   }
 
-  get women(): string {
+  get women() {
     return this.noun === Noun.male ? "women" : "men";
   }
 
-  get father(): string {
+  get father() {
     return this.noun === Noun.male ? "father" : "mother";
   }
 
-  get mother(): string {
+  get mother() {
     return this.noun === Noun.female ? "mother" : "father";
   }
 
-  get son(): string {
+  get son() {
     return this.noun === Noun.male ? "son" : "daughter";
   }
 
-  get sons(): string {
+  get sons() {
     return this.noun === Noun.male ? "sons" : "daughters";
   }
 
-  get daughter(): string {
+  get daughter() {
     return this.noun === Noun.female ? "daughter" : "son";
   }
 
-  get daughters(): string {
+  get daughters() {
     return this.noun === Noun.female ? "daughter" : "sons";
   }
 
-  get brother(): string {
+  get brother() {
     return this.noun === Noun.male ? "brother" : "sister";
   }
 
-  get sister(): string {
+  get sister() {
     return this.noun === Noun.female ? "sister" : "brother";
   }
 
-  get husband(): string {
+  get husband() {
     return this.noun === Noun.male ? "husband" : "wife";
   }
 
-  get wife(): string {
+  get wife() {
     return this.noun === Noun.female ? "wife" : "husband";
   }
 
-  get wives(): string {
+  get wives() {
     return this.noun === Noun.female ? "wives" : "husbands";
   }
 }
 
-// export function getPronouns(actor: Character): Pronouns {
-// 	return new Pronouns(actor);
-// }
+export class Sex {
+  constructor() {
+    this.type = "male";
+  }
+}
+
+export class Character {
+  constructor() {
+    this.age = new Age();
+    this.background = new Background();
+    this.eyes = new Eyes();
+    this.hair = new Hair();
+    this.name = new Name();
+    this.pronouns = new Pronouns(this);
+    this.sex = new Sex();
+  }
+}
+
+export default class CharacterGenerator {
+  generate() {
+    return new Character();
+  }
+}
