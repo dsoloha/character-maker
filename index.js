@@ -260,7 +260,7 @@ export class Sex {
   }
 }
 
-export class Character {
+export default class Character {
   constructor() {
     this.age = new Age();
     this.background = new Background();
@@ -272,8 +272,3 @@ export class Character {
   }
 }
 
-export default class CharacterGenerator {
-  generate() {
-    return new Character();
-  }
-}
