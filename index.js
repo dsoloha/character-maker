@@ -254,10 +254,6 @@ export default class Pronouns {
   }
 }
 
-export function getPronouns(actor) {
-	return new Pronouns(actor);
-}
-
 export class Sex {
   constructor() {
     this.type = "male";
