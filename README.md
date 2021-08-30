@@ -2,6 +2,8 @@
 
 `character-maker` is a tool designed to help you create a new realistic character for your game, story, etc, quickly and easily.
 
+**Note:** this library is currently heavily WIP and subject to changes. Use at your own risk.
+
 ## Usage
 
 Install `character-maker`:
