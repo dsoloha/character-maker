@@ -1,4 +1,4 @@
-import { capitalize } from "../../lib/string";
+import { capitalize } from "./lib/string";
 
 const Subject = {
   male: "he",
