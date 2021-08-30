@@ -1,6 +1,6 @@
 {
   "name": "character-maker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tool for creating realistic characters.",
   "main": "index.js",
   "scripts": {
