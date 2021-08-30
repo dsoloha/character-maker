@@ -92,7 +92,7 @@ export class Name {
   }
 }
 
-export default class Pronouns {
+export class Pronouns {
   constructor(character) {
     this.character = character;
   }
