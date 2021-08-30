@@ -89,9 +89,3 @@ export declare class Sex {
   /** Whether the character is male or female. */
   type: SexType;
 }
-
-/** The base generator class. */
-export declare class CharacterMaker {
-  /** Creates and returns a new character. */
-  generate(): Character;
-}

@@ -13,11 +13,11 @@ npm install character-maker
 Import the module:
 
 ```js
-import characterMaker from "character-maker";
+import { Character } from "character-maker";
 ```
 
 Create a new character:
 
 ```js
-const character = characterMaker.generate();
+const character = new Character();
 ```
