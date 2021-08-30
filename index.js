@@ -1,6 +1,6 @@
 import Character from "./src/classes/Character";
 
-export function generate(): Character {
+export function generate() {
   const character = new Character();
 
   return character;
@@ -8,6 +8,6 @@ export function generate(): Character {
 
 const characterMaker = {
   generate,
-}
+};
 
 export default characterMaker;

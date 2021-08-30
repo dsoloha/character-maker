@@ -1,11 +1,7 @@
 export default class Name {
-  /** The character's first name. */
   first: string;
-  /** The character's middle name. */
   middle: string;
-  /** The character's last name. */
   last: string;
-  /** Any nicknames the character has. */
   nicknames: string[];
 
   constructor() {

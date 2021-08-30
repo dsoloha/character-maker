@@ -1,9 +1,4 @@
-interface IBackground {
-  /** Where the character was born. */
-  birthplace: string;
-}
-
-export default class Background implements IBackground {
+export default class Background {
   birthplace: string;
 
   constructor() {

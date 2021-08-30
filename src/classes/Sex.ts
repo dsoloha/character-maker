@@ -1,8 +1,5 @@
-export type SexType = "male" | "female";
-
 export default class Sex {
-  /** Whether the character is male or female. */
-  type: SexType;
+  type: "male" | "female";
 
   constructor() {
     this.type = "male";

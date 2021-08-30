@@ -1,4 +1,4 @@
-import { ICharacter, IPronouns } from "../../types/character";
+import type Character from "./Character";
 import { capitalize } from "../../lib/string";
 
 const Subject = {
@@ -43,10 +43,10 @@ const Noun = {
   neuter: "thing",
 };
 
-export default class Pronouns implements IPronouns {
-  character: ICharacter;
+export default class Pronouns {
+  character: Character;
 
-  constructor(character: ICharacter) {
+  constructor(character: Character) {
     this.character = character;
   }
 
@@ -207,6 +207,6 @@ export default class Pronouns implements IPronouns {
   }
 }
 
-// export function getPronouns(actor: Character): Pronouns {
-// 	return new Pronouns(actor);
-// }
+export function getPronouns(actor: Character): Pronouns {
+	return new Pronouns(actor);
+}

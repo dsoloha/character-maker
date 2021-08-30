@@ -1,4 +1,3 @@
-import { ICharacter } from "../../types/character";
 import Age from "./Age";
 import Background from "./Background";
 import Eyes from "./Eyes";
@@ -7,7 +6,7 @@ import Name from "./Name";
 import Pronouns from "./Pronouns";
 import Sex from "./Sex";
 
-export default class Character implements ICharacter {
+export default class Character {
   age: Age;
   background: Background;
   eyes: Eyes;
