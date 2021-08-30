@@ -61,6 +61,8 @@ export declare class Name {
   last: string;
   /** Any nicknames the character has. */
   nicknames: string[];
+  /** Returns the character's full name. */
+  full: string;
 }
 
 /** A class containing properties related to the character's pronouns. */

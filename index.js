@@ -1,4 +1,4 @@
-import { capitalize } from "../../lib/string";
+import { capitalize } from "./lib/string";
 
 const Subject = {
   male: "he",
@@ -80,7 +80,6 @@ export class Name {
     this.nicknames = [];
   }
 
-  /** Returns the character's full name. */
   get full() {
     const name = [];
 
