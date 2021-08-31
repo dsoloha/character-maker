@@ -280,4 +280,4 @@ module.exports = {
   Name,
   Pronouns,
   Sex,
-}
+};
