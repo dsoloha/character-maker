@@ -42,7 +42,7 @@ const Noun = {
   neuter: "thing",
 };
 
-export class Age {
+class Age {
   constructor() {
     this.birth = {
       day: 1,
@@ -52,19 +52,19 @@ export class Age {
   }
 }
 
-export class Background {
+class Background {
   constructor() {
     this.birthplace = null;
   }
 }
 
-export class Eyes {
+class Eyes {
   constructor() {
     this.color = null;
   }
 }
 
-export class Hair {
+class Hair {
   constructor() {
     this.color = null;
     this.length = null;
@@ -72,7 +72,7 @@ export class Hair {
   }
 }
 
-export class Name {
+class Name {
   constructor() {
     this.first = null;
     this.middle = null;
@@ -91,7 +91,7 @@ export class Name {
   }
 }
 
-export class Pronouns {
+class Pronouns {
   constructor(character) {
     this.character = character;
   }
@@ -253,13 +253,13 @@ export class Pronouns {
   }
 }
 
-export class Sex {
+class Sex {
   constructor() {
     this.type = "male";
   }
 }
 
-export default class Character {
+class Character {
   constructor() {
     this.age = new Age();
     this.background = new Background();
@@ -271,3 +271,13 @@ export default class Character {
   }
 }
 
+module.exports = {
+  default: Character,
+  Age,
+  Background,
+  Eyes,
+  Hair,
+  Name,
+  Pronouns,
+  Sex,
+}
