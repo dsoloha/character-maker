@@ -1,93 +1,77 @@
 import { capitalize } from '../lib/string'
-import Character from './Character'
+import { SexType } from './Sex'
 
 export default class Pronouns {
-  _subject: { male: string; female: string; plural: string; neuter: string }
-  _object: { male: string; female: string; plural: string; neuter: string }
-  _possessiveDeterminer: {
-    male: string
-    female: string
-    plural: string
-    neuter: string
-  }
-  _possessivePronoun: {
-    male: string
-    female: string
-    plural: string
-    neuter: string
-  }
-  _reflexive: { male: string; female: string; plural: string; neuter: string }
-  _noun: { male: string; female: string; plural: string; neuter: string }
-  character: Character
+  sex: SexType
 
-  constructor(character: Character) {
-    this._subject = {
+  constructor(sex: SexType) {
+    this.sex = sex
+  }
+
+  get subject(): string {
+    const subject = {
       male: 'he',
       female: 'she',
       plural: 'they',
       neuter: 'it',
     }
 
-    this._object = {
+    return subject[this.sex]
+  }
+
+  get object(): string {
+    const object = {
       male: 'him',
       female: 'her',
       plural: 'them',
       neuter: 'it',
     }
 
-    this._possessiveDeterminer = {
+    return object[this.sex]
+  }
+
+  get possessive(): string {
+    const possessiveDeterminer = {
       male: 'his',
       female: 'her',
       plural: 'their',
       neuter: 'its',
     }
 
-    this._possessivePronoun = {
+    return possessiveDeterminer[this.sex]
+  }
+
+  get possessivePronoun(): string {
+    const possessivePronoun = {
       male: 'his',
       female: 'hers',
       plural: 'theirs',
       neuter: 'its',
     }
 
-    this._reflexive = {
-      male: 'himself',
-      female: 'herself',
-      plural: 'themselves',
-      neuter: 'itself',
-    }
+    return possessivePronoun[this.sex]
+  }
 
-    this._noun = {
+  get noun(): string {
+    const noun = {
       male: 'man',
       female: 'woman',
       plural: 'people',
       neuter: 'thing',
     }
 
-    this.character = character
-  }
-
-  get subject(): string {
-    return this._subject[this.character.sex.type]
-  }
-
-  get object(): string {
-    return this._object[this.character.sex.type]
-  }
-
-  get possessive(): string {
-    return this._possessiveDeterminer[this.character.sex.type]
-  }
-
-  get possessivePronoun(): string {
-    return this._possessivePronoun[this.character.sex.type]
-  }
-
-  get noun(): string {
-    return this._noun[this.character.sex.type]
+    return noun[this.sex]
   }
 
   get reflexive(): string {
-    return this._reflexive[this.character.sex.type]
+    const reflexive = {
+      male: 'himself',
+      female: 'herself',
+      plural: 'themselves',
+      neuter: 'itself',
+    }
+
+    return reflexive[this.sex]
   }
 
   get he(): string {

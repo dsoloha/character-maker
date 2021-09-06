@@ -1,4 +1,4 @@
-export type SexType = 'male' | 'female'
+export type SexType = 'male' | 'female' | 'plural' | 'neuter'
 
 export default class Sex {
   /** The biological sex of the character. */
