@@ -15,11 +15,20 @@ npm install character-maker
 Import the module:
 
 ```js
-import Character from "character-maker";
+import { Character } from "character-maker";
 ```
 
 Create a new character:
 
 ```js
 const character = new Character();
+
+// or optionally with parameters
+
+const character = new Character({
+  name: {
+    first: 'John',
+    last: 'Smith',
+  }
+});
 ```
