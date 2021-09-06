@@ -12,7 +12,7 @@ export default class Hair {
 
   constructor() {
     this.color = 'black'
-    this.length = 'shoulder-length'
+    this.length = 'short'
     this.style = 'straight'
   }
 }
