@@ -134,9 +134,6 @@ function generatePronouns(sex) {
     Himself() {
       return capitalize(this.himself);
     },
-    boy() {
-      return this.noun;
-    },
     she() {
       return this.subject;
     },
@@ -160,54 +157,6 @@ function generatePronouns(sex) {
     },
     Herself() {
       return capitalize(this.herself);
-    },
-    girl() {
-      return this.noun;
-    },
-    man() {
-      return this.noun === Noun.male ? "man" : "woman";
-    },
-    men() {
-      return this.noun === Noun.male ? "men" : "women";
-    },
-    woman() {
-      return this.noun === Noun.female ? "woman" : "man";
-    },
-    women() {
-      return this.noun === Noun.male ? "women" : "men";
-    },
-    father() {
-      return this.noun === Noun.male ? "father" : "mother";
-    },
-    mother() {
-      return this.noun === Noun.female ? "mother" : "father";
-    },
-    son() {
-      return this.noun === Noun.male ? "son" : "daughter";
-    },
-    sons() {
-      return this.noun === Noun.male ? "sons" : "daughters";
-    },
-    daughter() {
-      return this.noun === Noun.female ? "daughter" : "son";
-    },
-    daughters() {
-      return this.noun === Noun.female ? "daughter" : "sons";
-    },
-    brother() {
-      return this.noun === Noun.male ? "brother" : "sister";
-    },
-    sister() {
-      return this.noun === Noun.female ? "sister" : "brother";
-    },
-    husband() {
-      return this.noun === Noun.male ? "husband" : "wife";
-    },
-    wife() {
-      return this.noun === Noun.female ? "wife" : "husband";
-    },
-    wives() {
-      return this.noun === Noun.female ? "wives" : "husbands";
     },
   };
 }
