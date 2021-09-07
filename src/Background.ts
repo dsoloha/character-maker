@@ -2,7 +2,7 @@ export default class Background {
   /** The character's birthplace. */
   birthplace: string
 
-  constructor() {
-    this.birthplace = ''
+  constructor(options?: { birthplace?: string }) {
+    this.birthplace = options?.birthplace ?? ''
   }
 }
