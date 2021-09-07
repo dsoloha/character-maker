@@ -2,6 +2,7 @@ import { capitalize } from '../lib/string'
 import { SexType } from './Sex'
 
 export default class Pronouns {
+  /** The character's biological sex. */
   sex: SexType
 
   constructor(sex: SexType) {
