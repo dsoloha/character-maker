@@ -92,6 +92,8 @@ declare namespace characterMaker {
     /** Whether the character is male or female. */
     type: SexType;
   }
+
+  export function generateCharacter()
 }
 
 export = characterMaker;
