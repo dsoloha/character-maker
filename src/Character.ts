@@ -51,7 +51,7 @@ export default class Character {
       length?: string | number
       style?: string
     }
-    name: {
+    name?: {
       first?: string
       middle?: string | null
       last?: string | null
