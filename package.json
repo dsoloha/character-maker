@@ -17,7 +17,8 @@
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name @dsoloha/character-maker"
+    "addscope": "node tools/packagejson name @dsoloha/character-maker",
+    "postversion": "git push --follow-tags"
   },
   "publishConfig": {
     "access": "public"
