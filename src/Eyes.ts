@@ -9,7 +9,14 @@ export default class Eyes {
         right: string
       }
 
-  constructor() {
-    this.color = 'blue'
+  constructor(options?: {
+    color?:
+      | string
+      | {
+          left: string
+          right: string
+        }
+  }) {
+    this.color = options?.color ?? 'blue'
   }
 }
