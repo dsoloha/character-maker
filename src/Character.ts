@@ -8,7 +8,7 @@ import Sex from './Sex'
 
 /** The base character class. */
 export default class Character {
-  /** Properties pertaining to the character's age. */
+  /** `Properties pertaining to the character's age.` */
   age: Age
   /** Properties pertaining to the character's background and upbringing. */
   background: Background

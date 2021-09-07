@@ -15,8 +15,8 @@ export default class Hair {
     length?: string | number
     style?: string
   }) {
-    this.color = options?.color ?? 'black'
-    this.length = options?.length ?? 'short'
-    this.style = options?.style ?? 'straight'
+    this.color = options?.color ?? ''
+    this.length = options?.length ?? ''
+    this.style = options?.style ?? ''
   }
 }
