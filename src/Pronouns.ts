@@ -9,6 +9,7 @@ export default class Pronouns {
     this.sex = sex
   }
 
+  /** The subject form of the character's pronouns ("he", "she", "they", "it"). */
   get subject(): string {
     const subject = {
       male: 'he',
@@ -20,6 +21,7 @@ export default class Pronouns {
     return subject[this.sex]
   }
 
+  /** The object form of the character's pronouns ("him", "her", "them", "it"). */
   get object(): string {
     const object = {
       male: 'him',
@@ -31,6 +33,7 @@ export default class Pronouns {
     return object[this.sex]
   }
 
+  /** The possessive form of the character's pronouns ("his", "her", "their", "its"). */
   get possessive(): string {
     const possessiveDeterminer = {
       male: 'his',
@@ -42,6 +45,7 @@ export default class Pronouns {
     return possessiveDeterminer[this.sex]
   }
 
+  /** The possessive pronoun form of the character's pronouns ("his", "hers", "theirs", "its"). */
   get possessivePronoun(): string {
     const possessivePronoun = {
       male: 'his',
@@ -53,6 +57,7 @@ export default class Pronouns {
     return possessivePronoun[this.sex]
   }
 
+  /** The noun form of the character's pronouns ("man", "woman", "people", "thing"). */
   get noun(): string {
     const noun = {
       male: 'man',
@@ -64,6 +69,7 @@ export default class Pronouns {
     return noun[this.sex]
   }
 
+  /** The reflexive form of the character's pronouns ("himself", "herself", "themselves", "itself"). */
   get reflexive(): string {
     const reflexive = {
       male: 'himself',

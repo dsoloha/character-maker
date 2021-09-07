@@ -17,6 +17,6 @@ export default class Eyes {
           right: string
         }
   }) {
-    this.color = options?.color ?? 'blue'
+    this.color = options?.color ?? ''
   }
 }

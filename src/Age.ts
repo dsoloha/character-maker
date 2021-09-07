@@ -3,7 +3,7 @@ export default class Age {
   birth: {
     /** On which day of the month the character was born. */
     day: number
-    /** During which month of the year the character was born.*/
+    /** During which month of the year the character was born. */
     month: number
     /** During what year the character was born. */
     year: number
