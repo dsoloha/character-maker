@@ -8,10 +8,15 @@ export default class Name {
   /** Any nicknames the character has. */
   nicknames: string[]
 
-  constructor() {
-    this.first = ''
-    this.middle = null
-    this.last = null
-    this.nicknames = []
+  constructor(options?: {
+    first?: string
+    middle?: string | null
+    last?: string | null
+    nicknames?: string[]
+  }) {
+    this.first = options?.first ?? ''
+    this.middle = options?.middle ?? null
+    this.last = options?.last ?? null
+    this.nicknames = options?.nicknames ?? []
   }
 }

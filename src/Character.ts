@@ -27,12 +27,42 @@ export default class Character {
    */
   sex: Sex
 
-  constructor() {
-    this.age = new Age()
-    this.background = new Background()
-    this.eyes = new Eyes()
-    this.hair = new Hair()
-    this.name = new Name()
+  constructor(options?: {
+    age?: {
+      birth?: {
+        day?: number
+        month?: number
+        year?: number
+      }
+    }
+    background?: {
+      birthplace?: string
+    }
+    eyes?: {
+      color?:
+        | string
+        | {
+            left: string
+            right: string
+          }
+    }
+    hair?: {
+      color?: string
+      length?: string | number
+      style?: string
+    }
+    name: {
+      first?: string
+      middle?: string | null
+      last?: string | null
+      nicknames?: string[]
+    }
+  }) {
+    this.age = new Age(options?.age)
+    this.background = new Background(options?.background)
+    this.eyes = new Eyes(options?.eyes)
+    this.hair = new Hair(options?.hair)
+    this.name = new Name(options?.name)
     this.sex = new Sex()
 
     this.pronouns = new Pronouns(this.sex.type)

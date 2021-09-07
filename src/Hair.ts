@@ -10,9 +10,13 @@ export default class Hair {
   /** The style of the character's hair. */
   style: string
 
-  constructor() {
-    this.color = 'black'
-    this.length = 'short'
-    this.style = 'straight'
+  constructor(options?: {
+    color?: string
+    length?: string | number
+    style?: string
+  }) {
+    this.color = options?.color ?? 'black'
+    this.length = options?.length ?? 'short'
+    this.style = options?.style ?? 'straight'
   }
 }
