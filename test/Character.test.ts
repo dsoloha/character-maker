@@ -18,7 +18,7 @@ test('character with given background', () => {
 // eyes
 test('character with given eye color', () => {
   expect(new Character({ eyes: { color: 'blue' } }).eyes.color).toBe('blue')
-  expect(new Character({ eyes: { color: { left: 'blue', right: 'green' } } }).eyes.color).toStrictEqual({ left: 'blue', right: 'green' })
+  expect(new Character({ eyes: { colors: { left: 'blue', right: 'green' } } }).eyes.colors).toStrictEqual({ left: 'blue', right: 'green' })
 })
 
 // hair
