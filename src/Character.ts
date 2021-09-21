@@ -40,7 +40,7 @@ export default class Character {
     }
     eyes?: {
       color?: string
-      colors: {
+      colors?: {
         left: string
         right: string
       }
