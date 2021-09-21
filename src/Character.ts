@@ -39,12 +39,11 @@ export default class Character {
       birthplace?: string
     }
     eyes?: {
-      color?:
-        | string
-        | {
-            left: string
-            right: string
-          }
+      color?: string
+      colors: {
+        left: string
+        right: string
+      }
     }
     hair?: {
       color?: string
