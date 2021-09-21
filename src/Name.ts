@@ -19,4 +19,15 @@ export default class Name {
     this.last = options?.last ?? null
     this.nicknames = options?.nicknames ?? []
   }
+
+  /** Returns the character's full name, or as much as possible. */
+  get full(): string {
+    const name: string[] = []
+
+    if (this.first) name.push(this.first)
+    if (this.middle) name.push(this.middle)
+    if (this.last) name.push(this.last)
+
+    return name.join(' ')
+  }
 }
