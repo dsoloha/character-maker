@@ -37,6 +37,11 @@ export default class Character {
     }
     background?: {
       birthplace?: string
+      education?: {
+        school?: string
+        length?: number
+      }
+      nationality?: string
       occupation?: string
     }
     eyes?: {
