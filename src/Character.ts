@@ -42,6 +42,7 @@ export default class Character {
         length?: number
       }
       nationality?: string
+      occupation?: string
     }
     eyes?: {
       color?: string

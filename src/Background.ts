@@ -10,6 +10,8 @@ export default class Background {
   }
   /** The character's nationality. */
   nationality: string
+  /** The character's current occupation. */
+  occupation: string
 
   constructor(options?: {
     birthplace?: string
@@ -18,6 +20,7 @@ export default class Background {
       length?: number
     }
     nationality?: string
+    occupation?: string
   }) {
     this.birthplace = options?.birthplace ?? ''
     this.education = options?.education ?? {
@@ -25,5 +28,6 @@ export default class Background {
       length: options?.education?.length ?? 1,
     }
     this.nationality = options?.nationality ?? ''
+    this.occupation = options?.occupation ?? ''
   }
 }
