@@ -6,5 +6,6 @@ import Hair from './Hair'
 import Name from './Name'
 import Pronouns from './Pronouns'
 import Sex from './Sex'
+import Skin from './Skin'
 
-export { Age, Background, Character, Eyes, Hair, Name, Pronouns, Sex }
+export { Age, Background, Character, Eyes, Hair, Name, Pronouns, Sex, Skin }
