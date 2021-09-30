@@ -1,6 +1,7 @@
 export default class Background {
   /** The character's birthplace. */
   birthplace: string
+  /** The character's education. */
   education: {
     /** The school the character went to. */
     school?: string
@@ -9,7 +10,6 @@ export default class Background {
   }
   /** The character's nationality. */
   nationality: string
-  /** The character's education. */
 
   constructor(options?: {
     birthplace?: string
