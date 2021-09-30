@@ -7,3 +7,7 @@ test('default birthplace', () => {
 test('given birthplace', () => {
   expect(new Background({birthplace: 'London'}).birthplace).toBe('London')
 })
+
+test('given nationality', () => {
+  expect(new Background({nationality: 'English'}).nationality).toBe('English')
+})
