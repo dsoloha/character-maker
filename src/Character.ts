@@ -37,6 +37,7 @@ export default class Character {
     }
     background?: {
       birthplace?: string
+      occupation?: string
     }
     eyes?: {
       color?: string

@@ -19,3 +19,7 @@ test('given education length', () => {
 test('given nationality', () => {
   expect(new Background({nationality: 'English'}).nationality).toBe('English')
 })
+
+test('given occupation', () => {
+  expect(new Background({occupation: 'student'}).occupation).toBe('student')
+})
