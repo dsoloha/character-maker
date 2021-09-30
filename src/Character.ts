@@ -5,6 +5,7 @@ import Hair from './Hair'
 import Name from './Name'
 import Pronouns from './Pronouns'
 import Sex from './Sex'
+import Skin from './Skin'
 
 /** The base character class. */
 export default class Character {
@@ -26,6 +27,8 @@ export default class Character {
    * **Note:** this does not include gender. This will be found in an upcoming `Sexuality` class.
    */
   sex: Sex
+  /** Properties pertaining to the character's skin. */
+  skin: Skin
 
   constructor(options?: {
     age?: {
@@ -62,6 +65,25 @@ export default class Character {
       last?: string | null
       nicknames?: string[]
     }
+    skin?: {
+      color?: string
+      scars?: Array<{
+        location: string
+        description: string
+      }> | null
+      tattoos?: Array<{
+        location: string
+        description: string
+      }>
+      birthmarks?: Array<{
+        location: string
+        description: string
+      }>
+      brands?: Array<{
+        location: string
+        description: string
+      }>
+    }
   }) {
     this.age = new Age(options?.age)
     this.background = new Background(options?.background)
@@ -69,6 +91,7 @@ export default class Character {
     this.hair = new Hair(options?.hair)
     this.name = new Name(options?.name)
     this.sex = new Sex()
+    this.skin = new Skin(options?.skin)
 
     this.pronouns = new Pronouns(this.sex.type)
   }
