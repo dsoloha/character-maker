@@ -4,7 +4,7 @@ import Eyes from './Eyes'
 import Hair from './Hair'
 import Name from './Name'
 import Pronouns from './Pronouns'
-import Sex from './Sex'
+import Sex, { SexType } from './Sex'
 import Skin from './Skin'
 
 /** The base character class. */
@@ -45,7 +45,11 @@ export default class Character {
         length: number
       }
       nationality?: string
-      occupation?: string
+      occupation?: {
+        type: string
+        length: number
+        income: number
+      }
     }
     eyes?: {
       color?: string
@@ -64,6 +68,9 @@ export default class Character {
       middle?: string | null
       last?: string | null
       nicknames?: string[]
+    }
+    sex?: {
+      type: SexType
     }
     skin?: {
       color?: string
@@ -90,7 +97,7 @@ export default class Character {
     this.eyes = new Eyes(options?.eyes)
     this.hair = new Hair(options?.hair)
     this.name = new Name(options?.name)
-    this.sex = new Sex()
+    this.sex = new Sex(options?.sex)
     this.skin = new Skin(options?.skin)
 
     this.pronouns = new Pronouns(this.sex.type)
