@@ -1,7 +1,10 @@
 import { Eyes } from '../src/index';
 
 test('default eyes', () => {
+  expect(new Eyes().astigmatism).toBe(false)
   expect(new Eyes().color).toBe('')
+  expect(new Eyes().farsighted).toBe(false)
+  expect(new Eyes().nearsighted).toBe(false)
 });
 
 test('given astigmatism', () => {
