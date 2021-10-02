@@ -7,5 +7,17 @@ import Name from './Name'
 import Pronouns from './Pronouns'
 import Sex from './Sex'
 import Skin from './Skin'
+import Speech from './Speech'
 
-export { Age, Background, Character, Eyes, Hair, Name, Pronouns, Sex, Skin }
+export {
+  Age,
+  Background,
+  Character,
+  Eyes,
+  Hair,
+  Name,
+  Pronouns,
+  Sex,
+  Skin,
+  Speech,
+}

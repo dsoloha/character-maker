@@ -6,6 +6,7 @@ import Name from './Name'
 import Pronouns from './Pronouns'
 import Sex, { SexType } from './Sex'
 import Skin from './Skin'
+import Speech from './Speech'
 
 /** The base character class. */
 export default class Character {
@@ -29,6 +30,8 @@ export default class Character {
   sex: Sex
   /** Properties pertaining to the character's skin. */
   skin: Skin
+  /** Properties pertaining to the character's speech. */
+  speech: Speech
 
   constructor(options?: {
     age?: {
@@ -91,6 +94,9 @@ export default class Character {
         description: string
       }>
     }
+    speech?: {
+      style?: string
+    }
   }) {
     this.age = new Age(options?.age)
     this.background = new Background(options?.background)
@@ -99,6 +105,7 @@ export default class Character {
     this.name = new Name(options?.name)
     this.sex = new Sex(options?.sex)
     this.skin = new Skin(options?.skin)
+    this.speech = new Speech(options?.speech)
 
     this.pronouns = new Pronouns(this.sex.type)
   }
