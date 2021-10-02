@@ -14,7 +14,7 @@ export default class Background {
   occupation: {
     /** The character's current occupation. */
     type: string
-    /** The character's annual income. */
+    /** The character's annual income in USD. */
     income: number
     /** How many years the character has had this occupation. */
     length: number
