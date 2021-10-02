@@ -1,20 +1,6 @@
 export default class Skin {
   /** The color of the character's skin. */
   color: string
-  /** Any scars the character has. */
-  scars: Array<{
-    /** Where the scar is located. */
-    location: string
-    /** A description of the scar. */
-    description: string
-  }> | null
-  /** Any tattoos the character has. */
-  tattoos: Array<{
-    /** Where the tattoo is located. */
-    location: string
-    /** A description of the tattoo. */
-    description: string
-  }> | null
   /** Any birthmarks the character has. */
   birthmarks: Array<{
     /** Where the birthmark is located. */
@@ -29,17 +15,30 @@ export default class Skin {
     /** A description of the brand. */
     description: string
   }> | null
+  /** Any markings the character has. */
+  markings: Array<{
+    /** Where the marking is located. */
+    location: string
+    /** A description of the marking. */
+    description: string
+  }> | null
+  /** Any scars the character has. */
+  scars: Array<{
+    /** Where the scar is located. */
+    location: string
+    /** A description of the scar. */
+    description: string
+  }> | null
+  /** Any tattoos the character has. */
+  tattoos: Array<{
+    /** Where the tattoo is located. */
+    location: string
+    /** A description of the tattoo. */
+    description: string
+  }> | null
 
   constructor(options?: {
     color?: string
-    scars?: Array<{
-      location: string
-      description: string
-    }> | null
-    tattoos?: Array<{
-      location: string
-      description: string
-    }>
     birthmarks?: Array<{
       location: string
       description: string
@@ -48,11 +47,24 @@ export default class Skin {
       location: string
       description: string
     }>
+    markings?: Array<{
+      location: string
+      description: string
+    }> | null
+    scars?: Array<{
+      location: string
+      description: string
+    }> | null
+    tattoos?: Array<{
+      location: string
+      description: string
+    }>
   }) {
     this.color = options?.color ?? ''
-    this.scars = options?.scars ?? null
-    this.tattoos = options?.tattoos ?? null
     this.birthmarks = options?.birthmarks ?? null
     this.brands = options?.brands ?? null
+    this.markings = options?.markings ?? null
+    this.scars = options?.scars ?? null
+    this.tattoos = options?.tattoos ?? null
   }
 }
