@@ -5,6 +5,7 @@ import Hair from './Hair'
 import Name from './Name'
 import Pronouns from './Pronouns'
 import Sex, { SexType } from './Sex'
+import Sexuality from './Sexuality'
 import Skin from './Skin'
 import Speech from './Speech'
 
@@ -22,12 +23,10 @@ export default class Character {
   name: Name
   /** The pronouns assigned to the character. */
   pronouns: Pronouns
-  /**
-   * Properties pertaining to the character's biological sex.
-   *
-   * **Note:** this does not include gender. This will be found in an upcoming `Sexuality` class.
-   */
+  /** Properties pertaining to the character's biological sex. */
   sex: Sex
+  /** Properties pertaining to the character's sexuality. */
+  sexuality: Sexuality
   /** Properties pertaining to the character's skin. */
   skin: Skin
   /** Properties pertaining to the character's speech. */
@@ -75,6 +74,9 @@ export default class Character {
     sex?: {
       type: SexType
     }
+    sexuality?: {
+      gender?: string
+    }
     skin?: {
       color?: string
       scars?: Array<{
@@ -104,6 +106,7 @@ export default class Character {
     this.hair = new Hair(options?.hair)
     this.name = new Name(options?.name)
     this.sex = new Sex(options?.sex)
+    this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
     this.skin = new Skin(options?.skin)
     this.speech = new Speech(options?.speech)
 
