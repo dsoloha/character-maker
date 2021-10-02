@@ -6,6 +6,7 @@ import Hair from './Hair'
 import Name from './Name'
 import Pronouns from './Pronouns'
 import Sex from './Sex'
+import Sexuality from './Sexuality'
 import Skin from './Skin'
 import Speech from './Speech'
 
@@ -18,6 +19,7 @@ export {
   Name,
   Pronouns,
   Sex,
+  Sexuality,
   Skin,
   Speech,
 }
