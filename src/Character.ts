@@ -1,10 +1,10 @@
 import Age from './Age'
 import Background from './Background'
 import Eyes from './Eyes'
-import Hair, { IHair } from './Hair'
+import Hair from './Hair'
 import Name from './Name'
 import Pronouns from './Pronouns'
-import Sex, { SexType } from './Sex'
+import Sex from './Sex'
 import Sexuality from './Sexuality'
 import Skin from './Skin'
 import Speech from './Speech'
@@ -33,76 +33,15 @@ export default class Character {
   speech: Speech
 
   constructor(options?: {
-    age?: {
-      birth?: {
-        day?: number
-        month?: number
-        year?: number
-      }
-    }
-    background?: {
-      birthplace?: string
-      education?: {
-        school: string
-        length: number
-      }
-      nationality?: string
-      occupation?: {
-        type: string
-        length: number
-        income: number
-      }
-    }
-    eyes?: {
-      color?: string
-      colors?: {
-        left: string
-        right: string
-      }
-    }
-    hair?: {
-      arm?: IHair
-      head?: IHair
-      face?: IHair
-      underarms?: IHair
-      chest?: IHair
-      pubic?: IHair
-      leg?: IHair
-    }
-    name?: {
-      first?: string
-      middle?: string | null
-      last?: string | null
-      nicknames?: string[]
-    }
-    sex?: {
-      type: SexType
-    }
-    sexuality?: {
-      gender?: string
-    }
-    skin?: {
-      color?: string
-      scars?: Array<{
-        location: string
-        description: string
-      }> | null
-      tattoos?: Array<{
-        location: string
-        description: string
-      }>
-      birthmarks?: Array<{
-        location: string
-        description: string
-      }>
-      brands?: Array<{
-        location: string
-        description: string
-      }>
-    }
-    speech?: {
-      style?: string
-    }
+    age?: Age
+    background?: Background
+    eyes?: Eyes
+    hair?: Hair
+    name?: Name
+    sex?: Sex
+    sexuality?: Sexuality
+    skin?: Skin
+    speech?: Speech
   }) {
     this.age = new Age(options?.age)
     this.background = new Background(options?.background)
