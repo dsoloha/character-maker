@@ -1,7 +1,7 @@
 import Age from './Age'
 import Background from './Background'
 import Eyes from './Eyes'
-import Hair from './Hair'
+import Hair, { IHair } from './Hair'
 import Name from './Name'
 import Pronouns from './Pronouns'
 import Sex, { SexType } from './Sex'
@@ -61,9 +61,13 @@ export default class Character {
       }
     }
     hair?: {
-      color?: string
-      length?: string | number
-      style?: string
+      arm?: IHair
+      head?: IHair
+      face?: IHair
+      underarms?: IHair
+      chest?: IHair
+      pubic?: IHair
+      leg?: IHair
     }
     name?: {
       first?: string

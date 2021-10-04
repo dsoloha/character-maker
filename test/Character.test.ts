@@ -17,9 +17,9 @@ test('default character', () => {
   expect(new Character().eyes.farsighted).toBe(false)
   expect(new Character().eyes.nearsighted).toBe(false)
 
-  expect(new Character().hair.color).toBe('')
-  expect(new Character().hair.length).toBe('')
-  expect(new Character().hair.style).toBe('')
+  expect(new Character().hair.arm.color).toBe('')
+  expect(new Character().hair.arm.length).toBe('')
+  expect(new Character().hair.arm.style).toBe('')
 
   expect(new Character().name.first).toBe('')
   expect(new Character().name.middle).toBeNull()
@@ -61,11 +61,15 @@ test('character with given eye color', () => {
 
 // hair
 test('character with given hair color', () => {
-  expect(new Character({hair: { color: 'brown'}}).hair.color).toBe('brown')
+  expect(new Character({ hair: { arm: { color: 'brown', length: 'short', style: 'neat' }}}).hair.arm.color).toBe('brown')
 })
 
 test('character with given hair length', () => {
-  expect(new Character({hair: { length: 25 }}).hair.length).toBe(25)
+  expect(new Character({ hair: { arm: { color: 'brown', length: 'short', style: 'neat' }}}).hair.arm.length).toBe('short')
+})
+
+test('character with given hair style', () => {
+  expect(new Character({ hair: { arm: { color: 'brown', length: 'short', style: 'neat' }}}).hair.arm.style).toBe('neat')
 })
 
 // name
