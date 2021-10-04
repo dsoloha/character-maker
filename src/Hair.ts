@@ -1,22 +1,49 @@
 export default class Hair {
-  /** The color of the character's hair. */
-  color: string
-  /**
-   * The length of the character's hair.
-   *
-   * Accepts either a descriptor ("short", "buzzed", etc.) or an integer in centimeters.
-   */
-  length: string | number
-  /** The style of the character's hair. */
-  style: string
+  /** The hair on the character's head. */
+  head: IHair
+  /** The hair on the character's face. */
+  face: IHair
+  /** The hair on the character's underarms. */
+  underarms: IHair
+  /** The hair on the character's chest. */
+  chest: IHair
+  /** The hair on the character's pubic region. */
+  pubic: IHair
+  /** The hair on the character's arms. */
+  arm: IHair
+  /** The hair on the character's legs. */
+  leg: IHair
 
   constructor(options?: {
-    color?: string
-    length?: string | number
-    style?: string
+    head?: IHair
+    face?: IHair
+    underarms?: IHair
+    chest?: IHair
+    pubic?: IHair
+    arm?: IHair
+    leg?: IHair
   }) {
-    this.color = options?.color ?? ''
-    this.length = options?.length ?? ''
-    this.style = options?.style ?? ''
+    const defaultHair: IHair = {
+      color: '',
+      length: '',
+      style: '',
+    }
+
+    this.head = options?.head ?? Object.assign({}, defaultHair)
+    this.face = options?.face ?? Object.assign({}, defaultHair)
+    this.underarms = options?.underarms ?? Object.assign({}, defaultHair)
+    this.chest = options?.chest ?? Object.assign({}, defaultHair)
+    this.pubic = options?.pubic ?? Object.assign({}, defaultHair)
+    this.arm = options?.arm ?? Object.assign({}, defaultHair)
+    this.leg = options?.leg ?? Object.assign({}, defaultHair)
   }
+}
+
+export interface IHair {
+  /** The color of the character's hair. */
+  color: string
+  /** The length of the character's hair. */
+  length: string
+  /** The style of the character's hair. */
+  style: string
 }
