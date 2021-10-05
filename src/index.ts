@@ -2,6 +2,7 @@ import Age from './Age'
 import Background from './Background'
 import Character from './Character'
 import Chest from './Chest'
+import Crotch from './Crotch'
 import Eyes from './Eyes'
 import Hair from './Hair'
 import Mouth from './Mouth'
@@ -22,6 +23,7 @@ export {
   Background,
   Character,
   Chest,
+  Crotch,
   Eyes,
   Hair,
   Mouth,
