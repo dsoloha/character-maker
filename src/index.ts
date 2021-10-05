@@ -1,6 +1,7 @@
 import Age from './Age'
 import Background from './Background'
 import Character from './Character'
+import Chest from './Chest'
 import Eyes from './Eyes'
 import Hair from './Hair'
 import Mouth from './Mouth'
@@ -17,6 +18,7 @@ export {
   Age,
   Background,
   Character,
+  Chest,
   Eyes,
   Hair,
   Mouth,

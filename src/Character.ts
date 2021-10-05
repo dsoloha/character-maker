@@ -1,5 +1,6 @@
 import Age from './Age'
 import Background from './Background'
+import Chest from './Chest'
 import Eyes from './Eyes'
 import Hair, { IHair } from './Hair'
 import Mouth from './Mouth'
@@ -18,6 +19,8 @@ export default class Character {
   age: Age
   /** Properties pertaining to the character's background and upbringing. */
   background: Background
+  /** Properties pertaining to the character's chest. */
+  chest: Chest
   /** Properties pertaining to the character's eyes. */
   eyes: Eyes
   /** Properties pertaining to all hair on the character's body. */
@@ -61,6 +64,9 @@ export default class Character {
         length: number
         income: number
       }
+    }
+    chest?: {
+      size?: string
     }
     eyes?: {
       color?: string
@@ -128,6 +134,7 @@ export default class Character {
   }) {
     this.age = new Age(options?.age)
     this.background = new Background(options?.background)
+    this.chest = new Chest(options?.chest)
     this.eyes = new Eyes(options?.eyes)
     this.hair = new Hair(options?.hair)
     this.mouth = new Mouth(options?.mouth)
