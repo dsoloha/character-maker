@@ -2,63 +2,23 @@ export default class Skin {
   /** The color of the character's skin. */
   color: string
   /** Any birthmarks the character has. */
-  birthmarks: Array<{
-    /** Where the birthmark is located. */
-    location: string
-    /** A description of the birthmark. */
-    description: string
-  }> | null
+  birthmarks: IMark[] | null
   /** Any brands the character has. */
-  brands: Array<{
-    /** Where the brand is located. */
-    location: string
-    /** A description of the brand. */
-    description: string
-  }> | null
+  brands: IMark[] | null
   /** Any markings the character has. */
-  markings: Array<{
-    /** Where the marking is located. */
-    location: string
-    /** A description of the marking. */
-    description: string
-  }> | null
+  markings: IMark[] | null
   /** Any scars the character has. */
-  scars: Array<{
-    /** Where the scar is located. */
-    location: string
-    /** A description of the scar. */
-    description: string
-  }> | null
+  scars: IMark[] | null
   /** Any tattoos the character has. */
-  tattoos: Array<{
-    /** Where the tattoo is located. */
-    location: string
-    /** A description of the tattoo. */
-    description: string
-  }> | null
+  tattoos: IMark[] | null
 
   constructor(options?: {
     color?: string
-    birthmarks?: Array<{
-      location: string
-      description: string
-    }>
-    brands?: Array<{
-      location: string
-      description: string
-    }>
-    markings?: Array<{
-      location: string
-      description: string
-    }> | null
-    scars?: Array<{
-      location: string
-      description: string
-    }> | null
-    tattoos?: Array<{
-      location: string
-      description: string
-    }>
+    birthmarks?: IMark[] | null
+    brands?: IMark[] | null
+    markings?: IMark[] | null
+    scars?: IMark[] | null
+    tattoos?: IMark[] | null
   }) {
     this.color = options?.color ?? ''
     this.birthmarks = options?.birthmarks ?? null
@@ -67,4 +27,11 @@ export default class Skin {
     this.scars = options?.scars ?? null
     this.tattoos = options?.tattoos ?? null
   }
+}
+
+export interface IMark {
+  /** Where the mark is located. */
+  location: string
+  /** A description of the mark. */
+  description: string
 }
