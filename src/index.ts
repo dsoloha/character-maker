@@ -5,6 +5,7 @@ import Eyes from './Eyes'
 import Hair from './Hair'
 import Mouth from './Mouth'
 import Name from './Name'
+import Neck from './Neck'
 import Nose from './Nose'
 import Pronouns from './Pronouns'
 import Sex from './Sex'
@@ -20,6 +21,7 @@ export {
   Hair,
   Mouth,
   Name,
+  Neck,
   Nose,
   Pronouns,
   Sex,
