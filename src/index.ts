@@ -10,6 +10,7 @@ import Nose from './Nose'
 import Pronouns from './Pronouns'
 import Sex from './Sex'
 import Sexuality from './Sexuality'
+import Shoulders from './Shoulders'
 import Skin from './Skin'
 import Speech from './Speech'
 
@@ -26,6 +27,7 @@ export {
   Pronouns,
   Sex,
   Sexuality,
+  Shoulders,
   Skin,
   Speech,
 }
