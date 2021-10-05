@@ -28,6 +28,11 @@ test('default character hair', () => {
   expect(new Character().hair.arm.style).toBe('')
 })
 
+test('default character mouth', () => {
+  expect(new Character().mouth.teeth).toEqual({ count: 32, description: '' })
+  expect(new Character().mouth.tongue).toBe(true)
+})
+
 test('default character name', () => {
   expect(new Character().name.first).toBe('')
   expect(new Character().name.middle).toBeNull()
@@ -88,6 +93,12 @@ test('character with given hair length', () => {
 
 test('character with given hair style', () => {
   expect(new Character({ hair: { arm: { color: 'brown', length: 'short', style: 'neat' }}}).hair.arm.style).toBe('neat')
+})
+
+// mouth
+test('character with given mouth', () => {
+  expect(new Character({ mouth: { teeth: { count: 30, description: 'white' }}}).mouth.teeth).toEqual({ count: 30, description: 'white' })
+  expect(new Character({ mouth: { tongue: false }}).mouth.tongue).toBe(false)
 })
 
 // name

@@ -3,6 +3,7 @@ import Background from './Background'
 import Character from './Character'
 import Eyes from './Eyes'
 import Hair from './Hair'
+import Mouth from './Mouth'
 import Name from './Name'
 import Nose from './Nose'
 import Pronouns from './Pronouns'
@@ -17,6 +18,7 @@ export {
   Character,
   Eyes,
   Hair,
+  Mouth,
   Name,
   Nose,
   Pronouns,
