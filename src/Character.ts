@@ -14,6 +14,7 @@ import Shoulders from './Shoulders'
 import Skin from './Skin'
 import Speech from './Speech'
 import Stomach from './Stomach'
+import Waist from './Waist'
 
 /** The base character class. */
 export default class Character {
@@ -49,6 +50,8 @@ export default class Character {
   speech: Speech
   /** Properties pertaining to the character's stomach. */
   stomach: Stomach
+  /** Properties pertaining to the character's waist. */
+  waist: Waist
 
   constructor(options?: {
     age?: {
@@ -143,6 +146,9 @@ export default class Character {
     stomach?: {
       shape?: string
     }
+    waist?: {
+      size?: string
+    }
   }) {
     this.age = new Age(options?.age)
     this.background = new Background(options?.background)
@@ -159,6 +165,7 @@ export default class Character {
     this.skin = new Skin(options?.skin)
     this.speech = new Speech(options?.speech)
     this.stomach = new Stomach(options?.stomach)
+    this.waist = new Waist(options?.waist)
 
     this.pronouns = new Pronouns(this.sex.type)
   }
