@@ -15,6 +15,7 @@ import Shoulders from './Shoulders'
 import Skin from './Skin'
 import Speech from './Speech'
 import Stomach from './Stomach'
+import Waist from './Waist'
 
 export {
   Age,
@@ -34,4 +35,5 @@ export {
   Skin,
   Speech,
   Stomach,
+  Waist,
 }
