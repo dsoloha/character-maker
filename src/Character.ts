@@ -2,6 +2,7 @@ import Age from './Age'
 import Background from './Background'
 import Eyes from './Eyes'
 import Hair, { IHair } from './Hair'
+import Mouth from './Mouth'
 import Name from './Name'
 import Nose from './Nose'
 import Pronouns from './Pronouns'
@@ -20,6 +21,8 @@ export default class Character {
   eyes: Eyes
   /** Properties pertaining to all hair on the character's body. */
   hair: Hair
+  /** Properties pertaining to the character's mouth. */
+  mouth: Mouth
   /** Properties pertaining to the character's name. */
   name: Name
   /** Properties pertaining to the character's nose. */
@@ -72,6 +75,13 @@ export default class Character {
       pubic?: IHair
       leg?: IHair
     }
+    mouth?: {
+      teeth?: {
+        count: number
+        description: string
+      }
+      tongue?: boolean
+    }
     name?: {
       first?: string
       middle?: string | null
@@ -114,6 +124,7 @@ export default class Character {
     this.background = new Background(options?.background)
     this.eyes = new Eyes(options?.eyes)
     this.hair = new Hair(options?.hair)
+    this.mouth = new Mouth(options?.mouth)
     this.name = new Name(options?.name)
     this.nose = new Nose(options?.nose)
     this.sex = new Sex(options?.sex)
