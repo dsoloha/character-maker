@@ -3,6 +3,7 @@ import Background from './Background'
 import Eyes from './Eyes'
 import Hair, { IHair } from './Hair'
 import Name from './Name'
+import Nose from './Nose'
 import Pronouns from './Pronouns'
 import Sex, { SexType } from './Sex'
 import Sexuality from './Sexuality'
@@ -21,6 +22,8 @@ export default class Character {
   hair: Hair
   /** Properties pertaining to the character's name. */
   name: Name
+  /** Properties pertaining to the character's nose. */
+  nose: Nose
   /** The pronouns assigned to the character. */
   pronouns: Pronouns
   /** Properties pertaining to the character's biological sex. */
@@ -75,6 +78,9 @@ export default class Character {
       last?: string | null
       nicknames?: string[]
     }
+    nose?: {
+      anosmia?: boolean
+    }
     sex?: {
       type: SexType
     }
@@ -109,6 +115,7 @@ export default class Character {
     this.eyes = new Eyes(options?.eyes)
     this.hair = new Hair(options?.hair)
     this.name = new Name(options?.name)
+    this.nose = new Nose(options?.nose)
     this.sex = new Sex(options?.sex)
     this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
     this.skin = new Skin(options?.skin)

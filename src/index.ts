@@ -4,6 +4,7 @@ import Character from './Character'
 import Eyes from './Eyes'
 import Hair from './Hair'
 import Name from './Name'
+import Nose from './Nose'
 import Pronouns from './Pronouns'
 import Sex from './Sex'
 import Sexuality from './Sexuality'
@@ -17,6 +18,7 @@ export {
   Eyes,
   Hair,
   Name,
+  Nose,
   Pronouns,
   Sex,
   Sexuality,

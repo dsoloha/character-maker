@@ -27,6 +27,8 @@ test('default character', () => {
   expect(new Character().name.full).toBe('')
   expect(new Character().name.nicknames).toHaveLength(0)
 
+  expect(new Character().nose.anosmia).toBe(false)
+
   expect(new Character().pronouns.subject).toBe('he')
   expect(new Character().pronouns.object).toBe('him')
   expect(new Character().pronouns.possessive).toBe('his')
@@ -74,7 +76,12 @@ test('character with given hair style', () => {
 
 // name
 test('character with given name', () => {
-  expect(new Character({ name: {first: 'John', last: 'Smith'}}).name.first).toBe('John')
+  expect(new Character({ name: { first: 'John', last: 'Smith' }}).name.first).toBe('John')
+})
+
+// nose
+test('character with given nose', () => {
+  expect(new Character({ nose: { anosmia: true}}).nose.anosmia).toBe(true)
 })
 
 // sex
