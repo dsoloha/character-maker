@@ -9,6 +9,7 @@ import Nose from './Nose'
 import Pronouns from './Pronouns'
 import Sex, { SexType } from './Sex'
 import Sexuality from './Sexuality'
+import Shoulders from './Shoulders'
 import Skin from './Skin'
 import Speech from './Speech'
 import Stomach from './Stomach'
@@ -37,6 +38,8 @@ export default class Character {
   sex: Sex
   /** Properties pertaining to the character's sexuality. */
   sexuality: Sexuality
+  /** Properties pertaining to the character's shoulders. */
+  shoulders: Shoulders
   /** Properties pertaining to the character's skin. */
   skin: Skin
   /** Properties pertaining to the character's speech. */
@@ -106,6 +109,9 @@ export default class Character {
     sexuality?: {
       gender?: string
     }
+    shoulders?: {
+      width?: string
+    }
     skin?: {
       color?: string
       scars?: Array<{
@@ -142,6 +148,7 @@ export default class Character {
     this.nose = new Nose(options?.nose)
     this.sex = new Sex(options?.sex)
     this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
+    this.shoulders = new Shoulders(options?.shoulders)
     this.skin = new Skin(options?.skin)
     this.speech = new Speech(options?.speech)
     this.stomach = new Stomach(options?.stomach)
