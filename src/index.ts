@@ -12,6 +12,7 @@ import Sex from './Sex'
 import Sexuality from './Sexuality'
 import Skin from './Skin'
 import Speech from './Speech'
+import Stomach from './Stomach'
 
 export {
   Age,
@@ -28,4 +29,5 @@ export {
   Sexuality,
   Skin,
   Speech,
+  Stomach,
 }

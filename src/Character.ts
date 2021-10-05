@@ -11,6 +11,7 @@ import Sex, { SexType } from './Sex'
 import Sexuality from './Sexuality'
 import Skin from './Skin'
 import Speech from './Speech'
+import Stomach from './Stomach'
 
 /** The base character class. */
 export default class Character {
@@ -40,6 +41,8 @@ export default class Character {
   skin: Skin
   /** Properties pertaining to the character's speech. */
   speech: Speech
+  /** Properties pertaining to the character's stomach. */
+  stomach: Stomach
 
   constructor(options?: {
     age?: {
@@ -125,6 +128,9 @@ export default class Character {
     speech?: {
       style?: string
     }
+    stomach?: {
+      shape?: string
+    }
   }) {
     this.age = new Age(options?.age)
     this.background = new Background(options?.background)
@@ -138,6 +144,7 @@ export default class Character {
     this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
     this.skin = new Skin(options?.skin)
     this.speech = new Speech(options?.speech)
+    this.stomach = new Stomach(options?.stomach)
 
     this.pronouns = new Pronouns(this.sex.type)
   }
