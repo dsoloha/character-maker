@@ -1,4 +1,9 @@
 export default class Crotch {
+  /** Properties pertaining to the character's anus. */
+  anus: {
+    description: string
+  }
+  /** Properties pertaining to the character's ovaries, if any. */
   ovaries: {
     /** Whether or not the character has gone through menopause. */
     menopause: boolean
@@ -20,9 +25,11 @@ export default class Crotch {
     /** A description of the character's Vagina. */
     description: string
   } | null
-  /** Properties pertaining to the character's ovaries, if any. */
 
   constructor(options?: {
+    anus?: {
+      description: string
+    }
     ovaries?: {
       menopause: boolean
     } | null
@@ -37,6 +44,9 @@ export default class Crotch {
       description: string
     } | null
   }) {
+    this.anus = options?.anus ?? {
+      description: options?.anus?.description ?? '',
+    }
     this.ovaries = options?.ovaries ?? null
     this.penis = options?.penis ?? null
     this.testicles = options?.testicles ?? null

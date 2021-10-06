@@ -1,7 +1,9 @@
 export default class Mouth {
   /** Properties pertaining to the character's teeth. */
   teeth: {
+    /** How many teeth the character has, out of 32. */
     count: number
+    /** A description of the character's teeth. */
     description: string
   }
   /** Whether or not the character has a tongue. */
