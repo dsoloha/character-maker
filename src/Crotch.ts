@@ -1,6 +1,7 @@
 export default class Crotch {
   /** Properties pertaining to the character's anus. */
   anus: {
+    /** A description of the character's anus. */
     description: string
   }
   /** Properties pertaining to the character's ovaries, if any. */
@@ -22,7 +23,7 @@ export default class Crotch {
   } | null
   /** Properties pertaining to the character's vagina, if any. */
   vagina: {
-    /** A description of the character's Vagina. */
+    /** A description of the character's vagina. */
     description: string
   } | null
 
