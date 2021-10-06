@@ -1,9 +1,11 @@
 import Age from './Age'
+import Arms from './Arms'
 import Background from './Background'
 import Chest from './Chest'
 import Crotch from './Crotch'
 import Eyes from './Eyes'
 import Hair, { IHair } from './Hair'
+import Legs from './Legs'
 import Mouth from './Mouth'
 import Name from './Name'
 import Neck from './Neck'
@@ -19,8 +21,10 @@ import Waist from './Waist'
 
 /** The base character class. */
 export default class Character {
-  /** `Properties pertaining to the character's age.` */
+  /** Properties pertaining to the character's age. */
   age: Age
+  /** Properties pertaining to the character's arms. */
+  arms: Arms
   /** Properties pertaining to the character's background and upbringing. */
   background: Background
   /** Properties pertaining to the character's chest. */
@@ -31,6 +35,8 @@ export default class Character {
   eyes: Eyes
   /** Properties pertaining to all hair on the character's body. */
   hair: Hair
+  /** Properties pertaining to the character's legs. */
+  legs: Legs
   /** Properties pertaining to the character's mouth. */
   mouth: Mouth
   /** Properties pertaining to the character's name. */
@@ -62,6 +68,14 @@ export default class Character {
         day?: number
         month?: number
         year?: number
+      }
+    }
+    arms?: {
+      left?: {
+        size: string
+      }
+      right?: {
+        size: string
       }
     }
     background?: {
@@ -110,6 +124,14 @@ export default class Character {
       chest?: IHair
       pubic?: IHair
       leg?: IHair
+    }
+    legs?: {
+      left?: {
+        size: string
+      }
+      right?: {
+        size: string
+      }
     }
     mouth?: {
       teeth?: {
@@ -169,11 +191,13 @@ export default class Character {
     }
   }) {
     this.age = new Age(options?.age)
+    this.arms = new Arms(options?.arms)
     this.background = new Background(options?.background)
     this.chest = new Chest(options?.chest)
     this.crotch = new Crotch(options?.crotch)
     this.eyes = new Eyes(options?.eyes)
     this.hair = new Hair(options?.hair)
+    this.legs = new Legs(options?.legs)
     this.mouth = new Mouth(options?.mouth)
     this.name = new Name(options?.name)
     this.neck = new Neck(options?.neck)
