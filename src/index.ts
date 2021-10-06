@@ -1,10 +1,12 @@
 import Age from './Age'
+import Arms from './Arms'
 import Background from './Background'
 import Character from './Character'
 import Chest from './Chest'
 import Crotch from './Crotch'
 import Eyes from './Eyes'
 import Hair from './Hair'
+import Legs from './Legs'
 import Mouth from './Mouth'
 import Name from './Name'
 import Neck from './Neck'
@@ -20,12 +22,14 @@ import Waist from './Waist'
 
 export {
   Age,
+  Arms,
   Background,
   Character,
   Chest,
   Crotch,
   Eyes,
   Hair,
+  Legs,
   Mouth,
   Name,
   Neck,
