@@ -1,29 +1,18 @@
-export default class Crotch {
-  /** Properties pertaining to the character's anus. */
+export default class Crotch implements ICrotch {
   anus: {
-    /** A description of the character's anus. */
     description: string
   }
-  /** Properties pertaining to the character's ovaries, if any. */
   ovaries: {
-    /** Whether or not the character has gone through menopause. */
     menopause: boolean
   } | null
-  /** Properties pertaining to the character's penis, if any. */
   penis: {
-    /** The size of the character's penis. */
     size: string
   } | null
-  /** Properties pertaining to the character's testicles, if any. */
   testicles: {
-    /** The size of the character's testicles. */
     size: string
-    /** Whether or not the character has had a vasectomy. */
     vasectomy: boolean
   } | null
-  /** Properties pertaining to the character's vagina, if any. */
   vagina: {
-    /** A description of the character's vagina. */
     description: string
   } | null
 
@@ -53,4 +42,34 @@ export default class Crotch {
     this.testicles = options?.testicles ?? null
     this.vagina = options?.vagina ?? null
   }
+}
+
+export interface ICrotch {
+  /** Properties pertaining to the character's anus. */
+  anus: {
+    /** A description of the character's anus. */
+    description: string
+  }
+  /** Properties pertaining to the character's ovaries, if any. */
+  ovaries: {
+    /** Whether or not the character has gone through menopause. */
+    menopause: boolean
+  } | null
+  /** Properties pertaining to the character's penis, if any. */
+  penis: {
+    /** The size of the character's penis. */
+    size: string
+  } | null
+  /** Properties pertaining to the character's testicles, if any. */
+  testicles: {
+    /** The size of the character's testicles. */
+    size: string
+    /** Whether or not the character has had a vasectomy. */
+    vasectomy: boolean
+  } | null
+  /** Properties pertaining to the character's vagina, if any. */
+  vagina: {
+    /** A description of the character's vagina. */
+    description: string
+  } | null
 }
