@@ -14,7 +14,7 @@ import Pronouns from './Pronouns'
 import Sex, { SexType } from './Sex'
 import Sexuality from './Sexuality'
 import Shoulders from './Shoulders'
-import Skin from './Skin'
+import Skin, { IMark } from './Skin'
 import Speech from './Speech'
 import Stomach from './Stomach'
 import Waist from './Waist'
@@ -163,22 +163,10 @@ export default class Character {
     }
     skin?: {
       color?: string
-      scars?: Array<{
-        location: string
-        description: string
-      }> | null
-      tattoos?: Array<{
-        location: string
-        description: string
-      }>
-      birthmarks?: Array<{
-        location: string
-        description: string
-      }>
-      brands?: Array<{
-        location: string
-        description: string
-      }>
+      scars?: IMark[] | null
+      tattoos?: IMark[] | null
+      birthmarks?: IMark[] | null
+      brands?: IMark[] | null
     }
     speech?: {
       style?: string
