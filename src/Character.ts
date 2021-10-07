@@ -20,46 +20,26 @@ import Stomach from './Stomach'
 import Waist from './Waist'
 
 /** The base character class. */
-export default class Character {
-  /** Properties pertaining to the character's age. */
+export default class Character implements ICharacter {
   age: Age
-  /** Properties pertaining to the character's arms. */
   arms: Arms
-  /** Properties pertaining to the character's background and upbringing. */
   background: Background
-  /** Properties pertaining to the character's chest. */
   chest: Chest
-  /** Properties pertaining to the character's crotch. */
   crotch: Crotch
-  /** Properties pertaining to the character's eyes. */
   eyes: Eyes
-  /** Properties pertaining to all hair on the character's body. */
   hair: Hair
-  /** Properties pertaining to the character's legs. */
   legs: Legs
-  /** Properties pertaining to the character's mouth. */
   mouth: Mouth
-  /** Properties pertaining to the character's name. */
   name: Name
-  /** Properties pertaining to the character's neck. */
   neck: Neck
-  /** Properties pertaining to the character's nose. */
   nose: Nose
-  /** The pronouns assigned to the character. */
   pronouns: Pronouns
-  /** Properties pertaining to the character's biological sex. */
   sex: Sex
-  /** Properties pertaining to the character's sexuality. */
   sexuality: Sexuality
-  /** Properties pertaining to the character's shoulders. */
   shoulders: Shoulders
-  /** Properties pertaining to the character's skin. */
   skin: Skin
-  /** Properties pertaining to the character's speech. */
   speech: Speech
-  /** Properties pertaining to the character's stomach. */
   stomach: Stomach
-  /** Properties pertaining to the character's waist. */
   waist: Waist
 
   constructor(options?: {
@@ -200,4 +180,47 @@ export default class Character {
 
     this.pronouns = new Pronouns(this.sex.type)
   }
+}
+
+export interface ICharacter {
+  /** Properties pertaining to the character's age. */
+  age: Age
+  /** Properties pertaining to the character's arms. */
+  arms: Arms
+  /** Properties pertaining to the character's background and upbringing. */
+  background: Background
+  /** Properties pertaining to the character's chest. */
+  chest: Chest
+  /** Properties pertaining to the character's crotch. */
+  crotch: Crotch
+  /** Properties pertaining to the character's eyes. */
+  eyes: Eyes
+  /** Properties pertaining to all hair on the character's body. */
+  hair: Hair
+  /** Properties pertaining to the character's legs. */
+  legs: Legs
+  /** Properties pertaining to the character's mouth. */
+  mouth: Mouth
+  /** Properties pertaining to the character's name. */
+  name: Name
+  /** Properties pertaining to the character's neck. */
+  neck: Neck
+  /** Properties pertaining to the character's nose. */
+  nose: Nose
+  /** The pronouns assigned to the character. */
+  pronouns: Pronouns
+  /** Properties pertaining to the character's biological sex. */
+  sex: Sex
+  /** Properties pertaining to the character's sexuality. */
+  sexuality: Sexuality
+  /** Properties pertaining to the character's shoulders. */
+  shoulders: Shoulders
+  /** Properties pertaining to the character's skin. */
+  skin: Skin
+  /** Properties pertaining to the character's speech. */
+  speech: Speech
+  /** Properties pertaining to the character's stomach. */
+  stomach: Stomach
+  /** Properties pertaining to the character's waist. */
+  waist: Waist
 }
