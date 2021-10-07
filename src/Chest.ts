@@ -8,5 +8,5 @@ export default class Chest implements IChest {
 
 export interface IChest {
   /** The size of the character's chest. */
-  size: string
+  size?: string
 }

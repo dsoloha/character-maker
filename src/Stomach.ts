@@ -8,5 +8,5 @@ export default class Stomach implements IStomach {
 
 export interface IStomach {
   /** The shape of the character's stomach. */
-  shape: string
+  shape?: string
 }

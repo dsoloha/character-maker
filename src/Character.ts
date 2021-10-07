@@ -1,23 +1,23 @@
-import Age from './Age'
-import Arms from './Arms'
-import Background from './Background'
-import Chest from './Chest'
-import Crotch from './Crotch'
-import Eyes from './Eyes'
-import Hair, { IHair } from './Hair'
-import Legs from './Legs'
-import Mouth from './Mouth'
-import Name from './Name'
-import Neck from './Neck'
-import Nose from './Nose'
+import Age, { IAge } from './Age'
+import Arms, { IArms } from './Arms'
+import Background, { IBackground } from './Background'
+import Chest, { IChest } from './Chest'
+import Crotch, { ICrotch } from './Crotch'
+import Eyes, { IEyes } from './Eyes'
+import Hair, { IHairs } from './Hair'
+import Legs, { ILegs } from './Legs'
+import Mouth, { IMouth } from './Mouth'
+import Name, { IName } from './Name'
+import Neck, { INeck } from './Neck'
+import Nose, { INose } from './Nose'
 import Pronouns from './Pronouns'
-import Sex, { SexType } from './Sex'
-import Sexuality from './Sexuality'
-import Shoulders from './Shoulders'
-import Skin, { IMark } from './Skin'
-import Speech from './Speech'
-import Stomach from './Stomach'
-import Waist from './Waist'
+import Sex, { ISex } from './Sex'
+import Sexuality, { ISexuality } from './Sexuality'
+import Shoulders, { IShoulders } from './Shoulders'
+import Skin, { ISkin } from './Skin'
+import Speech, { ISpeech } from './Speech'
+import Stomach, { IStomach } from './Stomach'
+import Waist, { IWaist } from './Waist'
 
 /** The base character class. */
 export default class Character implements ICharacter {
@@ -42,122 +42,7 @@ export default class Character implements ICharacter {
   stomach: Stomach
   waist: Waist
 
-  constructor(options?: {
-    age?: {
-      birth?: {
-        day?: number
-        month?: number
-        year?: number
-      }
-    }
-    arms?: {
-      left?: {
-        size: string
-      }
-      right?: {
-        size: string
-      }
-    }
-    background?: {
-      birthplace?: string
-      education?: {
-        school: string
-        length: number
-      }
-      nationality?: string
-      occupation?: {
-        type: string
-        length: number
-        income: number
-      }
-    }
-    chest?: {
-      size?: string
-    }
-    crotch?: {
-      ovaries?: {
-        menopause: boolean
-      } | null
-      penis?: {
-        size: string
-      } | null
-      testicles?: {
-        size: string
-        vasectomy: boolean
-      } | null
-      vagina?: {
-        description: string
-      }
-    }
-    eyes?: {
-      color?: string
-      colors?: {
-        left: string
-        right: string
-      }
-    }
-    hair?: {
-      arm?: IHair
-      head?: IHair
-      face?: IHair
-      underarms?: IHair
-      chest?: IHair
-      pubic?: IHair
-      leg?: IHair
-    }
-    legs?: {
-      left?: {
-        size: string
-      }
-      right?: {
-        size: string
-      }
-    }
-    mouth?: {
-      teeth?: {
-        count: number
-        description: string
-      }
-      tongue?: boolean
-    }
-    name?: {
-      first?: string
-      middle?: string | null
-      last?: string | null
-      nicknames?: string[]
-    }
-    neck?: {
-      larynx?: boolean
-    }
-    nose?: {
-      anosmia?: boolean
-    }
-    sex?: {
-      type: SexType
-    }
-    sexuality?: {
-      gender?: string
-    }
-    shoulders?: {
-      width?: string
-    }
-    skin?: {
-      color?: string
-      scars?: IMark[] | null
-      tattoos?: IMark[] | null
-      birthmarks?: IMark[] | null
-      brands?: IMark[] | null
-    }
-    speech?: {
-      style?: string
-    }
-    stomach?: {
-      shape?: string
-    }
-    waist?: {
-      size?: string
-    }
-  }) {
+  constructor(options?: ICharacter) {
     this.age = new Age(options?.age)
     this.arms = new Arms(options?.arms)
     this.background = new Background(options?.background)
@@ -184,43 +69,43 @@ export default class Character implements ICharacter {
 
 export interface ICharacter {
   /** Properties pertaining to the character's age. */
-  age: Age
+  age?: IAge
   /** Properties pertaining to the character's arms. */
-  arms: Arms
+  arms?: IArms
   /** Properties pertaining to the character's background and upbringing. */
-  background: Background
+  background?: IBackground
   /** Properties pertaining to the character's chest. */
-  chest: Chest
+  chest?: IChest
   /** Properties pertaining to the character's crotch. */
-  crotch: Crotch
+  crotch?: ICrotch
   /** Properties pertaining to the character's eyes. */
-  eyes: Eyes
+  eyes?: IEyes
   /** Properties pertaining to all hair on the character's body. */
-  hair: Hair
+  hair?: IHairs
   /** Properties pertaining to the character's legs. */
-  legs: Legs
+  legs?: ILegs
   /** Properties pertaining to the character's mouth. */
-  mouth: Mouth
+  mouth?: IMouth
   /** Properties pertaining to the character's name. */
-  name: Name
+  name?: IName
   /** Properties pertaining to the character's neck. */
-  neck: Neck
+  neck?: INeck
   /** Properties pertaining to the character's nose. */
-  nose: Nose
+  nose?: INose
   /** The pronouns assigned to the character. */
-  pronouns: Pronouns
+  pronouns?: Pronouns
   /** Properties pertaining to the character's biological sex. */
-  sex: Sex
+  sex?: ISex
   /** Properties pertaining to the character's sexuality. */
-  sexuality: Sexuality
+  sexuality?: ISexuality
   /** Properties pertaining to the character's shoulders. */
-  shoulders: Shoulders
+  shoulders?: IShoulders
   /** Properties pertaining to the character's skin. */
-  skin: Skin
+  skin?: ISkin
   /** Properties pertaining to the character's speech. */
-  speech: Speech
+  speech?: ISpeech
   /** Properties pertaining to the character's stomach. */
-  stomach: Stomach
+  stomach?: IStomach
   /** Properties pertaining to the character's waist. */
-  waist: Waist
+  waist?: IWaist
 }

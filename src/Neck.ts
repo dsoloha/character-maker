@@ -8,5 +8,5 @@ export default class Neck implements INeck {
 
 export interface INeck {
   /** Whether or not the character has vocal cords. */
-  larynx: boolean
+  larynx?: boolean
 }

@@ -8,5 +8,5 @@ export default class Nose implements INose {
 
 export interface INose {
   /** Whether or not the character has a sense of smell. */
-  anosmia: boolean
+  anosmia?: boolean
 }

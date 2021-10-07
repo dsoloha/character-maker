@@ -30,11 +30,11 @@ export default class Name implements IName {
 
 export interface IName {
   /** The character's first name. */
-  first: string
+  first?: string
   /** The character's middle name, if any. */
-  middle: string | null
+  middle?: string | null
   /** The character's last name, if any. */
-  last: string | null
+  last?: string | null
   /** Any nicknames the character has. */
-  nicknames: string[]
+  nicknames?: string[]
 }

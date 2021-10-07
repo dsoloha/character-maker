@@ -8,5 +8,5 @@ export default class Shoulders implements IShoulders {
 
 export interface IShoulders {
   /** The width of the character's shoulders. */
-  width: string
+  width?: string
 }
