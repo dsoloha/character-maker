@@ -1,7 +1,7 @@
 export default class Chest implements IChest {
   size: string
 
-  constructor(options?: { size?: string }) {
+  constructor(options?: IChest) {
     this.size = options?.size ?? ''
   }
 }

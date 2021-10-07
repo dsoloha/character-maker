@@ -1,7 +1,7 @@
 export default class Stomach implements IStomach {
   shape: string
 
-  constructor(options?: { shape?: string }) {
+  constructor(options?: IStomach) {
     this.shape = options?.shape ?? ''
   }
 }

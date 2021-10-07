@@ -4,12 +4,7 @@ export default class Name implements IName {
   last: string | null
   nicknames: string[]
 
-  constructor(options?: {
-    first?: string
-    middle?: string | null
-    last?: string | null
-    nicknames?: string[]
-  }) {
+  constructor(options?: IName) {
     this.first = options?.first ?? ''
     this.middle = options?.middle ?? null
     this.last = options?.last ?? null

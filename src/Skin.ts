@@ -6,14 +6,7 @@ export default class Skin implements ISkin {
   scars: IMark[] | null
   tattoos: IMark[] | null
 
-  constructor(options?: {
-    color?: string
-    birthmarks?: IMark[] | null
-    brands?: IMark[] | null
-    markings?: IMark[] | null
-    scars?: IMark[] | null
-    tattoos?: IMark[] | null
-  }) {
+  constructor(options?: ISkin) {
     this.color = options?.color ?? ''
     this.birthmarks = options?.birthmarks ?? null
     this.brands = options?.brands ?? null

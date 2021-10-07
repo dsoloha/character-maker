@@ -2,7 +2,7 @@ export default class Arms {
   left: IArm
   right: IArm
 
-  constructor(options?: { left?: IArm; right?: IArm }) {
+  constructor(options?: IArms) {
     this.left = options?.left ?? {
       size: options?.left?.size ?? '',
     }
