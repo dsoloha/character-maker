@@ -1,18 +1,11 @@
-export default class Eyes {
-  /** Whether the character has astigmatism. */
+export default class Eyes implements IEyes {
   astigmatism: boolean
-  /** The character's eye color. */
   color: string
-  /** The character's eye colors if different. */
   colors: {
-    /** The character's left eye color. */
     left: string
-    /** The character's right eye color. */
     right: string
   }
-  /** Whether the character is farsighted. */
   farsighted: boolean
-  /** Whether the character is nearsighted. */
   nearsighted: boolean
 
   constructor(options?: {
@@ -34,4 +27,22 @@ export default class Eyes {
     this.farsighted = options?.farsighted ?? false
     this.nearsighted = options?.nearsighted ?? false
   }
+}
+
+export interface IEyes {
+  /** Whether the character has astigmatism. */
+  astigmatism: boolean
+  /** The character's eye color. */
+  color: string
+  /** The character's eye colors if different. */
+  colors: {
+    /** The character's left eye color. */
+    left: string
+    /** The character's right eye color. */
+    right: string
+  }
+  /** Whether the character is farsighted. */
+  farsighted: boolean
+  /** Whether the character is nearsighted. */
+  nearsighted: boolean
 }

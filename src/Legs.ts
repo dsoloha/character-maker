@@ -1,7 +1,5 @@
-export default class Legs {
-  /** Properties pertaining to the character's left leg. */
+export default class Legs implements ILegs {
   left: ILeg
-  /** Properties pertaining to the character's right leg. */
   right: ILeg
 
   constructor(options?: { left?: ILeg; right?: ILeg }) {
@@ -14,7 +12,14 @@ export default class Legs {
   }
 }
 
-interface ILeg {
+export interface ILeg {
   /** Properties pertaining to the leg's size. */
   size: string
+}
+
+export interface ILegs {
+  /** Properties pertaining to the character's left leg. */
+  left: ILeg
+  /** Properties pertaining to the character's right leg. */
+  right: ILeg
 }

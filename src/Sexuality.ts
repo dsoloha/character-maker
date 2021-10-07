@@ -1,13 +1,9 @@
 import { SexType } from './Sex'
 
-export default class Sexuality {
-  /** The character's self-perceived gender. */
+export default class Sexuality implements ISexuality {
   gender: string
-  /** Properties pertaining to the character's attraction to different sexes. */
   attraction: {
-    /** How attracted the character is to males. */
     male: number
-    /** How attracted the character is to females. */
     female: number
   }
 
@@ -26,5 +22,17 @@ export default class Sexuality {
       male: options?.attraction?.male ?? 0,
       female: options?.attraction?.female ?? 0,
     }
+  }
+}
+
+export interface ISexuality {
+  /** The character's self-perceived gender. */
+  gender: string
+  /** Properties pertaining to the character's attraction to different sexes. */
+  attraction: {
+    /** How attracted the character is to males. */
+    male: number
+    /** How attracted the character is to females. */
+    female: number
   }
 }

@@ -1,22 +1,13 @@
-export default class Background {
-  /** The character's birthplace. */
+export default class Background implements IBackground {
   birthplace: string
-  /** Properties pertaining to the character's education. */
   education: {
-    /** The school the character went to. */
     school: string
-    /** How many years the character attended the school. */
     length: number
   } | null
-  /** The character's nationality. */
   nationality: string
-  /** Properties pertaining to the character's occupation. */
   occupation: {
-    /** The character's current occupation. */
     type: string
-    /** The character's annual income in USD. */
     income: number
-    /** How many years the character has had this occupation. */
     length: number
   }
 
@@ -41,5 +32,28 @@ export default class Background {
       income: options?.occupation?.income ?? 0,
       length: options?.occupation?.length ?? 0,
     }
+  }
+}
+
+export interface IBackground {
+  /** The character's birthplace. */
+  birthplace: string
+  /** Properties pertaining to the character's education. */
+  education: {
+    /** The school the character went to. */
+    school: string
+    /** How many years the character attended the school. */
+    length: number
+  } | null
+  /** The character's nationality. */
+  nationality: string
+  /** Properties pertaining to the character's occupation. */
+  occupation: {
+    /** The character's current occupation. */
+    type: string
+    /** The character's annual income in USD. */
+    income: number
+    /** How many years the character has had this occupation. */
+    length: number
   }
 }

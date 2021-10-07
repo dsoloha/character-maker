@@ -1,7 +1,5 @@
 export default class Arms {
-  /** Properties pertaining to the character's left arm. */
   left: IArm
-  /** Properties pertaining to the character's right arm. */
   right: IArm
 
   constructor(options?: { left?: IArm; right?: IArm }) {
@@ -14,7 +12,14 @@ export default class Arms {
   }
 }
 
-interface IArm {
+export interface IArm {
   /** Properties pertaining to the arm's size. */
   size: string
+}
+
+export interface IArms {
+  /** Properties pertaining to the character's left arm. */
+  left: IArm
+  /** Properties pertaining to the character's right arm. */
+  right: IArm
 }
