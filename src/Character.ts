@@ -28,6 +28,7 @@ export default class Character implements ICharacter {
   crotch: Crotch
   eyes: Eyes
   hair: Hair
+  height: number
   legs: Legs
   mouth: Mouth
   name: Name
@@ -41,6 +42,7 @@ export default class Character implements ICharacter {
   speech: Speech
   stomach: Stomach
   waist: Waist
+  weight: number
 
   constructor(options?: ICharacter) {
     this.age = new Age(options?.age)
@@ -50,6 +52,7 @@ export default class Character implements ICharacter {
     this.crotch = new Crotch(options?.crotch)
     this.eyes = new Eyes(options?.eyes)
     this.hair = new Hair(options?.hair)
+    this.height = options?.height ?? 0
     this.legs = new Legs(options?.legs)
     this.mouth = new Mouth(options?.mouth)
     this.name = new Name(options?.name)
@@ -61,6 +64,7 @@ export default class Character implements ICharacter {
     this.speech = new Speech(options?.speech)
     this.stomach = new Stomach(options?.stomach)
     this.waist = new Waist(options?.waist)
+    this.weight = options?.weight ?? 0
 
     this.pronouns = new Pronouns(this.sex.type)
     this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
@@ -82,6 +86,8 @@ export interface ICharacter {
   eyes?: IEyes
   /** Properties pertaining to all hair on the character's body. */
   hair?: IHairs
+  /** How tall the character is, in cm. */
+  height?: number
   /** Properties pertaining to the character's legs. */
   legs?: ILegs
   /** Properties pertaining to the character's mouth. */
@@ -108,4 +114,6 @@ export interface ICharacter {
   stomach?: IStomach
   /** Properties pertaining to the character's waist. */
   waist?: IWaist
+  /** How much the character weighs, in kg. */
+  weight?: number
 }
