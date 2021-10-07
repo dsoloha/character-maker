@@ -32,15 +32,15 @@ export interface IMark {
 
 export interface ISkin {
   /** The color of the character's skin. */
-  color: string
+  color?: string
   /** Any birthmarks the character has. */
-  birthmarks: IMark[] | null
+  birthmarks?: IMark[] | null
   /** Any brands the character has. */
-  brands: IMark[] | null
+  brands?: IMark[] | null
   /** Any markings the character has. */
-  markings: IMark[] | null
+  markings?: IMark[] | null
   /** Any scars the character has. */
-  scars: IMark[] | null
+  scars?: IMark[] | null
   /** Any tattoos the character has. */
-  tattoos: IMark[] | null
+  tattoos?: IMark[] | null
 }

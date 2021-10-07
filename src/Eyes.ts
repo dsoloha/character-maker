@@ -31,18 +31,18 @@ export default class Eyes implements IEyes {
 
 export interface IEyes {
   /** Whether the character has astigmatism. */
-  astigmatism: boolean
+  astigmatism?: boolean
   /** The character's eye color. */
-  color: string
+  color?: string
   /** The character's eye colors if different. */
-  colors: {
+  colors?: {
     /** The character's left eye color. */
     left: string
     /** The character's right eye color. */
     right: string
   }
   /** Whether the character is farsighted. */
-  farsighted: boolean
+  farsighted?: boolean
   /** Whether the character is nearsighted. */
-  nearsighted: boolean
+  nearsighted?: boolean
 }

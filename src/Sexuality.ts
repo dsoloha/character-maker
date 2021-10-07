@@ -27,9 +27,9 @@ export default class Sexuality implements ISexuality {
 
 export interface ISexuality {
   /** The character's self-perceived gender. */
-  gender: string
+  gender?: string
   /** Properties pertaining to the character's attraction to different sexes. */
-  attraction: {
+  attraction?: {
     /** How attracted the character is to males. */
     male: number
     /** How attracted the character is to females. */

@@ -43,17 +43,17 @@ export interface IHair {
 
 export interface IHairs {
   /** The hair on the character's head. */
-  head: IHair
+  head?: IHair
   /** The hair on the character's face. */
-  face: IHair
+  face?: IHair
   /** The hair on the character's underarms. */
-  underarms: IHair
+  underarms?: IHair
   /** The hair on the character's chest. */
-  chest: IHair
+  chest?: IHair
   /** The hair on the character's pubic region. */
-  pubic: IHair
+  pubic?: IHair
   /** The hair on the character's arms. */
-  arm: IHair
+  arm?: IHair
   /** The hair on the character's legs. */
-  leg: IHair
+  leg?: IHair
 }

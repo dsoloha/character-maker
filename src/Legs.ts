@@ -19,7 +19,7 @@ export interface ILeg {
 
 export interface ILegs {
   /** Properties pertaining to the character's left leg. */
-  left: ILeg
+  left?: ILeg
   /** Properties pertaining to the character's right leg. */
-  right: ILeg
+  right?: ILeg
 }

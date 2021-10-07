@@ -8,5 +8,5 @@ export default class Waist implements IWaist {
 
 export interface IWaist {
   /** The size of the character's waist. */
-  size: string
+  size?: string
 }

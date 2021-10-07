@@ -8,5 +8,5 @@ export default class Speech implements ISpeech {
 
 export interface ISpeech {
   /** The character's style of speaking. */
-  style: string
+  style?: string
 }

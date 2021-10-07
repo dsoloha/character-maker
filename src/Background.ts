@@ -37,18 +37,18 @@ export default class Background implements IBackground {
 
 export interface IBackground {
   /** The character's birthplace. */
-  birthplace: string
+  birthplace?: string
   /** Properties pertaining to the character's education. */
-  education: {
+  education?: {
     /** The school the character went to. */
     school: string
     /** How many years the character attended the school. */
     length: number
   } | null
   /** The character's nationality. */
-  nationality: string
+  nationality?: string
   /** Properties pertaining to the character's occupation. */
-  occupation: {
+  occupation?: {
     /** The character's current occupation. */
     type: string
     /** The character's annual income in USD. */

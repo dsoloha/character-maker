@@ -22,12 +22,12 @@ export default class Mouth implements IMouth {
 
 export interface IMouth {
   /** Properties pertaining to the character's teeth. */
-  teeth: {
+  teeth?: {
     /** How many teeth the character has, out of 32. */
     count: number
     /** A description of the character's teeth. */
     description: string
   }
   /** Whether or not the character has a tongue. */
-  tongue: boolean
+  tongue?: boolean
 }
