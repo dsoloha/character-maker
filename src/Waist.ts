@@ -1,7 +1,7 @@
 export default class Waist implements IWaist {
   size: string
 
-  constructor(options?: { size?: string }) {
+  constructor(options?: IWaist) {
     this.size = options?.size ?? ''
   }
 }

@@ -1,7 +1,7 @@
 export default class Neck implements INeck {
   larynx: boolean
 
-  constructor(options?: { larynx?: boolean }) {
+  constructor(options?: INeck) {
     this.larynx = options?.larynx ?? true
   }
 }

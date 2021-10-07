@@ -11,19 +11,7 @@ export default class Background implements IBackground {
     length: number
   }
 
-  constructor(options?: {
-    birthplace?: string
-    education?: {
-      school: string
-      length: number
-    } | null
-    nationality?: string
-    occupation?: {
-      type: string
-      income: number
-      length: number
-    }
-  }) {
+  constructor(options?: IBackground) {
     this.birthplace = options?.birthplace ?? ''
     this.education = options?.education ?? null
     this.nationality = options?.nationality ?? ''

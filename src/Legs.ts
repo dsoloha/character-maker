@@ -2,7 +2,7 @@ export default class Legs implements ILegs {
   left: ILeg
   right: ILeg
 
-  constructor(options?: { left?: ILeg; right?: ILeg }) {
+  constructor(options?: ILegs) {
     this.left = options?.left ?? {
       size: options?.left?.size ?? '',
     }

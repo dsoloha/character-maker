@@ -1,7 +1,7 @@
 export default class Nose implements INose {
   anosmia: boolean
 
-  constructor(options?: { anosmia?: boolean }) {
+  constructor(options?: INose) {
     this.anosmia = options?.anosmia ?? false
   }
 }

@@ -5,13 +5,7 @@ export default class Mouth implements IMouth {
   }
   tongue: boolean
 
-  constructor(options?: {
-    teeth?: {
-      count: number
-      description: string
-    }
-    tongue?: boolean
-  }) {
+  constructor(options?: IMouth) {
     this.teeth = options?.teeth ?? {
       count: 32,
       description: '',

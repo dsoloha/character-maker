@@ -1,7 +1,7 @@
 export default class Speech implements ISpeech {
   style: string
 
-  constructor(options?: { style?: string }) {
+  constructor(options?: ISpeech) {
     this.style = options?.style ?? ''
   }
 }

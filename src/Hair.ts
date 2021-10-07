@@ -7,15 +7,7 @@ export default class Hair implements IHairs {
   arm: IHair
   leg: IHair
 
-  constructor(options?: {
-    head?: IHair
-    face?: IHair
-    underarms?: IHair
-    chest?: IHair
-    pubic?: IHair
-    arm?: IHair
-    leg?: IHair
-  }) {
+  constructor(options?: IHairs) {
     const defaultHair: IHair = {
       color: '',
       length: '',

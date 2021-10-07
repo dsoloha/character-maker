@@ -8,16 +8,7 @@ export default class Eyes implements IEyes {
   farsighted: boolean
   nearsighted: boolean
 
-  constructor(options?: {
-    astigmatism?: boolean
-    color?: string
-    colors?: {
-      left: string
-      right: string
-    }
-    farsighted?: boolean
-    nearsighted?: boolean
-  }) {
+  constructor(options?: IEyes) {
     this.astigmatism = options?.astigmatism ?? false
     this.color = options?.color ?? ''
     this.colors = options?.colors ?? {

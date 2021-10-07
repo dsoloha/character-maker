@@ -7,16 +7,7 @@ export default class Sexuality implements ISexuality {
     female: number
   }
 
-  constructor(
-    sex: SexType,
-    options?: {
-      gender?: string
-      attraction?: {
-        male: number
-        female: number
-      }
-    }
-  ) {
+  constructor(sex: SexType, options?: ISexuality) {
     this.gender = options?.gender ?? sex
     this.attraction = options?.attraction ?? {
       male: options?.attraction?.male ?? 0,
