@@ -56,7 +56,6 @@ export default class Character implements ICharacter {
     this.neck = new Neck(options?.neck)
     this.nose = new Nose(options?.nose)
     this.sex = new Sex(options?.sex)
-    this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
     this.shoulders = new Shoulders(options?.shoulders)
     this.skin = new Skin(options?.skin)
     this.speech = new Speech(options?.speech)
@@ -64,6 +63,7 @@ export default class Character implements ICharacter {
     this.waist = new Waist(options?.waist)
 
     this.pronouns = new Pronouns(this.sex.type)
+    this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
   }
 }
 
