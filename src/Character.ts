@@ -22,15 +22,17 @@ import Waist, { IWaist } from './Waist'
 /** The base character class. */
 export default class Character implements ICharacter {
   age: Age
-  arms: Arms
+  arms: Arms | null
   background: Background
+  build: string
   chest: Chest
   crotch: Crotch
   eyes: Eyes
   hair: Hair
   height: number
-  legs: Legs
+  legs: Legs | null
   mouth: Mouth
+  muscles: string
   name: Name
   neck: Neck
   nose: Nose
@@ -46,15 +48,17 @@ export default class Character implements ICharacter {
 
   constructor(options?: ICharacter) {
     this.age = new Age(options?.age)
-    this.arms = new Arms(options?.arms)
+    this.arms = null
     this.background = new Background(options?.background)
+    this.build = options?.build ?? ''
     this.chest = new Chest(options?.chest)
     this.crotch = new Crotch(options?.crotch)
     this.eyes = new Eyes(options?.eyes)
     this.hair = new Hair(options?.hair)
     this.height = options?.height ?? 0
-    this.legs = new Legs(options?.legs)
+    this.legs = null
     this.mouth = new Mouth(options?.mouth)
+    this.muscles = options?.muscles ?? ''
     this.name = new Name(options?.name)
     this.neck = new Neck(options?.neck)
     this.nose = new Nose(options?.nose)
@@ -75,9 +79,11 @@ export interface ICharacter {
   /** Properties pertaining to the character's age. */
   age?: IAge
   /** Properties pertaining to the character's arms. */
-  arms?: IArms
+  arms?: IArms | null
   /** Properties pertaining to the character's background and upbringing. */
   background?: IBackground
+  /** The character's build (lithe, stocky, etc). */
+  build?: string
   /** Properties pertaining to the character's chest. */
   chest?: IChest
   /** Properties pertaining to the character's crotch. */
@@ -89,9 +95,11 @@ export interface ICharacter {
   /** How tall the character is, in cm. */
   height?: number
   /** Properties pertaining to the character's legs. */
-  legs?: ILegs
+  legs?: ILegs | null
   /** Properties pertaining to the character's mouth. */
   mouth?: IMouth
+  /** How muscular the character is. */
+  muscles?: string
   /** Properties pertaining to the character's name. */
   name?: IName
   /** Properties pertaining to the character's neck. */
