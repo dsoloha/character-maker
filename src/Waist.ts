@@ -1,8 +1,12 @@
-export default class Waist {
-  /** The size of the character's waist. */
+export default class Waist implements IWaist {
   size: string
 
-  constructor(options?: { size?: string }) {
+  constructor(options?: IWaist) {
     this.size = options?.size ?? ''
   }
+}
+
+export interface IWaist {
+  /** The size of the character's waist. */
+  size?: string
 }

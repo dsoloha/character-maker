@@ -1,19 +1,10 @@
-export default class Name {
-  /** The character's first name. */
+export default class Name implements IName {
   first: string
-  /** The character's middle name, if any. */
   middle: string | null
-  /** The character's last name, if any. */
   last: string | null
-  /** Any nicknames the character has. */
   nicknames: string[]
 
-  constructor(options?: {
-    first?: string
-    middle?: string | null
-    last?: string | null
-    nicknames?: string[]
-  }) {
+  constructor(options?: IName) {
     this.first = options?.first ?? ''
     this.middle = options?.middle ?? null
     this.last = options?.last ?? null
@@ -30,4 +21,15 @@ export default class Name {
 
     return name.join(' ')
   }
+}
+
+export interface IName {
+  /** The character's first name. */
+  first?: string
+  /** The character's middle name, if any. */
+  middle?: string | null
+  /** The character's last name, if any. */
+  last?: string | null
+  /** Any nicknames the character has. */
+  nicknames?: string[]
 }
