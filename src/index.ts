@@ -6,6 +6,7 @@ import Chest from './Chest'
 import Crotch from './Crotch'
 import Eyes from './Eyes'
 import Hair from './Hair'
+import Health from './Health'
 import Legs from './Legs'
 import Mouth from './Mouth'
 import Name from './Name'
@@ -29,6 +30,7 @@ export {
   Crotch,
   Eyes,
   Hair,
+  Health,
   Legs,
   Mouth,
   Name,

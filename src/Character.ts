@@ -5,6 +5,7 @@ import Chest from './Chest'
 import Crotch from './Crotch'
 import Eyes from './Eyes'
 import Hair, { IHair } from './Hair'
+import Health from './Health'
 import Legs from './Legs'
 import Mouth from './Mouth'
 import Name from './Name'
@@ -35,6 +36,8 @@ export default class Character {
   eyes: Eyes
   /** Properties pertaining to all hair on the character's body. */
   hair: Hair
+  /** Properties pertaining to the character's health. */
+  health: Health
   /** Properties pertaining to the character's legs. */
   legs: Legs
   /** Properties pertaining to the character's mouth. */
@@ -125,6 +128,10 @@ export default class Character {
       pubic?: IHair
       leg?: IHair
     }
+    health?: {
+      illnesses?: string[]
+      injuries: string[]
+    }
     legs?: {
       left?: {
         size: string
@@ -197,6 +204,7 @@ export default class Character {
     this.crotch = new Crotch(options?.crotch)
     this.eyes = new Eyes(options?.eyes)
     this.hair = new Hair(options?.hair)
+    this.health = new Health(options?.health)
     this.legs = new Legs(options?.legs)
     this.mouth = new Mouth(options?.mouth)
     this.name = new Name(options?.name)
