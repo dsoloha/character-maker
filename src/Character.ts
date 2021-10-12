@@ -5,6 +5,7 @@ import Chest, { IChest } from './Chest'
 import Crotch, { ICrotch } from './Crotch'
 import Eyes, { IEyes } from './Eyes'
 import Hair, { IHairs } from './Hair'
+import Health, { IHealth } from './Health'
 import Legs, { ILegs } from './Legs'
 import Mouth, { IMouth } from './Mouth'
 import Name, { IName } from './Name'
@@ -29,6 +30,7 @@ export default class Character implements ICharacter {
   crotch: Crotch
   eyes: Eyes
   hair: Hair
+  health: Health
   height: number
   legs: Legs | null
   mouth: Mouth
@@ -54,6 +56,7 @@ export default class Character implements ICharacter {
     this.chest = new Chest(options?.chest)
     this.crotch = new Crotch(options?.crotch)
     this.eyes = new Eyes(options?.eyes)
+    this.health = new Health(options?.health)
     this.hair = new Hair(options?.hair)
     this.height = options?.height ?? 0
     this.legs = null
@@ -92,6 +95,8 @@ export interface ICharacter {
   eyes?: IEyes
   /** Properties pertaining to all hair on the character's body. */
   hair?: IHairs
+  /** Properties pertaining to the character's overall health. */
+  health?: IHealth
   /** How tall the character is, in cm. */
   height?: number
   /** Properties pertaining to the character's legs. */
