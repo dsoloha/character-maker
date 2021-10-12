@@ -8,7 +8,7 @@ export default class Health implements IHealth {
   }
 }
 
-interface IHealth {
+export interface IHealth {
   /** Any illnesses the character currently has. */
   illnesses: string[]
   /** Any injuries the character currently has. */
