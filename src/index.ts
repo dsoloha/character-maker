@@ -5,7 +5,9 @@ import Character from './Character'
 import Chest from './Chest'
 import Crotch from './Crotch'
 import Eyes from './Eyes'
+import Foot from './Foot'
 import Hair from './Hair'
+import Hand from './Hand'
 import Health from './Health'
 import Legs from './Legs'
 import Mouth from './Mouth'
@@ -29,7 +31,9 @@ export {
   Chest,
   Crotch,
   Eyes,
+  Foot,
   Hair,
+  Hand,
   Health,
   Legs,
   Mouth,

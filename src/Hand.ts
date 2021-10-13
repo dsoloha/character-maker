@@ -8,5 +8,5 @@ export default class Hand implements IHand {
 
 export interface IHand {
   /** How many fingers the hand has. */
-  fingers: number
+  fingers?: number
 }

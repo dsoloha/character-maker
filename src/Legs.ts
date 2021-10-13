@@ -18,7 +18,7 @@ export default class Legs implements ILegs {
 
 export interface ILeg {
   /** Properties pertaining to the foot on the leg. */
-  foot: IFoot
+  foot?: IFoot
   /** Properties pertaining to the leg's size. */
   size: string
 }

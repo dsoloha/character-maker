@@ -8,5 +8,5 @@ export default class Foot implements IFoot {
 
 export interface IFoot {
   /** How many toes the foot has. */
-  toes: number
+  toes?: number
 }
