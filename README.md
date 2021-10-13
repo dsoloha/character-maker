@@ -1,71 +1,55 @@
-# character-maker
 
-`character-maker` is a tool designed to help you create a new realistic character for your game, story, etc, quickly and easily.
+# character-creator
 
-**Note:** this library is currently heavily WIP and subject to changes. Use at your own risk.
+This site aims to help you create new characters for your next novel, story, game, TV show, etc.
 
-## Usage
+[![Issues](https://img.shields.io/github/issues/dsoloha/character-maker)](https://github.com/dsoloha/character-maker/issues)
+[![Stars](https://img.shields.io/github/stars/dsoloha/character-maker)](https://github.com/dsoloha/character-maker/stargazers)
+[![ISC License](https://img.shields.io/github/license/dsoloha/character-maker)](https://opensource.org/licenses/ISC)
 
-Install `character-maker`:
+## Usage/Examples
 
-```sh
-npm install character-maker
-```
+```javascript
+import Character from 'character-maker'
 
-Import the module:
-
-```js
-import { Character } from "character-maker";
-```
-
-Create a new character:
-
-```js
 const character = new Character();
 
-// or optionally with parameters
+// or optionally with parameters:
 
 const character = new Character({
-  name: {
-    first: 'John',
-    last: 'Smith',
-  }
-});
+    name: {
+        first: 'John',
+        last: 'Smith',
+    }
+})
 ```
 
-See `API` for more parameter options.
+All parameters available can be found [here](https://dsoloha.github.io/character-maker/).
 
-## API
+## API Reference
 
-| Option        | Value               | Type                                   | Description                                                                                                                                            | Default  |
-|---------------|---------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| `age`         |                     | `object`                               | Properties pertaining to the character's age.                                                                                                          |          |
-| `age.birth`   |                     | `object`                               | Properties pertaining to the character's birthtime.                                                                                                    |          |
-|               | `day`               | `number`                               | On which day of the month the character was born.                                                                                                      | `1`      |
-|               | `month`             | `number`                               | During which month of the year the character was born.                                                                                                 | `1`      |
-|               | `year`              | `number`                               | During what year the character was born.                                                                                                               | `1`      |
-| `background`  |                     | `object`                               | Properties pertaining to the character's background and upbringing.                                                                                    |          |
-|               | `birthplace`        | `string`                               | The character's birthplace.                                                                                                                            | `''`     |
-| `eyes`        |                     | `object`                               | Properties pertaining to the character's eyes.                                                                                                         |          |
-| `eyes.color`  |                     | `string`                               | The character's eye color.                                                                                                     | `''`     |
-| `eyes.colors` |                     | `object`                               | The character's eye colors if different.                                                                                                     | `''`     |
-|               | `left`              | `string`                               | The character's left eye color.                                                                                                                        |          |
-|               | `right`             | `string`                               | The character's right eye color.                                                                                                                       |          |
-| `hair`        |                     | `object`                               | Properties pertaining to all hair on the character's body.                                                                                             |          |
-|               | `color`             | `string`                               | The color of the character's hair.                                                                                                                     | `''`     |
-|               | `length`            | `string\|number`                       | The length of the character's hair.  Accepts either a descriptor ("short", "buzzed", etc.) or an integer in centimeters.                               | `''`     |
-|               | `style`             | `string`                               | The style of the character's hair.                                                                                                                     | `''`     |
-| `name`        |                     | `object`                               | Properties pertaining to the character's name.                                                                                                         |          |
-|               | `first`             | `string`                               | The character's first name.                                                                                                                            | `''`     |
-|               | `middle`            | `string\|null`                         | The character's middle name, if any.                                                                                                                   | `null`   |
-|               | `last`              | `string\|null`                         | The character's last name, if any.                                                                                                                     | `null`   |
-|               | `nicknames`         | `string[]`                             | Any nicknames the character has.                                                                                                                       | `[]`     |
-| `pronouns`    |                     | `object`                               | The pronouns assigned to the character.                                                                                                                |          |
-|               | `subject`           | `string`                               | The subject form of the character's pronouns ("he", "she", "they", "it").                                                                              |          |
-|               | `object`            | `string`                               | The object form of the character's pronouns ("him", "her", "them", "it").                                                                              |          |
-|               | `possessive`        | `string`                               | The possessive form of the character's pronouns ("his", "her", "their", "its").                                                                        |          |
-|               | `possessivePronoun` | `string`                               | The possessive pronoun form of the character's pronouns ("his", "hers", "theirs", "its").                                                              |          |
-|               | `noun`              | `string`                               | The noun form of the character's pronouns ("man", "woman", "people", "thing").                                                                         |          |
-|               | `reflexive`         | `string`                               | The reflexive form of the character's pronouns ("himself", "herself", "themselves", "itself").                                                         |          |
-| `sex`         |                     | `object`                               | Properties pertaining to the character's biological sex.  **Note:** this does not include gender. This will be found in an upcoming `Sexuality` class. |          |
-|               | `type`              | `'male'\|'female'\|'plural'\|'neuter'` | The biological sex of the character.                                                                                                                   | `'male'` |
+All parameters are optional.
+
+### Age
+
+Call using `Character().age`.
+
+| Parameter         | Type     | Description                                            |
+| :---------------- | :------- | :----------------------------------------------------- |
+| `age`             | `object` | Properties pertaining to the character's age.          |
+| `age.birth`       | `object` | Properties pertaining to the character's birthtime.    |
+| `age.birth.day`   | `number` | On which day of the month the character was born.      |
+| `age.birth.month` | `number` | During which month of the year the character was born. |
+| `age.birth.year`  | `number` | During what year the character was born.               |
+
+## Documentation
+
+View the full documentation [here](https://dsoloha.github.io/character-maker/).
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
