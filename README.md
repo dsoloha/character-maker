@@ -35,6 +35,7 @@ The following properties are available on an instance of the `Character` class:
 - `.age`
 - `.arms`
 - `.background`
+- `.build`
 - `.chest`
 - `.crotch`
 - `.eyes`
@@ -42,8 +43,10 @@ The following properties are available on an instance of the `Character` class:
 - `.hair`
 - `.hand`
 - `.health`
+- `.height`
 - `.legs`
 - `.mouth`
+- `.muscles`
 - `.name`
 - `.neck`
 - `.nose`
@@ -55,6 +58,7 @@ The following properties are available on an instance of the `Character` class:
 - `.speech`
 - `.stomach`
 - `.waist`
+- `.weight`
 
 View all sub-properties and more documentation [here](https://dsoloha.github.io/character-maker/).
 
