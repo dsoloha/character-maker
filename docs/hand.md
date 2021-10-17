@@ -1,38 +1,27 @@
-# `.`
+# `.hand`
 
-`class `
+`class Hand`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the hand on the arm.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Hand } from 'character-maker'
 
-const VAR = new CLASS()
+const hand = new Hand()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const hand = new Hand({
+  fingers: 4,
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property  | Type     | Description                    | Optional |
+| :-------- | :------- | :----------------------------- | :------- |
+| `fingers` | `number` | How many fingers the hand has. | Yes      |
