@@ -1,5 +1,5 @@
 
-# character-creator
+# character-maker
 
 This site aims to help you create new characters for your next novel, story, game, TV show, etc.
 
@@ -31,8 +31,6 @@ All parameters available can be found [here](https://dsoloha.github.io/character
 All parameters are optional.
 
 ### Age
-
-Call using `Character().age`.
 
 | Parameter         | Type     | Description                                            |
 | :---------------- | :------- | :----------------------------------------------------- |
