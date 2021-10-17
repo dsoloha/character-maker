@@ -12,7 +12,7 @@ This site aims to help you create new characters for your next novel, story, gam
 ```javascript
 import Character from 'character-maker'
 
-const character = new Character();
+const character = new Character()
 
 // or optionally with parameters:
 
