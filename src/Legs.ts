@@ -20,7 +20,7 @@ export interface ILeg {
   /** Properties pertaining to the foot on the leg. */
   foot?: IFoot
   /** Properties pertaining to the leg's size. */
-  size: string
+  size?: string
 }
 
 export interface ILegs {
