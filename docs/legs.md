@@ -16,6 +16,9 @@ const legs = new Legs()
 // or optionally with parameters:
 
 const legs = new Legs({
+  left: {
+    size: 'huge',
+  }
 })
 ```
 
