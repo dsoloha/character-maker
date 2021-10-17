@@ -39,9 +39,7 @@ The following properties are available on an instance of the `Character` class:
 - `.chest`
 - `.crotch`
 - `.eyes`
-- `.foot`
 - `.hair`
-- `.hand`
 - `.health`
 - `.height`
 - `.legs`

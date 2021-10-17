@@ -1,6 +1,6 @@
-# `.`
+# `.foot`
 
-`class `
+`class Foot`
 
 ## Description
 
