@@ -30,19 +30,33 @@ All parameters available can be found [here](https://dsoloha.github.io/character
 
 All parameters are optional.
 
-### Age
+The following properties are available on an instance of the `Character` class:
 
-| Parameter         | Type     | Description                                            |
-| :---------------- | :------- | :----------------------------------------------------- |
-| `age`             | `object` | Properties pertaining to the character's age.          |
-| `age.birth`       | `object` | Properties pertaining to the character's birthtime.    |
-| `age.birth.day`   | `number` | On which day of the month the character was born.      |
-| `age.birth.month` | `number` | During which month of the year the character was born. |
-| `age.birth.year`  | `number` | During what year the character was born.               |
+- `.age`
+- `.arms`
+- `.background`
+- `.chest`
+- `.crotch`
+- `.eyes`
+- `.foot`
+- `.hair`
+- `.hand`
+- `.health`
+- `.legs`
+- `.mouth`
+- `.name`
+- `.neck`
+- `.nose`
+- `.pronouns`
+- `.sex`
+- `.sexuality`
+- `.shoulders`
+- `.skin`
+- `.speech`
+- `.stomach`
+- `.waist`
 
-## Documentation
-
-View the full documentation [here](https://dsoloha.github.io/character-maker/).
+View all sub-properties and more documentation [here](https://dsoloha.github.io/character-maker/).
 
 ## Contributing
 
