@@ -1,38 +1,27 @@
-# `.`
+# `.chest`
 
-`class `
+`class Chest`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's chest.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Chest } from 'character-maker'
 
-const VAR = new CLASS()
+const chest = new Chest()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const chest = new Chest({
+  size: 'flat',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type     | Description                        | Optional |
+| :------- | :------- | :--------------------------------- | :------- |
+| `size`   | `string` | The size of the character's chest. | Yes      |
