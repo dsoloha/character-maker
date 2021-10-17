@@ -32,7 +32,6 @@ const arms = new Arms({
 
 Properties pertaining to the character's left arm.
 
-
 #### Properties
 
 | Property | Type     | Description                                   | Optional |
