@@ -21,9 +21,9 @@ export interface ISexuality {
   gender?: string
   /** Properties pertaining to the character's attraction to different sexes. */
   attraction?: {
-    /** How attracted the character is to males. */
+    /** How attracted the character is to males, on a scale of 0 - 100. */
     male: number
-    /** How attracted the character is to females. */
+    /** How attracted the character is to females, on a scale of 0 - 100. */
     female: number
   }
 }

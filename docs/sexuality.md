@@ -1,31 +1,33 @@
-# `.`
+# `.sexuality`
 
-`class `
+`class Sexuality`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's sexuality.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Sexuality } from 'character-maker'
 
-const VAR = new CLASS()
+const sexuality = new Sexuality()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const sexuality = new Sexuality({
+  gender: 'male',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property     | Type     | Description                                                             | Optional |
+| :----------- | :------- | :---------------------------------------------------------------------- | :------- |
+| `gender`     | `string` | The character's self-perceived gender.                                  | Yes      |
+| `attraction` | `object` | Properties pertaining to the character's attraction to different sexes. | Yes      |
 
-### `.NAME`
+### `.attraction`
 
 #### Description
 
@@ -33,6 +35,7 @@ DESCRIPTION
 
 #### Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type     | Description                                                       | Optional |
+| :------- | :------- | :---------------------------------------------------------------- | :------- |
+| `male`   | `number` | How attracted the character is to males, on a scale of 0 - 100.   | Yes      |
+| `female` | `number` | How attracted the character is to females, on a scale of 0 - 100. | Yes      |
