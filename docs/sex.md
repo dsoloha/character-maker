@@ -1,38 +1,27 @@
-# `.`
+# `.sex`
 
-`class `
+`class Sex`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's biological sex.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Sex } from 'character-maker'
 
-const VAR = new CLASS()
+const sex = new Sex()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const sex = new Sex({
+  type: 'male',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type                                | Description                          | Optional |
+| :------- | :---------------------------------- | :----------------------------------- | :------- |
+| `type`   | `'male'|'female'|'plural'|'neuter'` | The biological sex of the character. | Yes      |
