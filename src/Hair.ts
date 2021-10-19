@@ -25,11 +25,11 @@ export default class Hair implements IHairs {
 }
 
 export interface IHair {
-  /** The color of the character's hair. */
+  /** The color of the hair. */
   color: string
-  /** The length of the character's hair. */
+  /** The length of the hair. */
   length: string
-  /** The style of the character's hair. */
+  /** The style of the hair. */
   style: string
 }
 

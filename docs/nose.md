@@ -1,38 +1,27 @@
-# `.`
+# `.nose`
 
-`class `
+`class Nose`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's nose.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Nose } from 'character-maker'
 
-const VAR = new CLASS()
+const nose = new Nose()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const nose = new Nose({
+  anosmia: true
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property  | Type      | Description                                                  | Optional |
+| :-------- | :-------- | :----------------------------------------------------------- | :------- |
+| `anosmia` | `boolean` | Whether or not the character has a lack of a sense of smell. | Yes      |

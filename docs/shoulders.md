@@ -1,38 +1,27 @@
-# `.`
+# `.shoulders`
 
-`class `
+`class Shoulders`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's shoulders.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Shoulders } from 'character-maker'
 
-const VAR = new CLASS()
+const shoulders = new Shoulders()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const shoulders = new Shoulders({
+  width: 'broad',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type     | Description                             | Optional |
+| :------- | :------- | :-------------------------------------- | :------- |
+| `width`  | `string` | The width of the character's shoulders. | Yes      |

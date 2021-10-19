@@ -1,38 +1,57 @@
-# `.`
+# `.background`
 
-`class `
+`class Background`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's background and upbringing.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Background } from 'character-maker'
 
-const VAR = new CLASS()
+const background = new Background()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const background = new Background({
+  birthplace: 'London',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property      | Type          | Description                                          | Optional |
+| :------------ | :------------ | :--------------------------------------------------- | :------- |
+| `birthplace`  | `string`      | The character's birthplace.                          | Yes      |
+| `education`   | `object|null` | Properties pertaining to the character's education.  | Yes      |
+| `nationality` | `string`      | The character's nationality.                         | Yes      |
+| `occupation`  | `object`      | Properties pertaining to the character's occupation. | Yes      |
 
-### `.NAME`
+### `.education`
 
 #### Description
 
-DESCRIPTION
+Properties pertaining to the character's education.
 
 #### Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type     | Description                                       | Optional |
+| :------- | :------- | :------------------------------------------------ | :------- |
+| `school` | `string` | The school the character went to.                 | No       |
+| `length` | `number` | How many years the character attended the school. | No       |
+
+### `.occupation`
+
+#### Description
+
+Properties pertaining to the character's occupation.
+
+#### Properties
+
+| Property | Type     | Description                                           | Optional |
+| :------- | :------- | :---------------------------------------------------- | :------- |
+| `type`   | `string` | The character's current occupation.                   | Yes      |
+| `income` | `number` | The character's annual income in USD.                 | Yes      |
+| `length` | `number` | How many years the character has had this occupation. | Yes      |

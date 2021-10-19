@@ -1,38 +1,27 @@
-# `.`
+# `.foot`
 
-`class `
+`class Foot`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the foot on the leg.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Foot } from 'character-maker'
 
-const VAR = new CLASS()
+const foot = new Foot()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const foot = new Legs({
+  toes: 4,
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type     | Description                 | Optional |
+| :------- | :------- | :-------------------------- | :------- |
+| `toes`   | `number` | How many toes the foot has. | Yes      |

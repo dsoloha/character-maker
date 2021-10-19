@@ -1,38 +1,31 @@
-# `.`
+# `.name`
 
-`class `
+`class Name`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's name.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Name } from 'character-maker'
 
-const VAR = new CLASS()
+const name = new Name()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const name = new Name({
+  first: 'John',
+  last: 'Smith',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property    | Type          | Description                          | Optional |
+| :---------- | :------------ | :----------------------------------- | :------- |
+| `first`     | `string`      | The character's first name.          | Yes      |
+| `middle`    | `string|null` | The character's middle name, if any. | Yes      |
+| `last`      | `string|null` | The character's last name, if any.   | Yes      |
+| `nicknames` | `string[]`    | Any nicknames the character has.     | Yes      |

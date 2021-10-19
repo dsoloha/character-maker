@@ -1,38 +1,27 @@
-# `.`
+# `.waist`
 
-`class `
+`class Waist`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's waist.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Waist } from 'character-maker'
 
-const VAR = new CLASS()
+const waist = new Waist()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const waist = new Waist({
+  size: 'thin',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type     | Description                        | Optional |
+| :------- | :------- | :--------------------------------- | :------- |
+| `size`   | `string` | The size of the character's waist. | Yes      |

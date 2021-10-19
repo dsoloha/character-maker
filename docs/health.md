@@ -1,38 +1,28 @@
-# `.`
+# `.health`
 
-`class `
+`class Health`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's overall health.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Health } from 'character-maker'
 
-const VAR = new CLASS()
+const health = new Health()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const health = new Health({
+  illnesses: ['common cold'],
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property    | Type       | Description                                | Optional |
+| :---------- | :--------- | :----------------------------------------- | :------- |
+| `illnesses` | `string[]` | Any illnesses the character currently has. | Yes      |
+| `injuries`  | `string[]` | Any injuries the character currently has.  | Yes      |
