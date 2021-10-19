@@ -1,38 +1,27 @@
-# `.`
+# `.speech`
 
-`class `
+`class Speech`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's speech.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Speech } from 'character-maker'
 
-const VAR = new CLASS()
+const speech = new Speech()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const speech = new Speech({
+  style: 'posh',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type     | Description                        | Optional |
+| :------- | :------- | :--------------------------------- | :------- |
+| `style`  | `string` | The character's style of speaking. | Yes      |
