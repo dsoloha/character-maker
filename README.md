@@ -28,7 +28,7 @@ All parameters available can be found [here](https://dsoloha.github.io/character
 
 ## API Reference
 
-All parameters are optional.
+All parameters listed here are optional.
 
 The following properties are available on an instance of the `Character` class:
 

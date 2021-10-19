@@ -31,7 +31,7 @@ const sexuality = new Sexuality({
 
 #### Description
 
-DESCRIPTION
+Properties pertaining to the character's attraction to different sexes.
 
 #### Properties
 
