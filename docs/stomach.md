@@ -1,38 +1,27 @@
-# `.`
+# `.stomach`
 
-`class `
+`class Stomach`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's stomach.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Stomach } from 'character-maker'
 
-const VAR = new CLASS()
+const stomach = new Stomach()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const stomach = new Stomach({
+  shape: 'flat',
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property | Type     | Description                           | Optional |
+| :------- | :------- | :------------------------------------ | :------- |
+| `shape`  | `string` | The shape of the character's stomach. | Yes      |
