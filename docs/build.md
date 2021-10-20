@@ -1,38 +1,30 @@
-# `.`
+# `.build`
 
-`class `
+`class Build`
 
 ## Description
 
-DESCRIPTION
+Properties pertaining to the character's physical build.
 
 ## Declaration
 
 ```js
-import { CLASS } from 'character-maker'
+import { Build } from 'character-maker'
 
-const VAR = new CLASS()
+const build = new Build()
 
 // or optionally with parameters:
 
-const VAR = new CLASS({
+const build = new Build({
+  height: 180,
 })
 ```
 
 ## Properties
 
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
-
-### `.NAME`
-
-#### Description
-
-DESCRIPTION
-
-#### Properties
-
-| Property | Type     | Description | Optional |
-| :------- | :------- | :---------- | :------- |
-| `NAME`   | `TYPE`   | DESCRIPTION | Yes      |
+| Property  | Type     | Description                                      | Optional |
+| :-------- | :------- | :----------------------------------------------- | :------- |
+| `height`  | `number` | How tall the character is, in cm.                | Yes      |
+| `muscles` | `string` | How muscular the character is.                   | Yes      |
+| `type`    | `string` | The character's build type (lithe, stocky, etc). | Yes      |
+| `weight`  | `number` | How much the character weighs, in kg.            | Yes      |
