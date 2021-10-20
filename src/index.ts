@@ -1,6 +1,7 @@
 import Age from './Age'
 import Arms from './Arms'
 import Background from './Background'
+import Build from './Build'
 import Character from './Character'
 import Chest from './Chest'
 import Crotch from './Crotch'
@@ -27,6 +28,7 @@ export {
   Age,
   Arms,
   Background,
+  Build,
   Character,
   Chest,
   Crotch,

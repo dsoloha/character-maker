@@ -1,6 +1,7 @@
 import Age, { IAge } from './Age'
 import Arms, { IArms } from './Arms'
 import Background, { IBackground } from './Background'
+import Build, { IBuild } from './Build'
 import Chest, { IChest } from './Chest'
 import Crotch, { ICrotch } from './Crotch'
 import Eyes, { IEyes } from './Eyes'
@@ -25,16 +26,14 @@ export default class Character implements ICharacter {
   age: Age
   arms: Arms | null
   background: Background
-  build: string
+  build: Build
   chest: Chest
   crotch: Crotch
   eyes: Eyes
   hair: Hair
   health: Health
-  height: number
   legs: Legs | null
   mouth: Mouth
-  muscles: string
   name: Name
   neck: Neck
   nose: Nose
@@ -46,22 +45,19 @@ export default class Character implements ICharacter {
   speech: Speech
   stomach: Stomach
   waist: Waist
-  weight: number
 
   constructor(options?: ICharacter) {
     this.age = new Age(options?.age)
     this.arms = null
     this.background = new Background(options?.background)
-    this.build = options?.build ?? ''
+    this.build = new Build(options?.build)
     this.chest = new Chest(options?.chest)
     this.crotch = new Crotch(options?.crotch)
     this.eyes = new Eyes(options?.eyes)
     this.health = new Health(options?.health)
     this.hair = new Hair(options?.hair)
-    this.height = options?.height ?? 0
     this.legs = null
     this.mouth = new Mouth(options?.mouth)
-    this.muscles = options?.muscles ?? ''
     this.name = new Name(options?.name)
     this.neck = new Neck(options?.neck)
     this.nose = new Nose(options?.nose)
@@ -71,7 +67,6 @@ export default class Character implements ICharacter {
     this.speech = new Speech(options?.speech)
     this.stomach = new Stomach(options?.stomach)
     this.waist = new Waist(options?.waist)
-    this.weight = options?.weight ?? 0
 
     this.pronouns = new Pronouns(this.sex.type)
     this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
@@ -85,8 +80,8 @@ export interface ICharacter {
   arms?: IArms | null
   /** Properties pertaining to the character's background and upbringing. */
   background?: IBackground
-  /** The character's build (lithe, stocky, etc). */
-  build?: string
+  /** Properties pertaining to the character's physical build. */
+  build?: IBuild
   /** Properties pertaining to the character's chest. */
   chest?: IChest
   /** Properties pertaining to the character's crotch. */
@@ -97,14 +92,10 @@ export interface ICharacter {
   hair?: IHairs
   /** Properties pertaining to the character's overall health. */
   health?: IHealth
-  /** How tall the character is, in cm. */
-  height?: number
   /** Properties pertaining to the character's legs. */
   legs?: ILegs | null
   /** Properties pertaining to the character's mouth. */
   mouth?: IMouth
-  /** How muscular the character is. */
-  muscles?: string
   /** Properties pertaining to the character's name. */
   name?: IName
   /** Properties pertaining to the character's neck. */
@@ -127,6 +118,4 @@ export interface ICharacter {
   stomach?: IStomach
   /** Properties pertaining to the character's waist. */
   waist?: IWaist
-  /** How much the character weighs, in kg. */
-  weight?: number
 }
