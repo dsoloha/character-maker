@@ -3,7 +3,7 @@
  * @param min The minimum value of the range.
  * @param max The maximum value of the range.
  * @param skew How much to skew the range to either side of the mean value.
- * Greater than positive shifts to the left, negative values shift to the right.
+ * Greater than one shifts towards `min`, less than one shifts towards `max`.
  */
 export function gaussian(min = 0, max = 0, skew = 1): number {
   let u = 0
