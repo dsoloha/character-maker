@@ -1,3 +1,4 @@
+import '../lib/array'
 export default class Hair implements IHairs {
   head: IHair
   face: IHair
@@ -24,6 +25,152 @@ export default class Hair implements IHairs {
     this.pubic = options?.pubic ?? defaultHair
     this.arm = options?.arm ?? defaultHair
     this.leg = options?.leg ?? defaultHair
+  }
+
+  generateColor(): string {
+    const colors = ['brown', 'blond', 'red']
+
+    return colors.random()
+  }
+
+  generateLength(): string {
+    const lengths = ['short', 'medium', 'long']
+
+    return lengths.random()
+  }
+
+  generateStyle(): string {
+    const styles = ['neat', 'curly', 'straight']
+
+    return styles.random()
+  }
+
+  generateHead(options?: {
+    color?: string
+    length?: string
+    style?: string
+  }): IHair {
+    const color = options?.color ?? this.generateColor()
+    const length = options?.length ?? this.generateLength()
+    const style = options?.style ?? this.generateStyle()
+
+    return {
+      color,
+      length,
+      style,
+    }
+  }
+
+  generateFace(options?: {
+    color?: string
+    length?: string
+    style?: string
+  }): IHair {
+    const color = options?.color ?? this.generateColor()
+    const length = options?.length ?? this.generateLength()
+    const style = options?.style ?? this.generateStyle()
+
+    return {
+      color,
+      length,
+      style,
+    }
+  }
+
+  generateUnderarms(options?: {
+    color?: string
+    length?: string
+    style?: string
+  }): IHair {
+    const color = options?.color ?? this.generateColor()
+    const length = options?.length ?? this.generateLength()
+    const style = options?.style ?? this.generateStyle()
+
+    return {
+      color,
+      length,
+      style,
+    }
+  }
+
+  generateChest(options?: {
+    color?: string
+    length?: string
+    style?: string
+  }): IHair {
+    const color = options?.color ?? this.generateColor()
+    const length = options?.length ?? this.generateLength()
+    const style = options?.style ?? this.generateStyle()
+
+    return {
+      color,
+      length,
+      style,
+    }
+  }
+
+  generatePubic(options?: {
+    color?: string
+    length?: string
+    style?: string
+  }): IHair {
+    const color = options?.color ?? this.generateColor()
+    const length = options?.length ?? this.generateLength()
+    const style = options?.style ?? this.generateStyle()
+
+    return {
+      color,
+      length,
+      style,
+    }
+  }
+
+  generateArm(options?: {
+    color?: string
+    length?: string
+    style?: string
+  }): IHair {
+    const color = options?.color ?? this.generateColor()
+    const length = options?.length ?? this.generateLength()
+    const style = options?.style ?? this.generateStyle()
+
+    return {
+      color,
+      length,
+      style,
+    }
+  }
+
+  generateLeg(options?: {
+    color?: string
+    length?: string
+    style?: string
+  }): IHair {
+    const color = options?.color ?? this.generateColor()
+    const length = options?.length ?? this.generateLength()
+    const style = options?.style ?? this.generateStyle()
+
+    return {
+      color,
+      length,
+      style,
+    }
+  }
+
+  generate(options?: {
+    color?: string
+    length?: string
+    style?: string
+  }): IHairs {
+    return {
+      head: this.generateHead(options),
+      face: this.generateFace(options),
+      underarms: this.generateUnderarms(options),
+      chest: this.generateChest(options),
+      pubic: this.generatePubic(options),
+      arm: this.generateArm(options),
+      leg: this.generateLeg(options),
+    }
   }
 }
 
