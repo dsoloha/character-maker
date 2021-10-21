@@ -15,7 +15,6 @@ export default class Age implements IAge {
     }
   }
 
-  /** Generates a new birth date. */
   generateBirth(): IBirth {
     let day: number
 
@@ -39,7 +38,6 @@ export default class Age implements IAge {
     }
   }
 
-  /** Generates a new random age. */
   generate(): IAge {
     const age = {
       birth: this.generateBirth(),
