@@ -1,3 +1,6 @@
+import { random } from '../lib/array'
+import { gaussian } from '../lib/number'
+
 export default class Eyes implements IEyes {
   astigmatism: boolean
   color: string
@@ -17,6 +20,64 @@ export default class Eyes implements IEyes {
     }
     this.farsighted = options?.farsighted ?? false
     this.nearsighted = options?.nearsighted ?? false
+  }
+
+  generateAstigmatism(): boolean {
+    if (gaussian(1, 100) > 70) return true
+
+    return false
+  }
+
+  // TODO: add options for race
+  generateColor(): string {
+    const colors = ['green', 'blue', 'brown']
+
+    return random(colors)
+  }
+
+  generateColors(): { left: string; right: string } {
+    const colors = ['green', 'blue', 'brown']
+    let eyes: [string, string]
+
+    if (gaussian(1, 100, 1.5) > 99) {
+      const left = random(colors)
+      let right: string = random(colors)
+
+      while (right === left) right = random(colors)
+
+      eyes = [left, right]
+    } else {
+      const color = random(colors)
+
+      eyes = [color, color]
+    }
+
+    return {
+      left: eyes[0],
+      right: eyes[1],
+    }
+  }
+
+  generateFarsighted(): boolean {
+    if (gaussian(1, 100) > 90) return true
+
+    return false
+  }
+
+  generateNearsighted(): boolean {
+    if (gaussian(1, 100) > 65) return true
+
+    return false
+  }
+
+  generate(): IEyes {
+    return {
+      astigmatism: this.generateAstigmatism(),
+      color: this.generateColor(),
+      colors: this.generateColors(),
+      farsighted: this.generateFarsighted(),
+      nearsighted: this.generateNearsighted(),
+    }
   }
 }
 
