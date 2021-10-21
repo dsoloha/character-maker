@@ -18,7 +18,7 @@ export default class Arms {
   }
 
   generateHand(): IHand | null {
-    return gaussian(1, 100) > 95 ? null : new Hand()
+    return gaussian(1, 100) > 95 ? null : new Hand().generate()
   }
 
   generateArm(): IArm {
