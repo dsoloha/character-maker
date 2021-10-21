@@ -1,4 +1,4 @@
-import { random } from '../lib/array'
+import '../lib/array'
 import { gaussian } from '../lib/number'
 
 export default class Crotch implements ICrotch {
@@ -32,7 +32,7 @@ export default class Crotch implements ICrotch {
   generateAnus(): IAnus {
     // TODO: add more descriptions
     const descriptions = ['unremarkable']
-    const description = random(descriptions)
+    const description = descriptions.random()
 
     return {
       description,
@@ -58,7 +58,7 @@ export default class Crotch implements ICrotch {
 
   generatePenis(): IPenis {
     const sizes = ['small', 'average', 'large', 'huge']
-    const size = random(sizes)
+    const size = sizes.random()
 
     return {
       size,
@@ -67,7 +67,7 @@ export default class Crotch implements ICrotch {
 
   generateTesticles(): ITesticles {
     const sizes = ['small', 'average', 'large', 'huge']
-    const size = random(sizes)
+    const size = sizes.random()
     const vasectomy = gaussian(1, 100) > 75 ? true : false
 
     return {
@@ -78,7 +78,7 @@ export default class Crotch implements ICrotch {
 
   generateVagina(): IVagina {
     const descriptions = ['unremarkable']
-    const description = random(descriptions)
+    const description = descriptions.random()
 
     return {
       description,

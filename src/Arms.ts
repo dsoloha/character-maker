@@ -1,5 +1,5 @@
+import '../lib/array'
 import { gaussian } from '../lib/number'
-import { random } from '../lib/array'
 import Hand, { IHand } from './Hand'
 
 export default class Arms {
@@ -31,7 +31,8 @@ export default class Arms {
   generate(): IArms {
     const left = this.generateArm()
     const right = this.generateArm()
-    const size: string = random(['small', 'average', 'large', 'huge'])
+    const sizes = ['small', 'average', 'large', 'huge']
+    const size: string = sizes.random()
 
     left.size = size
     right.size = size

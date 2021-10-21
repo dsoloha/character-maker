@@ -1,4 +1,4 @@
-import { random } from '../lib/array';
+import '../lib/array'
 import { gaussian } from '../lib/number'
 import { SexType } from './Sex'
 
@@ -27,20 +27,20 @@ export default class Build implements IBuild {
   generateMuscles(options: { sex: SexType } = { sex: 'male' }): string {
     const muscles = ['weak', 'average', 'strong', 'jacked']
 
-    if (options?.sex === 'male') return random(muscles)
-    else if (options?.sex === 'female') return random(muscles)
+    if (options?.sex === 'male') return muscles.random()
+    else if (options?.sex === 'female') return muscles.random()
 
-    return random(muscles)
+    return muscles.random()
   }
 
   // TODO: add more types
   generateType(options: { sex: SexType } = { sex: 'male' }): string {
     const types = ['lithe', 'average', 'stocky']
 
-    if (options?.sex === 'male') return random(types)
-    else if (options?.sex === 'female') return random(types)
+    if (options?.sex === 'male') return types.random()
+    else if (options?.sex === 'female') return types.random()
 
-    return random(types)
+    return types.random()
   }
 
   generateWeight(options: { sex: SexType } = { sex: 'male' }): number {

@@ -1,4 +1,4 @@
-import { random } from '../lib/array'
+import '../lib/array'
 
 export default class Chest implements IChest {
   size: string
@@ -10,7 +10,7 @@ export default class Chest implements IChest {
   generateChest(): string {
     const sizes = ['flat', 'small', 'medium', 'large', 'huge']
 
-    return random(sizes)
+    return sizes.random()
   }
 
   generate(): IChest {

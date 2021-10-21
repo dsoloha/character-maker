@@ -1,4 +1,4 @@
-import { random } from '../lib/array'
+import '../lib/array'
 import { gaussian } from '../lib/number'
 
 export default class Eyes implements IEyes {
@@ -32,7 +32,7 @@ export default class Eyes implements IEyes {
   generateColor(): string {
     const colors = ['green', 'blue', 'brown']
 
-    return random(colors)
+    return colors.random()
   }
 
   generateColors(): { left: string; right: string } {
@@ -40,14 +40,14 @@ export default class Eyes implements IEyes {
     let eyes: [string, string]
 
     if (gaussian(1, 100, 1.5) > 99) {
-      const left = random(colors)
-      let right: string = random(colors)
+      const left = colors.random()
+      let right: string = colors.random()
 
-      while (right === left) right = random(colors)
+      while (right === left) right = colors.random()
 
       eyes = [left, right]
     } else {
-      const color = random(colors)
+      const color = colors.random()
 
       eyes = [color, color]
     }
