@@ -49,6 +49,15 @@ export default class Build implements IBuild {
 
     return gaussian()
   }
+
+  generate(): IBuild {
+    return {
+      height: this.generateHeight(),
+      muscles: this.generateMuscles(),
+      type: this.generateType(),
+      weight: this.generateWeight(),
+    }
+  }
 }
 
 export interface IBuild {
