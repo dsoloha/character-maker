@@ -56,9 +56,9 @@ export interface IAge {
 
 export interface IBirth {
   /** On which day of the month the character was born. */
-  day: number
+  day?: number
   /** During which month of the year the character was born. */
-  month: number
+  month?: number
   /** During what year the character was born. */
-  year: number
+  year?: number
 }
