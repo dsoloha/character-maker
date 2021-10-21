@@ -8,19 +8,22 @@ export default class Hair implements IHairs {
   leg: IHair
 
   constructor(options?: IHairs) {
-    const defaultHair: IHair = {
-      color: '',
-      length: '',
-      style: '',
-    }
+    const defaultHair: IHair = Object.assign(
+      {},
+      {
+        color: '',
+        length: '',
+        style: '',
+      }
+    )
 
-    this.head = options?.head ?? Object.assign({}, defaultHair)
-    this.face = options?.face ?? Object.assign({}, defaultHair)
-    this.underarms = options?.underarms ?? Object.assign({}, defaultHair)
-    this.chest = options?.chest ?? Object.assign({}, defaultHair)
-    this.pubic = options?.pubic ?? Object.assign({}, defaultHair)
-    this.arm = options?.arm ?? Object.assign({}, defaultHair)
-    this.leg = options?.leg ?? Object.assign({}, defaultHair)
+    this.head = options?.head ?? defaultHair
+    this.face = options?.face ?? defaultHair
+    this.underarms = options?.underarms ?? defaultHair
+    this.chest = options?.chest ?? defaultHair
+    this.pubic = options?.pubic ?? defaultHair
+    this.arm = options?.arm ?? defaultHair
+    this.leg = options?.leg ?? defaultHair
   }
 }
 
