@@ -1,3 +1,10 @@
+/**
+ * Returns a random number in the range of `min` and `max` inclusive with a normal distribution.
+ * @param min The minimum value of the range.
+ * @param max The maximum value of the range.
+ * @param skew How much to skew the range to either side of the mean value.
+ * Greater than one shifts towards `min`, less than one shifts towards `max`.
+ */
 export function gaussian(min = 0, max = 0, skew = 1): number {
   let u = 0
   let v = 0
@@ -25,4 +32,13 @@ export function gaussianPair(mean = 0, deviation = 0): number[] {
   return [num * Math.cos(sigma), num * Math.sin(sigma)].map(
     (val) => val * deviation * mean
   )
+}
+
+/** Returns a random number between `min` and `max`, inclusive. */
+export function random(min: number, max: number): number {
+  function rand() {
+    return Math.random() * (max - min + 1) + min
+  }
+
+  return Math.floor(rand())
 }

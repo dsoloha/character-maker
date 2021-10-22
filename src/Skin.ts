@@ -1,3 +1,6 @@
+import '../lib/array'
+import { gaussian } from '../lib/number'
+
 export default class Skin implements ISkin {
   color: string
   birthmarks: IMark[] | null
@@ -13,6 +16,90 @@ export default class Skin implements ISkin {
     this.markings = options?.markings ?? null
     this.scars = options?.scars ?? null
     this.tattoos = options?.tattoos ?? null
+  }
+
+  generateColor(): string {
+    const colors = ['white', 'brown', 'black']
+    const color = colors.random()
+
+    return color
+  }
+
+  generateMark(options?: { location?: string; description?: string }): IMark {
+    const locations = ['back', 'arm', 'leg', 'butt']
+    const descriptions = ['a skull', 'a butterfly']
+    const location = options?.location ?? locations.random()
+    const description = options?.location ?? descriptions.random()
+
+    return {
+      location,
+      description,
+    }
+  }
+
+  generateBirthmarks(): IMark[] | null {
+    const birthmarks = []
+
+    while (gaussian(1, 100) > 80)
+      birthmarks.push(this.generateMark({ description: 'a birthmark' }))
+
+    if (birthmarks) return birthmarks
+
+    return null
+  }
+
+  generateBrands(): IMark[] | null {
+    const brands = []
+
+    while (gaussian(1, 100) > 80)
+      brands.push(this.generateMark({ description: 'a brand' }))
+
+    if (brands) return brands
+
+    return null
+  }
+
+  generateMarkings(): IMark[] | null {
+    const markings = []
+
+    while (gaussian(1, 100) > 80)
+      markings.push(this.generateMark({ description: 'a marking' }))
+
+    if (markings) return markings
+
+    return null
+  }
+
+  generateScars(): IMark[] | null {
+    const scars = []
+
+    while (gaussian(1, 100) > 80)
+      scars.push(this.generateMark({ description: 'a scar' }))
+
+    if (scars) return scars
+
+    return null
+  }
+
+  generateTattoos(): IMark[] | null {
+    const tattoos = []
+
+    while (gaussian(1, 100) > 80) tattoos.push(this.generateMark())
+
+    if (tattoos) return tattoos
+
+    return null
+  }
+
+  generate(): ISkin {
+    return {
+      color: this.generateColor(),
+      birthmarks: this.generateBirthmarks(),
+      brands: this.generateBrands(),
+      markings: this.generateMarkings(),
+      scars: this.generateScars(),
+      tattoos: this.generateTattoos(),
+    }
   }
 }
 

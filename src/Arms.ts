@@ -1,3 +1,5 @@
+import '../lib/array'
+import { gaussian } from '../lib/number'
 import Hand, { IHand } from './Hand'
 
 export default class Arms {
@@ -6,19 +8,45 @@ export default class Arms {
 
   constructor(options?: IArms) {
     this.left = options?.left ?? {
-      hand: options?.left?.hand ?? new Hand(options?.left?.hand),
+      hand: options?.left?.hand ?? null,
       size: options?.left?.size ?? '',
     }
     this.right = options?.right ?? {
-      hand: options?.right?.hand ?? new Hand(options?.right?.hand),
+      hand: options?.right?.hand ?? null,
       size: options?.right?.size ?? '',
+    }
+  }
+
+  generateHand(): IHand | null {
+    return gaussian(1, 100) > 95 ? null : new Hand().generate()
+  }
+
+  generateArm(): IArm {
+    return {
+      hand: this.generateHand(),
+      size: '',
+    }
+  }
+
+  generate(): IArms {
+    const left = this.generateArm()
+    const right = this.generateArm()
+    const sizes = ['small', 'average', 'large', 'huge']
+    const size: string = sizes.random()
+
+    left.size = size
+    right.size = size
+
+    return {
+      left,
+      right,
     }
   }
 }
 
 export interface IArm {
   /** Properties pertaining to the hand on the arm. */
-  hand?: IHand
+  hand?: IHand | null
   /** Properties pertaining to the arm's size. */
   size?: string
 }

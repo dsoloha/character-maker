@@ -1,8 +1,8 @@
 import { Arms } from '../src/index'
 
 test('default hands', () => {
-  expect(new Arms().left?.hand?.fingers).toBe(5)
-  expect(new Arms().right?.hand?.fingers).toBe(5)
+  expect(new Arms().left?.hand).toBeNull()
+  expect(new Arms().right?.hand).toBeNull()
 })
 
 test('default arm size', () => {
@@ -11,8 +11,8 @@ test('default arm size', () => {
 })
 
 test('default arms', () => {
-  expect(new Arms().left).toEqual({ hand: { fingers: 5 }, size: ''})
-  expect(new Arms().right).toEqual({ hand: { fingers: 5 }, size: ''})
+  expect(new Arms().left).toEqual({ hand: null, size: ''})
+  expect(new Arms().right).toEqual({ hand: null, size: ''})
 })
 
 test('given arm size', () => {

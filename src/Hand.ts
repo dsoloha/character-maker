@@ -1,8 +1,20 @@
+import { gaussian, random } from '../lib/number'
+
 export default class Hand implements IHand {
   fingers: number
 
   constructor(options?: IHand) {
     this.fingers = options?.fingers ?? 5
+  }
+
+  generateFingers(): number {
+    return gaussian(1, 100) > 98 ? random(1, 4) : 5
+  }
+
+  generate(): IHand {
+    return {
+      fingers: this.generateFingers(),
+    }
   }
 }
 

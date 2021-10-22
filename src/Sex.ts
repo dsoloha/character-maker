@@ -1,3 +1,5 @@
+import { random } from '../lib/number'
+
 export type SexType = 'male' | 'female' | 'plural' | 'neuter'
 
 export default class Sex implements ISex {
@@ -5,6 +7,10 @@ export default class Sex implements ISex {
 
   constructor(options?: ISex) {
     this.type = options?.type ?? 'male'
+  }
+
+  generate(): string {
+    return random(1, 100) > 50 ? 'male' : 'female'
   }
 }
 
