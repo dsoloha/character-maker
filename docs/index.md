@@ -32,7 +32,7 @@ const character = new Character().generate()
 
 ## API Reference
 
-Here are all properties available on an instance of the `Character` class:
+Here are all properties available on a given instance of the `Character` class:
 
 - [`.age`](./age)
 - [`.arms`](./arms)
