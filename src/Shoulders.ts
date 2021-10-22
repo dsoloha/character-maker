@@ -14,6 +14,7 @@ export default class Shoulders implements IShoulders {
     return size
   }
 
+  // TODO: add options for sex
   generate(): IShoulders {
     return {
       width: this.generateWidth(),
