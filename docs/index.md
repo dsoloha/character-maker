@@ -56,3 +56,5 @@ Here are all properties available on a given instance of the `Character` class:
 - [`.speech`](./speech)
 - [`.stomach`](./stomach)
 - [`.waist`](./waist)
+
+View the full `Character` documentation [here](./character).
