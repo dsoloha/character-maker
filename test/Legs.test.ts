@@ -1,8 +1,8 @@
 import { Legs } from '../src/index'
 
 test('default feet', () => {
-  expect(new Legs().left?.foot?.toes).toBe(5)
-  expect(new Legs().right?.foot?.toes).toBe(5)
+  expect(new Legs().left.foot).toBeNull()
+  expect(new Legs().right.foot).toBeNull()
 })
 
 test('default leg size', () => {

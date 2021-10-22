@@ -41,7 +41,6 @@ export default class Legs implements ILegs {
       right,
     }
   }
-  }
 }
 
 export interface ILeg {
