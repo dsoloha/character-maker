@@ -37,7 +37,7 @@
   "homepage": "https://github.com/dsoloha/character-maker",
   "repository": {
     "type": "git",
-    "url": "git@github.com:dsoloha/character-maker.git"
+    "url": "git://github.com/dsoloha/character-maker.git"
   },
   "bugs": {
     "url": "https://github.com/dsoloha/character-maker/issues"
