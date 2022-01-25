@@ -5,13 +5,13 @@ test('default birthday', () => {
 })
 
 test('given birth day', () => {
-  expect(new Age({ birth: { day: 12 }}).birth.day).toBe(12)
+  expect(new Age({ birth: { day: 12 } }).birth.day).toBe(12)
 })
 
 test('given birth month', () => {
-  expect(new Age({ birth: { month: 5 }}).birth.month).toBe(5);
+  expect(new Age({ birth: { month: 5 } }).birth.month).toBe(5)
 })
 
 test('given birth year', () => {
-  expect(new Age({ birth: { year: 99 }}).birth.year).toBe(99)
+  expect(new Age({ birth: { year: 99 } }).birth.year).toBe(99)
 })

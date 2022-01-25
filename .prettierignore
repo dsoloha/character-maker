@@ -1,0 +1,19 @@
+# Documentation
+docs/
+*.md
+
+# Node modules
+node_modules/
+
+# Built files
+config/
+coverage/
+dist/
+tools/
+
+# Config files
+*.config.*
+.husky
+
+# Editor files
+.vscode

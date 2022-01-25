@@ -5,8 +5,12 @@ test('default mouth', () => {
 })
 
 test('given teeth', () => {
-  expect(new Mouth({ teeth: { count: 30, description: 'white' } }).teeth.count).toBe(30)
-  expect(new Mouth({ teeth: { count: 30, description: 'white' } }).teeth.description).toBe('white')
+  expect(
+    new Mouth({ teeth: { count: 30, description: 'white' } }).teeth.count
+  ).toBe(30)
+  expect(
+    new Mouth({ teeth: { count: 30, description: 'white' } }).teeth.description
+  ).toBe('white')
 })
 
 test('given tongue', () => {

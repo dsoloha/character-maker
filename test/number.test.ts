@@ -1,4 +1,4 @@
-import { gaussian, gaussianPair, random } from '../lib/number';
+import { gaussian, gaussianPair, random } from '../lib/number'
 
 test('normal distribution', () => {
   expect(gaussian(1, 10)).toBeGreaterThanOrEqual(1)

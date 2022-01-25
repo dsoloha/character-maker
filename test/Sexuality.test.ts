@@ -11,6 +11,10 @@ test('given gender', () => {
 })
 
 test('given attraction', () => {
-  expect(new Sexuality('male', { attraction: { male: 0, female: 100 } }).attraction).toEqual({ male: 0, female: 100 })
-  expect(new Sexuality('male', { attraction: { male: 100, female: 0 } }).attraction).toEqual({ male: 100, female: 0 })
+  expect(
+    new Sexuality('male', { attraction: { male: 0, female: 100 } }).attraction
+  ).toEqual({ male: 0, female: 100 })
+  expect(
+    new Sexuality('male', { attraction: { male: 100, female: 0 } }).attraction
+  ).toEqual({ male: 100, female: 0 })
 })

@@ -13,8 +13,14 @@ test('default education', () => {
 })
 
 test('given education', () => {
-  expect(new Background({ education: { school: 'Oxford', length: 4 }}).education?.school).toBe('Oxford')
-  expect(new Background({ education: { school: 'Oxford', length: 4 }}).education?.length).toBe(4)
+  expect(
+    new Background({ education: { school: 'Oxford', length: 4 } }).education
+      ?.school
+  ).toBe('Oxford')
+  expect(
+    new Background({ education: { school: 'Oxford', length: 4 } }).education
+      ?.length
+  ).toBe(4)
 })
 
 test('given nationality', () => {
@@ -22,14 +28,27 @@ test('given nationality', () => {
 })
 
 test('default occupation', () => {
-  expect(new Background().occupation).toEqual({ type: '', income: 0, length: 0 })
+  expect(new Background().occupation).toEqual({
+    type: '',
+    income: 0,
+    length: 0,
+  })
   expect(new Background().occupation.type).toBe('')
   expect(new Background().occupation.income).toBe(0)
   expect(new Background().occupation.length).toBe(0)
 })
 
 test('given occupation', () => {
-  expect(new Background({ occupation: { type: 'student', income: 100, length: 4} }).occupation.type).toBe('student')
-  expect(new Background({ occupation: { type: 'student', income: 100, length: 4} }).occupation.income).toBe(100)
-  expect(new Background({ occupation: { type: 'student', income: 100, length: 4} }).occupation.length).toBe(4)
+  expect(
+    new Background({ occupation: { type: 'student', income: 100, length: 4 } })
+      .occupation.type
+  ).toBe('student')
+  expect(
+    new Background({ occupation: { type: 'student', income: 100, length: 4 } })
+      .occupation.income
+  ).toBe(100)
+  expect(
+    new Background({ occupation: { type: 'student', income: 100, length: 4 } })
+      .occupation.length
+  ).toBe(4)
 })
