@@ -2,9 +2,37 @@
 
 This is a relatively simple JavaScript library designed to make creating new characters for your next project easier than ever.
 
+## Getting Started
+
+Install the package:
+
+```sh
+npm install character-maker
+```
+
+Import the module and create a new character:
+
+```js
+import { Character } from 'character-maker'
+
+// create a new blank character:
+const character = new Character()
+
+// create a new character with given parameters:
+const character = new Character({
+  name: {
+    first: 'John',
+    last: 'Smith',
+  }
+})
+
+// create a new fully-randomized character:
+const character = new Character().generate()
+```
+
 ## API Reference
 
-Here are all properties available on an instance of the `Character` class:
+Here are all properties available on a given instance of the `Character` class:
 
 - [`.age`](./age)
 - [`.arms`](./arms)
@@ -28,3 +56,5 @@ Here are all properties available on an instance of the `Character` class:
 - [`.speech`](./speech)
 - [`.stomach`](./stomach)
 - [`.waist`](./waist)
+
+View the full `Character` documentation [here](./character).

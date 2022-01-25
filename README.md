@@ -7,21 +7,32 @@ This site aims to help you create new characters for your next novel, story, gam
 [![Stars](https://img.shields.io/github/stars/dsoloha/character-maker)](https://github.com/dsoloha/character-maker/stargazers)
 [![ISC License](https://img.shields.io/github/license/dsoloha/character-maker)](https://opensource.org/licenses/ISC)
 
-## Usage/Examples
+## Usage
 
-```javascript
-import Character from 'character-maker'
+Install the package:
 
+```sh
+npm install character-maker
+```
+
+Import the module and create a new character:
+
+```js
+import { Character } from 'character-maker'
+
+// create a new blank character:
 const character = new Character()
 
-// or optionally with parameters:
-
+// create a new character with given parameters:
 const character = new Character({
-    name: {
-        first: 'John',
-        last: 'Smith',
-    }
+  name: {
+    first: 'John',
+    last: 'Smith',
+  }
 })
+
+// create a new fully-randomized character:
+const character = new Character().generate()
 ```
 
 All parameters available can be found [here](https://dsoloha.github.io/character-maker/).

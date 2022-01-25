@@ -1,6 +1,6 @@
 {
-  "name": "character-maker",
-  "version": "0.1.2",
+  "name": "@dsoloha/character-maker",
+  "version": "0.2.2",
   "description": "A tool for creating realistic characters.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -25,6 +25,7 @@
     "version" : "npm run format && git add -A src"
   },
   "publishConfig": {
+    "registry":"https://npm.pkg.github.com",
     "access": "public"
   },
   "files": [
@@ -40,7 +41,7 @@
   "homepage": "https://github.com/dsoloha/character-maker",
   "repository": {
     "type": "git",
-    "url": "git@github.com:dsoloha/character-maker.git"
+    "url": "git://github.com/dsoloha/character-maker.git"
   },
   "bugs": {
     "url": "https://github.com/dsoloha/character-maker/issues"
