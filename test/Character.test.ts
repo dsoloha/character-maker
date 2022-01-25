@@ -11,7 +11,11 @@ test('default character background', () => {
   expect(new Character().background.birthplace).toBe('')
   expect(new Character().background.education).toBeNull()
   expect(new Character().background.nationality).toBe('')
-  expect(new Character().background.occupation).toEqual({ type: '', income: 0, length: 0 })
+  expect(new Character().background.occupation).toEqual({
+    type: '',
+    income: 0,
+    length: 0,
+  })
 })
 
 test('default character eyes', () => {
@@ -73,56 +77,85 @@ test('character with given age', () => {
 
 // background
 test('character with given background', () => {
-  expect(new Character({ background: { birthplace: 'London' } }).background.birthplace).toBe('London')
+  expect(
+    new Character({ background: { birthplace: 'London' } }).background
+      .birthplace
+  ).toBe('London')
 })
 
 // eyes
 test('character with given eye color', () => {
   expect(new Character({ eyes: { color: 'blue' } }).eyes.color).toBe('blue')
-  expect(new Character({ eyes: { colors: { left: 'blue', right: 'green' } } }).eyes.colors).toStrictEqual({ left: 'blue', right: 'green' })
+  expect(
+    new Character({ eyes: { colors: { left: 'blue', right: 'green' } } }).eyes
+      .colors
+  ).toStrictEqual({ left: 'blue', right: 'green' })
 })
 
 // hair
 test('character with given hair color', () => {
-  expect(new Character({ hair: { arm: { color: 'brown', length: 'short', style: 'neat' }}}).hair.arm.color).toBe('brown')
+  expect(
+    new Character({
+      hair: { arm: { color: 'brown', length: 'short', style: 'neat' } },
+    }).hair.arm.color
+  ).toBe('brown')
 })
 
 test('character with given hair length', () => {
-  expect(new Character({ hair: { arm: { color: 'brown', length: 'short', style: 'neat' }}}).hair.arm.length).toBe('short')
+  expect(
+    new Character({
+      hair: { arm: { color: 'brown', length: 'short', style: 'neat' } },
+    }).hair.arm.length
+  ).toBe('short')
 })
 
 test('character with given hair style', () => {
-  expect(new Character({ hair: { arm: { color: 'brown', length: 'short', style: 'neat' }}}).hair.arm.style).toBe('neat')
+  expect(
+    new Character({
+      hair: { arm: { color: 'brown', length: 'short', style: 'neat' } },
+    }).hair.arm.style
+  ).toBe('neat')
 })
 
 // mouth
 test('character with given mouth', () => {
-  expect(new Character({ mouth: { teeth: { count: 30, description: 'white' }}}).mouth.teeth).toEqual({ count: 30, description: 'white' })
-  expect(new Character({ mouth: { tongue: false }}).mouth.tongue).toBe(false)
+  expect(
+    new Character({ mouth: { teeth: { count: 30, description: 'white' } } })
+      .mouth.teeth
+  ).toEqual({ count: 30, description: 'white' })
+  expect(new Character({ mouth: { tongue: false } }).mouth.tongue).toBe(false)
 })
 
 // name
 test('character with given name', () => {
-  expect(new Character({ name: { first: 'John', last: 'Smith' }}).name.first).toBe('John')
+  expect(
+    new Character({ name: { first: 'John', last: 'Smith' } }).name.first
+  ).toBe('John')
 })
 
 // nose
 test('character with given nose', () => {
-  expect(new Character({ nose: { anosmia: true}}).nose.anosmia).toBe(true)
+  expect(new Character({ nose: { anosmia: true } }).nose.anosmia).toBe(true)
 })
 
 // sex
 test('character with given sex', () => {
-  expect(new Character({ sex: { type: 'male' }}).sex.type).toBe('male')
-  expect(new Character({ sex: { type: 'male' }}).pronouns.subject).toBe('he')
-  expect(new Character({ sex: { type: 'male' }}).pronouns.object).toBe('him')
-  expect(new Character({ sex: { type: 'male' }}).pronouns.possessive).toBe('his')
-  expect(new Character({ sex: { type: 'male' }}).pronouns.possessivePronoun).toBe('his')
-  expect(new Character({ sex: { type: 'male' }}).pronouns.noun).toBe('man')
-  expect(new Character({ sex: { type: 'male' }}).pronouns.reflexive).toBe('himself')
+  expect(new Character({ sex: { type: 'male' } }).sex.type).toBe('male')
+  expect(new Character({ sex: { type: 'male' } }).pronouns.subject).toBe('he')
+  expect(new Character({ sex: { type: 'male' } }).pronouns.object).toBe('him')
+  expect(new Character({ sex: { type: 'male' } }).pronouns.possessive).toBe(
+    'his'
+  )
+  expect(
+    new Character({ sex: { type: 'male' } }).pronouns.possessivePronoun
+  ).toBe('his')
+  expect(new Character({ sex: { type: 'male' } }).pronouns.noun).toBe('man')
+  expect(new Character({ sex: { type: 'male' } }).pronouns.reflexive).toBe(
+    'himself'
+  )
 })
 
 // skin
 test('character with given skin color', () => {
-  expect(new Character({ skin: { color: 'green' }}).skin.color).toBe('green')
+  expect(new Character({ skin: { color: 'green' } }).skin.color).toBe('green')
 })
