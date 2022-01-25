@@ -1,0 +1,11 @@
+# Documentation
+docs/
+
+# Node modules
+node_modules/
+
+# Built files
+dist/
+config/
+tools/
+coverage/
