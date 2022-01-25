@@ -20,9 +20,11 @@ test('given last name', () => {
 })
 
 test('given full name', () => {
-  expect(new Name({ first: 'John', middle: 'A', last: 'Smith' }).full).toBe('John A Smith')
+  expect(new Name({ first: 'John', middle: 'A', last: 'Smith' }).full).toBe(
+    'John A Smith'
+  )
 })
 
 test('given nicknames', () => {
-  expect(new Name({ nicknames: ['Johnny']}).nicknames).toContain('Johnny')
+  expect(new Name({ nicknames: ['Johnny'] }).nicknames).toContain('Johnny')
 })

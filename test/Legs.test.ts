@@ -11,6 +11,6 @@ test('default leg size', () => {
 })
 
 test('given leg size', () => {
-  expect(new Legs({ left: { size: 'large' }}).left.size).toBe('large')
-  expect(new Legs({ right: { size: 'large' }}).right.size).toBe('large')
+  expect(new Legs({ left: { size: 'large' } }).left.size).toBe('large')
+  expect(new Legs({ right: { size: 'large' } }).right.size).toBe('large')
 })

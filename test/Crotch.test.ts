@@ -21,21 +21,31 @@ test('default vagina', () => {
 })
 
 test('given anus', () => {
-  expect(new Crotch({ anus: { description: 'small' }}).anus).toEqual({ description: 'small' })
+  expect(new Crotch({ anus: { description: 'small' } }).anus).toEqual({
+    description: 'small',
+  })
 })
 
 test('given ovaries', () => {
-  expect(new Crotch({ ovaries: { menopause: true }}).ovaries).toEqual({ menopause: true })
+  expect(new Crotch({ ovaries: { menopause: true } }).ovaries).toEqual({
+    menopause: true,
+  })
 })
 
 test('given penis', () => {
-  expect(new Crotch({ penis: { size: 'large' }}).penis).toEqual({ size: 'large' })
+  expect(new Crotch({ penis: { size: 'large' } }).penis).toEqual({
+    size: 'large',
+  })
 })
 
 test('given testicles', () => {
-  expect(new Crotch({ testicles: { size: 'large', vasectomy: true }}).testicles).toEqual({ size: 'large', vasectomy: true })
+  expect(
+    new Crotch({ testicles: { size: 'large', vasectomy: true } }).testicles
+  ).toEqual({ size: 'large', vasectomy: true })
 })
 
 test('given vagina', () => {
-  expect(new Crotch({ vagina: { description: 'small' }}).vagina).toEqual({ description: 'small' })
+  expect(new Crotch({ vagina: { description: 'small' } }).vagina).toEqual({
+    description: 'small',
+  })
 })

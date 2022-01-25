@@ -14,36 +14,66 @@ test('given skin color', () => {
 })
 
 test('given birthmarks', () => {
-  expect(new Skin({ birthmarks: [{
-    location: 'arm',
-    description: 'A birthmark',
-  }] }).birthmarks).toContainEqual({ location: 'arm', description: 'A birthmark' })
+  expect(
+    new Skin({
+      birthmarks: [
+        {
+          location: 'arm',
+          description: 'A birthmark',
+        },
+      ],
+    }).birthmarks
+  ).toContainEqual({ location: 'arm', description: 'A birthmark' })
 })
 
 test('given brands', () => {
-  expect(new Skin({ brands: [{
-    location: 'arm',
-    description: 'A brand',
-  }] }).brands).toContainEqual({ location: 'arm', description: 'A brand' })
+  expect(
+    new Skin({
+      brands: [
+        {
+          location: 'arm',
+          description: 'A brand',
+        },
+      ],
+    }).brands
+  ).toContainEqual({ location: 'arm', description: 'A brand' })
 })
 
 test('given markings', () => {
-  expect(new Skin({ markings: [{
-    location: 'face',
-    description: 'Freckles',
-  }] }).markings).toContainEqual({ location: 'face', description: 'Freckles' })
+  expect(
+    new Skin({
+      markings: [
+        {
+          location: 'face',
+          description: 'Freckles',
+        },
+      ],
+    }).markings
+  ).toContainEqual({ location: 'face', description: 'Freckles' })
 })
 
 test('given scars', () => {
-  expect(new Skin({ scars: [{
-    location: 'arm',
-    description: 'A scar',
-  }] }).scars).toContainEqual({ location: 'arm', description: 'A scar' })
+  expect(
+    new Skin({
+      scars: [
+        {
+          location: 'arm',
+          description: 'A scar',
+        },
+      ],
+    }).scars
+  ).toContainEqual({ location: 'arm', description: 'A scar' })
 })
 
 test('given tattoos', () => {
-  expect(new Skin({ tattoos: [{
-    location: 'arm',
-    description: 'A tattoo',
-  }] }).tattoos).toContainEqual({ location: 'arm', description: 'A tattoo' })
+  expect(
+    new Skin({
+      tattoos: [
+        {
+          location: 'arm',
+          description: 'A tattoo',
+        },
+      ],
+    }).tattoos
+  ).toContainEqual({ location: 'arm', description: 'A tattoo' })
 })
