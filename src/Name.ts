@@ -21,6 +21,51 @@ export default class Name implements IName {
 
     return name.join(' ')
   }
+
+  generateFirst(): string {
+    // TODO: hook this up to a database of first names
+    const names: string[] = []
+
+    names.push('John')
+
+    return names.random()
+  }
+
+  generateMiddle(): string {
+    // TODO: hook this up to a database of middle names
+    const names: string[] = []
+
+    names.push('Jacob')
+
+    return names.random()
+  }
+
+  generateLast(): string {
+    // TODO: hook this up to a database of last names
+    const names: string[] = []
+
+    names.push('Smith')
+
+    return names.random()
+  }
+
+  generateNicknames(): string[] {
+    // TODO: hook this up to a database of nicknames based on first name
+    const names: string[] = []
+
+    names.push('Johnny')
+
+    return names
+  }
+
+  generate(): IName {
+    return {
+      first: this.generateFirst(),
+      middle: this.generateMiddle(),
+      last: this.generateLast(),
+      nicknames: this.generateNicknames(),
+    }
+  }
 }
 
 export interface IName {
