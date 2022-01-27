@@ -9,8 +9,14 @@ export default class Sex implements ISex {
     this.type = options?.type ?? 'male'
   }
 
-  generate(): string {
+  generateType(): SexType {
     return random(1, 100) > 50 ? 'male' : 'female'
+  }
+
+  generate(): ISex {
+    return {
+      type: this.generateType(),
+    }
   }
 }
 
