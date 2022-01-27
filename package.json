@@ -17,7 +17,7 @@
     "package": "npm run build && npm pack",
     "postinstall": "husky install",
     "postversion": "git push --follow-tags",
-    "prepare": "npm run build",
+    "prepare": "npm run build && husky install",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "test:cov": "jest --coverage --no-cache --runInBand",
@@ -57,7 +57,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "husky": "^7.0.4",
     "jest": "^26.6.3",
-
+    "lint-staged": "^12.3.2",
     "prettier": "^2.5.1",
     "ts-jest": "^26.5.0",
     "ts-loader": "^8.0.16",
