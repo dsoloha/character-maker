@@ -71,6 +71,31 @@ export default class Character implements ICharacter {
     this.pronouns = new Pronouns(this.sex.type)
     this.sexuality = new Sexuality(this.sex.type, options?.sexuality)
   }
+
+  generate(): ICharacter {
+    return {
+      age: this.age.generate(),
+      arms: this.arms?.generate(),
+      background: this.background.generate(),
+      build: this.build.generate(),
+      chest: this.chest.generate(),
+      crotch: this.crotch.generate(),
+      eyes: this.eyes.generate(),
+      health: this.health.generate(),
+      hair: this.hair.generate(),
+      legs: this.legs?.generate(),
+      mouth: this.mouth.generate(),
+      name: this.name.generate(),
+      neck: this.neck.generate(),
+      nose: this.nose.generate(),
+      sex: this.sex.generate(),
+      shoulders: this.shoulders.generate(),
+      skin: this.skin.generate(),
+      speech: this.speech.generate(),
+      stomach: this.stomach.generate(),
+      waist: this.waist.generate(),
+    }
+  }
 }
 
 export interface ICharacter {
