@@ -14,6 +14,8 @@
     "build:umd": "node tools/cleanup umd && webpack --config config/webpack.config.js",
     "build": "npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
     "clean": "node tools/cleanup",
+    "lint": "npx prettier --check .",
+    "lint:write": "npx prettier --write .",
     "package": "npm run build && npm pack",
     "postinstall": "husky install",
     "postversion": "git push --follow-tags",
