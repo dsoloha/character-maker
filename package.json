@@ -24,7 +24,7 @@
     "preversion": "npm run lint",
     "test:cov": "jest --coverage --no-cache --runInBand",
     "test": "jest --no-cache --runInBand",
-    "version": "npm run format && git add -A src"
+    "version": "npm run lint:write && git add -A src"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
