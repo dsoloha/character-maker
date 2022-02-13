@@ -12,7 +12,7 @@ This site aims to help you create new characters for your next novel, story, gam
 Install the package:
 
 ```sh
-npm install character-maker
+npm install @dsoloha/character-maker
 ```
 
 Import the module and create a new character:
