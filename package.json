@@ -1,6 +1,6 @@
 {
   "name": "@dsoloha/character-maker",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "A tool for creating realistic characters.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
