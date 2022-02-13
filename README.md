@@ -1,7 +1,6 @@
-
 # character-maker
 
-This site aims to help you create new characters for your next novel, story, game, TV show, etc.
+This package aims to help you create new characters for your next novel, story, game, TV show, etc.
 
 [![Issues](https://img.shields.io/github/issues/dsoloha/character-maker)](https://github.com/dsoloha/character-maker/issues)
 [![Stars](https://img.shields.io/github/stars/dsoloha/character-maker)](https://github.com/dsoloha/character-maker/stargazers)
@@ -76,5 +75,3 @@ View all sub-properties and more documentation [here](https://dsoloha.github.io/
 Contributions are always welcome!
 
 See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
