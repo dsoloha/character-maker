@@ -31,7 +31,7 @@
     "access": "public"
   },
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "keywords": [
     "character",
