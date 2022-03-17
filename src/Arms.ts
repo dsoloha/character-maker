@@ -1,8 +1,7 @@
-import '../lib/array'
 import { gaussian } from '../lib/number'
 import Hand, { IHand } from './Hand'
 
-export default class Arms {
+export default class Arms implements IArms {
   left: IArm
   right: IArm
 
@@ -17,29 +16,39 @@ export default class Arms {
     }
   }
 
-  generateHand(): IHand | null {
-    return gaussian(1, 100) > 95 ? null : new Hand().generate()
+  /**
+   * Generates a new hand.
+   *
+   * Returns `null` if a missing hand is generated.
+   */
+  private generateHand(): IHand | null {
+    return gaussian(1, 100) > 97 ? null : new Hand().generate()
   }
 
-  generateArm(): IArm {
+  /** Generates a new arm. */
+  private generateArm(muscles: number): IArm {
+    const sizes = new Map([
+      [0, 'small'],
+      [25, 'average'],
+      [50, 'large'],
+      [75, 'huge'],
+    ])
+    let size = 'small'
+
+    sizes.forEach((s, i) => {
+      if (muscles > i) size = s
+    })
+
     return {
       hand: this.generateHand(),
-      size: '',
+      size,
     }
   }
 
-  generate(): IArms {
-    const left = this.generateArm()
-    const right = this.generateArm()
-    const sizes = ['small', 'average', 'large', 'huge']
-    const size: string = sizes.random()
-
-    left.size = size
-    right.size = size
-
+  generate(muscles: number): IArms {
     return {
-      left,
-      right,
+      left: this.generateArm(muscles),
+      right: this.generateArm(muscles),
     }
   }
 }
