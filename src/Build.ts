@@ -1,21 +1,19 @@
-import '../lib/array'
 import { gaussian } from '../lib/number'
 import { SexType } from './Sex'
 
 export default class Build implements IBuild {
   height: number
-  muscles: string
+  muscles: number
   type: string
   weight: number
 
   constructor(options?: IBuild) {
     this.height = options?.height ?? 0
-    this.muscles = options?.muscles ?? ''
+    this.muscles = options?.muscles ?? 0
     this.type = options?.type ?? ''
     this.weight = options?.weight ?? 0
   }
 
-  // TODO: generate height based on nationality
   /** Generates a new height, in cm. */
   private generateHeight(options: { sex: SexType } = { sex: 'male' }): number {
     if (options?.sex === 'male') return gaussian(147, 207)
@@ -24,26 +22,65 @@ export default class Build implements IBuild {
     return gaussian(140, 200)
   }
 
-  // TODO: base muscles on sex and build type
   /** Generates new muscles. */
-  private generateMuscles(options: { sex: SexType } = { sex: 'male' }): string {
-    const muscles = ['weak', 'average', 'strong', 'jacked']
+  private generateMuscles(options: { sex: SexType } = { sex: 'male' }): number {
+    if (options?.sex === 'male') return gaussian(1, 100, 0.75)
+    if (options?.sex === 'female') return gaussian(1, 100, 1.25)
 
-    if (options?.sex === 'male') return muscles.random()
-    if (options?.sex === 'female') return muscles.random()
-
-    return muscles.random()
+    return gaussian(1, 100)
   }
 
-  // TODO: add more types
-  /** Generates a new build. */
-  private generateType(options: { sex: SexType } = { sex: 'male' }): string {
-    const types = ['lithe', 'average', 'stocky']
+  /** Generates a description for the character's build based on height, weight, and musculature. */
+  private generateType(options: {
+    sex: SexType
+    height: number
+    weight: number
+    muscles: number
+  }): string {
+    const meanHeight = {
+      male: 168,
+      female: 158,
+    }
+    const meanWeight = {
+      male: 77,
+      female: 73,
+    }
+    const lowMuscles = 35
+    const midMuscles = 65
+    const builds: [string, string, string][][] = [
+      [
+        ['frail', 'petite', 'shortstack'],
+        ['small', 'short', 'beefy'],
+        ['tubby', 'stout', 'rotund'],
+      ],
+      [
+        ['skinny', 'trim', 'lean'],
+        ['weak', 'average', 'buff'],
+        ['soft', 'chubby', 'robust'],
+      ],
+      [
+        ['gaunt', 'thin', 'burly'],
+        ['lanky', 'tall', 'jacked'],
+        ['pillowy', 'large', 'huge'],
+      ],
+    ]
+    let height: number
+    let weight: number
+    let muscles: number
 
-    if (options?.sex === 'male') return types.random()
-    if (options?.sex === 'female') return types.random()
+    if (options.height < meanHeight[options.sex]) height = 0
+    else if (options.height > meanHeight[options.sex]) height = 1
+    else height = 2
 
-    return types.random()
+    if (options.weight < meanWeight[options.sex]) weight = 0
+    else if (options.weight > meanWeight[options.sex]) weight = 1
+    else weight = 2
+
+    if (options.weight < lowMuscles) muscles = 0
+    else if (options.weight < midMuscles) muscles = 1
+    else muscles = 2
+
+    return builds[height][weight][muscles]
   }
 
   /** Generates a new weight, in kg. */
@@ -55,20 +92,25 @@ export default class Build implements IBuild {
   }
 
   generate(options: { sex: SexType } = { sex: 'male' }): IBuild {
-    return {
-      height: this.generateHeight({ sex: options?.sex }),
-      muscles: this.generateMuscles({ sex: options?.sex }),
-      type: this.generateType({ sex: options?.sex }),
-      weight: this.generateWeight({ sex: options?.sex }),
-    }
+    const height = this.generateHeight({ sex: options?.sex })
+    const muscles = this.generateMuscles({ sex: options?.sex })
+    const weight = this.generateWeight({ sex: options?.sex })
+    const type = this.generateType({
+      sex: options?.sex ?? 'male',
+      height,
+      weight,
+      muscles,
+    })
+
+    return { height, muscles, type, weight }
   }
 }
 
 export interface IBuild {
   /** How tall the character is, in cm. */
   height?: number
-  /** How muscular the character is. */
-  muscles?: string
+  /** How muscular the character is, on a scale from 1 to 100 (1 being no visible muscle mass, 100 being bodybuilder-like musculature). */
+  muscles?: number
   /** The character's build type (lithe, stocky, etc). */
   type?: string
   /** How much the character weighs, in kg. */
