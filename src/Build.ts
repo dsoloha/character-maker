@@ -64,21 +64,18 @@ export default class Build implements IBuild {
         ['pillowy', 'large', 'huge'],
       ],
     ]
-    let height: number
-    let weight: number
-    let muscles: number
+    let height = 1
+    let weight = 1
+    let muscles = 1
 
     if (options.height < meanHeight[options.sex]) height = 0
-    else if (options.height > meanHeight[options.sex]) height = 1
-    else height = 2
+    else if (options.height > meanHeight[options.sex]) height = 2
 
     if (options.weight < meanWeight[options.sex]) weight = 0
-    else if (options.weight > meanWeight[options.sex]) weight = 1
-    else weight = 2
+    else if (options.weight > meanWeight[options.sex]) weight = 2
 
     if (options.weight < lowMuscles) muscles = 0
-    else if (options.weight < midMuscles) muscles = 1
-    else muscles = 2
+    else if (options.weight < midMuscles) muscles = 2
 
     return builds[height][weight][muscles]
   }
