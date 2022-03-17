@@ -85,8 +85,8 @@ export default class Build implements IBuild {
 
   /** Generates a new weight, in kg. */
   private generateWeight(options: { sex: SexType } = { sex: 'male' }): number {
-    if (options?.sex === 'male') return gaussian()
-    if (options?.sex === 'female') return gaussian()
+    if (options?.sex === 'male') return gaussian(47, 107, 0.75)
+    if (options?.sex === 'female') return gaussian(43, 103, 1.25)
 
     return gaussian()
   }
