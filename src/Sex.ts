@@ -1,6 +1,6 @@
 import { random } from '../lib/number'
 
-export type SexType = 'male' | 'female' | 'plural' | 'neuter'
+export type SexType = 'male' | 'female'
 
 export default class Sex implements ISex {
   type: SexType
