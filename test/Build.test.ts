@@ -2,7 +2,7 @@ import { Build } from '../src/index'
 
 test('default build', () => {
   expect(new Build().height).toBe(0)
-  expect(new Build().muscles).toBe('')
+  expect(new Build().muscles).toBe(0)
   expect(new Build().type).toBe('')
   expect(new Build().weight).toBe(0)
 })
@@ -12,7 +12,7 @@ test('given height', () => {
 })
 
 test('given muscles', () => {
-  expect(new Build({ muscles: 'jacked' }).muscles).toBe('jacked')
+  expect(new Build({ muscles: 100 }).muscles).toBe(100)
 })
 
 test('given type', () => {
