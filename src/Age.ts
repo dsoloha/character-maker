@@ -15,35 +15,41 @@ export default class Age implements IAge {
     }
   }
 
-  generateBirth(): IBirth {
-    let day: number
+  /** Generates a new birth day. */
+  private generateBirthDay(year: number, month: number): number {
+    if (year % 4 === 0 && month === 2) return random(1, 29)
+    if (month === 2) return random(1, 28)
+    if ([1, 3, 5, 6, 8, 10, 12].includes(month)) return random(1, 31)
+    return random(1, 30)
+  }
 
-    const year = gaussian(
+  /** Generates a new birth month. */
+  private generateBirthMonth(): number {
+    return random(1, 12)
+  }
+
+  /** Generates a new birth year. */
+  private generateBirthYear(): number {
+    return gaussian(
       new Date().getFullYear() - 100,
       new Date().getFullYear(),
       0.75
     )
+  }
 
-    const month = random(1, 12)
+  /** Generates a new, full birthday. */
+  private generateBirth(): IBirth {
+    const year = this.generateBirthYear()
+    const month = this.generateBirthMonth()
+    const day = this.generateBirthDay(year, month)
 
-    if (year % 4 === 0 && month === 2) day = random(1, 29)
-    else if (month === 2) day = random(1, 28)
-    else if ([1, 3, 5, 6, 8, 10, 12].includes(month)) day = random(1, 31)
-    else day = random(1, 30)
-
-    return {
-      year,
-      month,
-      day,
-    }
+    return { day, month, year }
   }
 
   generate(): IAge {
-    const age = {
+    return {
       birth: this.generateBirth(),
     }
-
-    return age
   }
 }
 
