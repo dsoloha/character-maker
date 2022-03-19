@@ -29,7 +29,8 @@ export default class Crotch implements ICrotch {
     this.vagina = options?.vagina ?? null
   }
 
-  generateAnus(): IAnus {
+  /** Generates a new anus. */
+  private generateAnus(): IAnus {
     // TODO: add more descriptions
     const descriptions = ['unremarkable']
     const description = descriptions.random()
@@ -39,8 +40,8 @@ export default class Crotch implements ICrotch {
     }
   }
 
-  // TODO: incorporate age
-  generateOvaries(options?: { age: number }): IOvaries {
+  /** Generates a new set of ovaries. */
+  private generateOvaries(options?: { age: number }): IOvaries {
     let menopause: boolean
 
     if (options) {
@@ -56,7 +57,8 @@ export default class Crotch implements ICrotch {
     }
   }
 
-  generatePenis(): IPenis {
+  /** Generates a new penis. */
+  private generatePenis(): IPenis {
     const sizes = ['small', 'average', 'large', 'huge']
     const size = sizes.random()
 
@@ -65,7 +67,8 @@ export default class Crotch implements ICrotch {
     }
   }
 
-  generateTesticles(): ITesticles {
+  /** Generates new testicles. */
+  private generateTesticles(): ITesticles {
     const sizes = ['small', 'average', 'large', 'huge']
     const size = sizes.random()
     const vasectomy = gaussian(1, 100) > 75 ? true : false
@@ -76,7 +79,8 @@ export default class Crotch implements ICrotch {
     }
   }
 
-  generateVagina(): IVagina {
+  /** Generates a new vagina. */
+  private generateVagina(): IVagina {
     const descriptions = ['unremarkable']
     const description = descriptions.random()
 
