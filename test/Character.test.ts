@@ -20,7 +20,7 @@ test('default character background', () => {
 
 test('default character eyes', () => {
   expect(new Character().eyes.astigmatism).toBe(false)
-  expect(new Character().eyes.color).toBe('')
+  expect(new Character().eyes.colors).toStrictEqual({ left: '', right: '' })
   expect(new Character().eyes.colors).toEqual({ right: '', left: '' })
   expect(new Character().eyes.farsighted).toBe(false)
   expect(new Character().eyes.nearsighted).toBe(false)
@@ -84,8 +84,8 @@ test('character with given background', () => {
 })
 
 // eyes
-test('character with given eye color', () => {
-  expect(new Character({ eyes: { color: 'blue' } }).eyes.color).toBe('blue')
+test('character with given eye colors', () => {
+  expect(new Character({ eyes: { colors: { left: 'blue', right: 'green' }}}).eyes.colors).toStrictEqual({ left: 'blue', right: 'green' })
   expect(
     new Character({ eyes: { colors: { left: 'blue', right: 'green' } } }).eyes
       .colors
