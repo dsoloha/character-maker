@@ -12,7 +12,9 @@ test('given astigmatism', () => {
 })
 
 test('given eye colors', () => {
-  expect(new Eyes({ colors: { left: 'blue', right: 'green' } }).colors).toStrictEqual({ left: 'blue', right: 'green' })
+  expect(
+    new Eyes({ colors: { left: 'blue', right: 'green' } }).colors
+  ).toStrictEqual({ left: 'blue', right: 'green' })
 })
 
 test('given farsightedness', () => {
