@@ -11,13 +11,13 @@ This package aims to help you create new characters for your next novel, story, 
 Install the package:
 
 ```sh
-npm install @dsoloha/character-maker
+npm install character-maker
 ```
 
 Import the module and create a new character:
 
 ```js
-import { Character } from '@dsoloha/character-maker'
+import { Character } from 'character-maker'
 
 // create a new blank character:
 const character = new Character()
