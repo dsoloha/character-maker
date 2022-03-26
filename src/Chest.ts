@@ -1,4 +1,6 @@
 import '../lib/array'
+import { random } from '../lib/number'
+import { SexType } from './Sex'
 
 export default class Chest implements IChest {
   size: string
@@ -7,15 +9,18 @@ export default class Chest implements IChest {
     this.size = options?.size ?? ''
   }
 
-  generateChest(): string {
+  /** Generates a new chest. */
+  private generateChest(options: { sex: SexType } = { sex: 'male' }): string {
     const sizes = ['flat', 'small', 'medium', 'large', 'huge']
+
+    if (options.sex === 'male') return sizes[random(0, 2)]
 
     return sizes.random()
   }
 
-  generate(): IChest {
+  generate(options: { sex: SexType } = { sex: 'male' }): IChest {
     return {
-      size: this.generateChest(),
+      size: this.generateChest(options),
     }
   }
 }

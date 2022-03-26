@@ -14,7 +14,8 @@ test('default object', () => {
 test('default possessive', () => {
   expect(new Pronouns('male').His).toBe('His')
   expect(new Pronouns('female').hers).toBe('her')
-  expect(new Pronouns('male').Hers).toBe('His')})
+  expect(new Pronouns('male').Hers).toBe('His')
+})
 
 test('default possessivePronoun', () => {
   expect(new Pronouns('male').possessivePronoun).toBe('his')
