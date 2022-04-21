@@ -9,7 +9,7 @@ Properties pertaining to the character's biological sex.
 ## Declaration
 
 ```js
-import { Sex } from 'character-maker'
+import { Sex } from '@dsoloha/character-maker'
 
 const sex = new Sex()
 

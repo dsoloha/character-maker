@@ -9,7 +9,7 @@ Properties pertaining to the character's waist.
 ## Declaration
 
 ```js
-import { Waist } from 'character-maker'
+import { Waist } from '@dsoloha/character-maker'
 
 const waist = new Waist()
 

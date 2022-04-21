@@ -7,13 +7,13 @@ This is a relatively simple JavaScript library designed to make creating new cha
 Install the package:
 
 ```sh
-npm install character-maker
+npm install @dsoloha/character-maker
 ```
 
 Import the module and create a new character:
 
 ```js
-import { Character } from 'character-maker'
+import { Character } from '@dsoloha/character-maker'
 
 // create a new blank character:
 const character = new Character()

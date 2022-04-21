@@ -9,7 +9,7 @@ Properties pertaining to the character's nose.
 ## Declaration
 
 ```js
-import { Nose } from 'character-maker'
+import { Nose } from '@dsoloha/character-maker'
 
 const nose = new Nose()
 

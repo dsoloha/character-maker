@@ -9,7 +9,7 @@ Properties pertaining to the character's stomach.
 ## Declaration
 
 ```js
-import { Stomach } from 'character-maker'
+import { Stomach } from '@dsoloha/character-maker'
 
 const stomach = new Stomach()
 

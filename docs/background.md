@@ -9,7 +9,7 @@ Properties pertaining to the character's background and upbringing.
 ## Declaration
 
 ```js
-import { Background } from 'character-maker'
+import { Background } from '@dsoloha/character-maker'
 
 const background = new Background()
 
