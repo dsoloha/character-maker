@@ -1,4 +1,4 @@
-# `.character`
+# <h1>`.character`</h1>
 
 `class Character`
 
