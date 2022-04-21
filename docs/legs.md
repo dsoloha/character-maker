@@ -9,7 +9,7 @@ Properties pertaining to the character's legs.
 ## Declaration
 
 ```js
-import { Legs } from 'character-maker'
+import { Legs } from '@dsoloha/character-maker'
 
 const legs = new Legs()
 

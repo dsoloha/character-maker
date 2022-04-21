@@ -9,7 +9,7 @@ Properties pertaining to the character's arms.
 ## Declaration
 
 ```js
-import { Arms } from 'character-maker'
+import { Arms } from '@dsoloha/character-maker'
 
 const arms = new Arms()
 

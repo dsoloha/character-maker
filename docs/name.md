@@ -9,7 +9,7 @@ Properties pertaining to the character's name.
 ## Declaration
 
 ```js
-import { Name } from 'character-maker'
+import { Name } from '@dsoloha/character-maker'
 
 const name = new Name()
 

@@ -9,7 +9,7 @@ Properties pertaining to all hair on the character's body.
 ## Declaration
 
 ```js
-import { Hair } from 'character-maker'
+import { Hair } from '@dsoloha/character-maker'
 
 const hair = new Hair()
 

@@ -9,7 +9,7 @@ Properties pertaining to the character's physical build.
 ## Declaration
 
 ```js
-import { Build } from 'character-maker'
+import { Build } from '@dsoloha/character-maker'
 
 const build = new Build()
 

@@ -9,7 +9,7 @@ Properties pertaining to the character's chest.
 ## Declaration
 
 ```js
-import { Chest } from 'character-maker'
+import { Chest } from '@dsoloha/character-maker'
 
 const chest = new Chest()
 

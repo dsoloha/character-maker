@@ -9,7 +9,7 @@ Properties pertaining to the character's shoulders.
 ## Declaration
 
 ```js
-import { Shoulders } from 'character-maker'
+import { Shoulders } from '@dsoloha/character-maker'
 
 const shoulders = new Shoulders()
 

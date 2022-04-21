@@ -9,7 +9,7 @@ Properties pertaining to the character's sexuality.
 ## Declaration
 
 ```js
-import { Sexuality } from 'character-maker'
+import { Sexuality } from '@dsoloha/character-maker'
 
 const sexuality = new Sexuality()
 

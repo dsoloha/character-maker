@@ -9,7 +9,7 @@ All properties available on a given instance of `Character`.
 ## Declaration
 
 ```js
-import { Character } from 'character-maker'
+import { Character } from '@dsoloha/character-maker'
 
 const character = new Character()
 ```

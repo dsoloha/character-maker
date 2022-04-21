@@ -9,7 +9,7 @@ Properties pertaining to the character's mouth.
 ## Declaration
 
 ```js
-import { Mouth } from 'character-maker'
+import { Mouth } from '@dsoloha/character-maker'
 
 const mouth = new Mouth()
 

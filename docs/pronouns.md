@@ -9,7 +9,7 @@ The pronouns assigned to the character.
 ## Declaration
 
 ```js
-import { Pronouns } from 'character-maker'
+import { Pronouns } from '@dsoloha/character-maker'
 
 const pronouns = new Pronouns('male')
 ```

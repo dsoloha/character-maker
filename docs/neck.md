@@ -9,7 +9,7 @@ Properties pertaining to the character's neck.
 ## Declaration
 
 ```js
-import { Neck } from 'character-maker'
+import { Neck } from '@dsoloha/character-maker'
 
 const neck = new Neck()
 
