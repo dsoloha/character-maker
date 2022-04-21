@@ -9,7 +9,7 @@ Properties pertaining to the character's speech.
 ## Declaration
 
 ```js
-import { Speech } from 'character-maker'
+import { Speech } from '@dsoloha/character-maker'
 
 const speech = new Speech()
 

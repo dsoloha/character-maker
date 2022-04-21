@@ -9,7 +9,7 @@ Properties pertaining to the character's skin.
 ## Declaration
 
 ```js
-import { Skin } from 'character-maker'
+import { Skin } from '@dsoloha/character-maker'
 
 const skin = new Skin()
 

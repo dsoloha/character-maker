@@ -9,7 +9,7 @@ Properties pertaining to the hand on the arm.
 ## Declaration
 
 ```js
-import { Hand } from 'character-maker'
+import { Hand } from '@dsoloha/character-maker'
 
 const hand = new Hand()
 

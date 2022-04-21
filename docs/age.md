@@ -9,7 +9,7 @@ Properties pertaining to the character's age.
 ## Declaration
 
 ```js
-import { Age } from 'character-maker'
+import { Age } from '@dsoloha/character-maker'
 
 const age = new Age()
 

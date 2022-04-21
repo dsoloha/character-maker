@@ -9,7 +9,7 @@ Properties pertaining to the character's crotch.
 ## Declaration
 
 ```js
-import { Crotch } from 'character-maker'
+import { Crotch } from '@dsoloha/character-maker'
 
 const crotch = new Crotch()
 

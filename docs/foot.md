@@ -9,7 +9,7 @@ Properties pertaining to the foot on the leg.
 ## Declaration
 
 ```js
-import { Foot } from 'character-maker'
+import { Foot } from '@dsoloha/character-maker'
 
 const foot = new Foot()
 

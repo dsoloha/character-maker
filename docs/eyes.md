@@ -9,7 +9,7 @@ Properties pertaining to the character's eyes.
 ## Declaration
 
 ```js
-import { Eyes } from 'character-maker'
+import { Eyes } from '@dsoloha/character-maker'
 
 const eyes = new Eyes()
 

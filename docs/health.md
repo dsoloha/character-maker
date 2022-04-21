@@ -9,7 +9,7 @@ Properties pertaining to the character's overall health.
 ## Declaration
 
 ```js
-import { Health } from 'character-maker'
+import { Health } from '@dsoloha/character-maker'
 
 const health = new Health()
 
