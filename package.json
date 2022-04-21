@@ -1,5 +1,5 @@
 {
-  "name": "character-maker",
+  "name": "@dsoloha/character-maker",
   "version": "0.2.15",
   "description": "A tool for creating realistic characters.",
   "main": "dist/cjs/index.js",
@@ -7,7 +7,7 @@
   "umd:main": "dist/umd/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "addscope": "node tools/packagejson name character-maker",
+    "addscope": "node tools/packagejson name @dsoloha/character-maker",
     "build:cjs": "node tools/cleanup cjs && tsc -p config/tsconfig.cjs.json",
     "build:esm": "node tools/cleanup esm && tsc -p config/tsconfig.esm.json",
     "build:types": "node tools/cleanup types && tsc -p config/tsconfig.types.json",
