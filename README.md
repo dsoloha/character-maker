@@ -1,5 +1,7 @@
 # character-maker
 
+⚠️ This project is still early in development, and will undergo many changes in the future. Use at your own risk! ⚠️
+
 This package aims to help you create new characters for your next novel, story, game, TV show, etc.
 
 [![Issues](https://img.shields.io/github/issues/dsoloha/character-maker)](https://github.com/dsoloha/character-maker/issues)
