@@ -52,9 +52,9 @@ Properties pertaining to the character's ovaries, if any.
 
 #### Properties
 
-| Property    | Type      | Description                                              | Optional |
-| :---------- | :-------- | :------------------------------------------------------- | :------- |
-| `menopause` | `boolean` | Whether or not the character has gone through menopause. | No       |
+| Property    | Type      | Description                                       | Optional |
+| :---------- | :-------- | :------------------------------------------------ | :------- |
+| `fertile`   | `boolean` | Whether or not the character is sexually fertile. | No       |
 
 ### `.penis`
 
@@ -79,7 +79,7 @@ Properties pertaining to the character's testicles, if any.
 | Property    | Type      | Description                                       | Optional |
 | :---------- | :-------- | :------------------------------------------------ | :------- |
 | `size`      | `string`  | The size of the character's testicles.            | No       |
-| `vasectomy` | `boolean` | Whether or not the character has had a vasectomy. | No       |
+| `potent`    | `boolean` | Whether or not the character is sexually potent.  | Yes      |
 
 ### `.vagina`
 
