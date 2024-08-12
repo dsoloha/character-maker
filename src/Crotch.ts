@@ -6,14 +6,14 @@ export default class Crotch implements ICrotch {
     description: string
   }
   ovaries: {
-    menopause: boolean
+    fertile: boolean
   } | null
   penis: {
     size: string
   } | null
   testicles: {
     size: string
-    vasectomy: boolean
+    potent?: boolean
   } | null
   vagina: {
     description: string
@@ -42,18 +42,18 @@ export default class Crotch implements ICrotch {
 
   /** Generates a new set of ovaries. */
   private generateOvaries(options?: { age: number }): IOvaries {
-    let menopause: boolean
+    let fertile: boolean
 
     if (options) {
-      if (options.age > 45) menopause = gaussian(1, 100) > 65 ? true : false
-      else if (options.age < 40) menopause = false
-      else menopause = gaussian(1, 100) > 75 ? true : false
+      if (options.age > 45) fertile = gaussian(1, 100) > 65 ? true : false
+      else if (options.age > 40) fertile = false
+      else fertile = gaussian(1, 100) > 75 ? true : false
     } else {
-      menopause = false
+      fertile = false
     }
 
     return {
-      menopause,
+      fertile,
     }
   }
 
@@ -71,11 +71,13 @@ export default class Crotch implements ICrotch {
   private generateTesticles(): ITesticles {
     const sizes = ['small', 'average', 'large', 'huge']
     const size = sizes.random()
-    const vasectomy = gaussian(1, 100) > 75 ? true : false
+    let potent = true
+
+    if (gaussian(0, 100) > 80) potent = false
 
     return {
       size,
-      vasectomy,
+      potent,
     }
   }
 
@@ -106,8 +108,8 @@ export interface IAnus {
 }
 
 export interface IOvaries {
-  /** Whether or not the character has gone through menopause. */
-  menopause: boolean
+  /** Whether or not the character is sexually fertile. */
+  fertile: boolean
 }
 
 export interface IPenis {
@@ -118,8 +120,8 @@ export interface IPenis {
 export interface ITesticles {
   /** The size of the character's testicles. */
   size: string
-  /** Whether or not the character has had a vasectomy. */
-  vasectomy: boolean
+  /** Whether or not the character is sexually potent. */
+  potent?: boolean
 }
 
 export interface IVagina {
