@@ -27,8 +27,8 @@ test('given anus', () => {
 })
 
 test('given ovaries', () => {
-  expect(new Crotch({ ovaries: { menopause: true } }).ovaries).toEqual({
-    menopause: true,
+  expect(new Crotch({ ovaries: { fertile: true } }).ovaries).toEqual({
+    fertile: true,
   })
 })
 
@@ -40,8 +40,26 @@ test('given penis', () => {
 
 test('given testicles', () => {
   expect(
-    new Crotch({ testicles: { size: 'large', vasectomy: true } }).testicles
-  ).toEqual({ size: 'large', vasectomy: true })
+    new Crotch({ testicles: { size: 'large', potent: true } }).testicles
+  ).toEqual({ size: 'large', potent: true })
+})
+
+test('given testicle size', () => {
+  expect(new Crotch({ testicles: { size: 'large' } }).testicles?.size).toBe(
+    'large'
+  )
+  expect(
+    new Crotch({ testicles: { size: 'small' } }).generate().testicles?.potent
+  ).toBeDefined()
+})
+
+test('given testicle potency', () => {
+  expect(
+    new Crotch({ testicles: { size: 'small', potent: false } }).testicles
+  ).toEqual({
+    size: 'small',
+    potent: false,
+  })
 })
 
 test('given vagina', () => {

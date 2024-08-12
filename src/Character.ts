@@ -1,3 +1,4 @@
+import { gaussian } from '../lib/number'
 import Age, { IAge } from './Age'
 import Arms, { IArms } from './Arms'
 import Background, { IBackground } from './Background'
@@ -77,7 +78,7 @@ export default class Character implements ICharacter {
       age: this.age.generate(),
       background: this.background.generate(),
       build: this.build.generate(),
-      arms: this.arms?.generate(this.build.muscles),
+      arms: this.arms?.generate(this.build.muscles ?? gaussian(0, 100)),
       chest: this.chest.generate(),
       crotch: this.crotch.generate(),
       eyes: this.eyes.generate(),
