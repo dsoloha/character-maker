@@ -1,7 +1,21 @@
 import { Age } from '../src/index'
 
 test('default birthday', () => {
-  expect(new Age().birth.day).toBe(1)
+  expect(new Age().birth.day).toBeGreaterThanOrEqual(1)
+  expect(new Age().birth.day).toBeLessThanOrEqual(31)
+  expect(new Age({ birth: { month: 2 } }).birth.day).toBeLessThanOrEqual(28)
+  expect(new Age({ birth: { month: 6 } }).birth.day).toBeLessThanOrEqual(30)
+  expect(new Age().birth.month).toBeGreaterThanOrEqual(1)
+  expect(new Age().birth.month).toBeLessThanOrEqual(12)
+  expect(new Age().birth.year).toBeGreaterThanOrEqual(1)
+})
+
+test('random birthday', () => {
+  expect(new Age().generate().birth?.day).toBeGreaterThanOrEqual(1)
+  expect(new Age().generate().birth?.day).toBeLessThanOrEqual(31)
+  expect(new Age().generate().birth?.month).toBeGreaterThanOrEqual(1)
+  expect(new Age().generate().birth?.month).toBeLessThanOrEqual(12)
+  expect(new Age().generate().birth?.year).toBeGreaterThanOrEqual(0)
 })
 
 test('given birth day', () => {
