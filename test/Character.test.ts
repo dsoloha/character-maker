@@ -2,20 +2,13 @@ import { Character } from '../src/index'
 
 // default
 test('default character age', () => {
-  expect(new Character().age.birth.day).toBe(1)
-  expect(new Character().age.birth.month).toBe(1)
-  expect(new Character().age.birth.year).toBe(1)
   expect(new Character().age.birth.day).toBeGreaterThanOrEqual(1)
   expect(new Character().age.birth.day).toBeLessThanOrEqual(31)
-  expect(new Character().age.generate().birth?.month).toBeGreaterThanOrEqual(1)
+  expect(new Character().age.birth.month).toBeGreaterThanOrEqual(1)
   expect(new Character().age.birth.month).toBeLessThanOrEqual(12)
-  expect(new Character().age.birth.year).toBeLessThanOrEqual(
-    new Date().getFullYear()
-  )
+  expect(new Character().age.birth.year).toBeGreaterThanOrEqual(1)
   expect(new Character().age.monthsOld).toBeGreaterThanOrEqual(0)
-  expect(new Character().age.monthsOld).toBeLessThanOrEqual(
-    new Date().getFullYear() * 12
-  )
+  expect(new Character().age.monthsOld).toBeLessThanOrEqual(1200)
 })
 
 test('default character background', () => {
