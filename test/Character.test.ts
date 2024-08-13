@@ -5,6 +5,17 @@ test('default character age', () => {
   expect(new Character().age.birth.day).toBe(1)
   expect(new Character().age.birth.month).toBe(1)
   expect(new Character().age.birth.year).toBe(1)
+  expect(new Character().age.birth.day).toBeGreaterThanOrEqual(1)
+  expect(new Character().age.birth.day).toBeLessThanOrEqual(31)
+  expect(new Character().age.generate().birth?.month).toBeGreaterThanOrEqual(1)
+  expect(new Character().age.birth.month).toBeLessThanOrEqual(12)
+  expect(new Character().age.birth.year).toBeLessThanOrEqual(
+    new Date().getFullYear()
+  )
+  expect(new Character().age.monthsOld).toBeGreaterThanOrEqual(0)
+  expect(new Character().age.monthsOld).toBeLessThanOrEqual(
+    new Date().getFullYear() * 12
+  )
 })
 
 test('default character background', () => {
@@ -69,9 +80,56 @@ test('default character skin', () => {
   expect(new Character().skin.tattoos).toBeNull()
 })
 
+// random
+test('random character age', () => {
+  expect(new Character().age.generate().birth?.day).toBeGreaterThanOrEqual(1)
+  expect(new Character().age.generate().birth?.day).toBeLessThanOrEqual(31)
+  expect(new Character().age.generate().birth?.month).toBeGreaterThanOrEqual(1)
+  expect(new Character().age.generate().birth?.month).toBeLessThanOrEqual(12)
+  expect(new Character().age.generate().birth?.year).toBeGreaterThanOrEqual(1)
+  expect(new Character().age.generate().birth?.year).toBeLessThanOrEqual(
+    new Date().getFullYear()
+  )
+  expect(
+    new Character({ age: { birth: { year: new Date().getFullYear() - 1 } } })
+      .age.monthsOld
+  ).toBeGreaterThan(0)
+  expect(
+    new Character({ age: { birth: { year: new Date().getFullYear() - 1 } } })
+      .age.monthsOld
+  ).toBeLessThanOrEqual(1200)
+  expect(
+    new Character({
+      age: {
+        birth: {
+          year: new Date().getFullYear() - 1,
+          month: new Date().getMonth() + 2,
+        },
+      },
+    }).age.monthsOld
+  ).toBe(10)
+})
+
+test('random character sex', () => {
+  expect(new Character().sex.generateType()).toBeTruthy()
+  expect(new Character().sex.generate().type).toBeTruthy()
+  expect(new Character().generate().sex?.type).toBeTruthy()
+})
+
 // age
 test('character with given age', () => {
-  expect(new Character({ age: { birth: { day: 29 } } }).age.birth.day).toBe(29)
+  expect(new Character({ age: { birth: { year: 2000 } } }).age.birth.year).toBe(
+    2000
+  )
+  expect(new Character({ age: { birth: { month: 6 } } }).age.birth.month).toBe(
+    6
+  )
+  expect(new Character({ age: { birth: { day: 15 } } }).age.birth.day).toBe(15)
+  expect(
+    new Character({
+      age: { birth: { month: 6 } },
+    }).age.monthsOld
+  ).toBeGreaterThanOrEqual(1)
 })
 
 // background
