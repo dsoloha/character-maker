@@ -4,8 +4,20 @@ test('default birthplace', () => {
   expect(new Background().birthplace).toBe('')
 })
 
+test('random birthplace', () => {
+  expect(new Background().generate().birthplace).toBeDefined()
+  expect(new Background().generate().birthplace?.city).toBeDefined()
+  expect(new Background().generate().birthplace?.country).toBeDefined()
+})
+
 test('given birthplace', () => {
-  expect(new Background({ birthplace: 'London' }).birthplace).toBe('London')
+  expect(new Background({ birthplace: { city: 'Kyiv' } }).birthplace.city).toBe(
+    'Kyiv'
+  )
+  expect(
+    new Background({ birthplace: { city: 'Kyiv', country: 'Ukraine' } })
+      .birthplace.city
+  ).toBe('Kyiv')
 })
 
 test('default education', () => {
@@ -14,13 +26,15 @@ test('default education', () => {
 
 test('given education', () => {
   expect(
-    new Background({ education: { school: 'Oxford', length: 4 } }).education
-      ?.school
-  ).toBe('Oxford')
+    new Background({ education: { school: 'high scool', length: 24 } })
+      .education?.school
+  ).toBe('high scool')
   expect(
-    new Background({ education: { school: 'Oxford', length: 4 } }).education
-      ?.length
-  ).toBe(4)
+    new Background({ education: { school: 'high school', length: 24 } })
+      .education?.length
+  ).toBe(24)
+  expect(new Background().generate().education?.grade).toBeGreaterThanOrEqual(0)
+  expect(new Background().generate().education?.grade).toBeLessThanOrEqual(100)
 })
 
 test('given nationality', () => {
