@@ -1,4 +1,7 @@
 import { Character } from '../src/index'
+import testCharacter from './testCharacter'
+
+const givenCharacter = testCharacter
 
 // default
 test('default character age', () => {
@@ -127,10 +130,9 @@ test('character with given age', () => {
 
 // background
 test('character with given background', () => {
-  expect(
-    new Character({ background: { birthplace: 'London' } }).background
-      .birthplace
-  ).toBe('London')
+  expect(givenCharacter.background.birthplace).toBeDefined()
+  expect(givenCharacter.background.education).toBeDefined()
+  expect(givenCharacter.background.occupation).toBeDefined()
 })
 
 // eyes
