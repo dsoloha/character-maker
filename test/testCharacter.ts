@@ -5,8 +5,8 @@ import { Character } from '../src/index'
 const testCharacter = new Character({
   age: { birth: { day: 1, month: 1, year: 2000 } },
   arms: {
-    left: { hand: { fingers: 5 }, size: 35 },
-    right: { hand: { fingers: 5 }, size: 35 },
+    left: { hand: { fingers: 5 }, size: 'large' },
+    right: { hand: { fingers: 5 }, size: 'large' },
   },
   background: {
     birthplace: { city: 'Kyiv', country: 'Ukraine' },
@@ -30,10 +30,10 @@ const testCharacter = new Character({
       fertile: false,
     },
     penis: {
-      size: 20,
+      size: 'average',
     },
     testicles: {
-      size: 20,
+      size: 'average',
       potent: true,
     },
     vagina: {
