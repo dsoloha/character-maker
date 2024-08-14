@@ -1,6 +1,8 @@
 import { gaussian, random } from '../lib/number'
 import { SexType } from './Sex'
 
+// TODO: expand this with full modern gender spectrum
+
 export default class Sexuality implements ISexuality {
   gender: string
   attraction: {

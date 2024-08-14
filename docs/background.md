@@ -6,41 +6,61 @@
 
 Properties pertaining to the character's background and upbringing.
 
-## Declaration
+## Usage
 
 ```js
 import { Background } from '@dsoloha/character-maker'
 
+// create a blank instance:
 const background = new Background()
 
-// or optionally with parameters:
-
+// with parameters:
 const background = new Background({
-  birthplace: 'London',
+  birthplace: 'Kyiv',
 })
+
+// generate a random instance:
+const background = new Background().generate()
+
+// get the character's nationality:
+const background = new Background({ birthplace: { city: "Kyiv" } })
+console.log(background.nationality) // expected output: "Ukrainian"
 ```
 
 ## Properties
 
-| Property      | Type          | Description                                          | Optional |
-| :------------ | :------------ | :--------------------------------------------------- | :------- |
-| `birthplace`  | `string`      | The character's birthplace.                          | Yes      |
-| `education`   | `object|null` | Properties pertaining to the character's education.  | Yes      |
-| `nationality` | `string`      | The character's nationality.                         | Yes      |
-| `occupation`  | `object`      | Properties pertaining to the character's occupation. | Yes      |
+| Property     | Type     | Description                                          | Optional |
+|:-------------|:---------|:-----------------------------------------------------|:---------|
+| `birthplace` | `object` | The character's birthplace.                          | No       |
+| `education`  | `object` | Properties pertaining to the character's education.  | No       |
+| `occupation` | `object` | Properties pertaining to the character's occupation. | No       |
+
+### `.birthplace`
+
+#### Description
+
+Properties pertaining to where the character was born.
+
+#### Properties
+
+| Property  | Type     | Description              | Optional |
+|:----------|:---------|:-------------------------|:---------|
+| `city`    | `string` | The name of the city.    | Yes      |
+| `country` | `string` | The name of the country. | No       |
 
 ### `.education`
 
 #### Description
 
-Properties pertaining to the character's education.
+Properties pertaining to the character's education, if any.
 
 #### Properties
 
-| Property | Type     | Description                                       | Optional |
-| :------- | :------- | :------------------------------------------------ | :------- |
-| `school` | `string` | The school the character went to.                 | No       |
-| `length` | `number` | How many years the character attended the school. | No       |
+| Property | Type     | Description                                                    | Optional |
+|:---------|:---------|:---------------------------------------------------------------|:---------|
+| `grade`  | `number` | The character's grade-point average at graduation, out of 100. | No       |
+| `length` | `number` | How many years the character attended the school.              | No       |
+| `school` | `string` | The school the character went to.                              | No       |
 
 ### `.occupation`
 
@@ -50,8 +70,8 @@ Properties pertaining to the character's occupation.
 
 #### Properties
 
-| Property | Type     | Description                                           | Optional |
-| :------- | :------- | :---------------------------------------------------- | :------- |
-| `type`   | `string` | The character's current occupation.                   | Yes      |
-| `income` | `number` | The character's annual income in USD.                 | Yes      |
-| `length` | `number` | How many years the character has had this occupation. | Yes      |
+| Property | Type     | Description                                            | Optional |
+|:---------|:---------|:-------------------------------------------------------|:---------|
+| `type`   | `string` | The character's current occupation.                    | No       |
+| `income` | `number` | The character's weekly income in the local currency.   | No       |
+| `length` | `number` | How many months the character has had this occupation. | No       |

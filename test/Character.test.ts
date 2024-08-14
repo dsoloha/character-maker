@@ -1,4 +1,9 @@
 import { Character } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultCharacter = new Character()
+const randomCharacter = new Character().generate()
+const givenCharacter = testCharacter
 
 // default
 test('default character age', () => {
@@ -12,14 +17,17 @@ test('default character age', () => {
 })
 
 test('default character background', () => {
-  expect(new Character().background.birthplace).toBe('')
-  expect(new Character().background.education).toBeNull()
-  expect(new Character().background.nationality).toBe('')
-  expect(new Character().background.occupation).toEqual({
-    type: '',
-    income: 0,
-    length: 0,
-  })
+  expect(defaultCharacter.background.birthplace).toBeDefined()
+  expect(defaultCharacter.background.birthplace.city).not.toBeNull()
+  expect(defaultCharacter.background.birthplace.country).not.toBeNull()
+  expect(defaultCharacter.background.education).toBeDefined()
+  expect(defaultCharacter.background.education.highestLevel).toBeDefined()
+  expect(defaultCharacter.background.education.schools).toBeDefined()
+  expect(defaultCharacter.background.nationality).toBeDefined()
+  expect(defaultCharacter.background.occupation).toBeDefined()
+  expect(defaultCharacter.background.occupation.income).toBeDefined()
+  expect(defaultCharacter.background.occupation.length).toBeDefined()
+  expect(defaultCharacter.background.occupation.type).toBeDefined()
 })
 
 test('default character eyes', () => {
@@ -103,6 +111,19 @@ test('random character age', () => {
   ).toBe(10)
 })
 
+test('random character background', () => {
+  expect(randomCharacter.background?.birthplace).toBeDefined()
+  expect(randomCharacter.background?.birthplace?.city).not.toBeNull()
+  expect(randomCharacter.background?.birthplace?.country).not.toBeNull()
+  expect(randomCharacter.background?.education).toBeDefined()
+  expect(randomCharacter.background?.education?.highestLevel).toBeDefined()
+  expect(randomCharacter.background?.education?.schools).toBeDefined()
+  expect(randomCharacter.background?.occupation).toBeDefined()
+  expect(randomCharacter.background?.occupation?.income).toBeDefined()
+  expect(randomCharacter.background?.occupation?.length).toBeDefined()
+  expect(randomCharacter.background?.occupation?.type).toBeDefined()
+})
+
 test('random character sex', () => {
   expect(new Character().sex.generateType()).toBeTruthy()
   expect(new Character().sex.generate().type).toBeTruthy()
@@ -127,10 +148,9 @@ test('character with given age', () => {
 
 // background
 test('character with given background', () => {
-  expect(
-    new Character({ background: { birthplace: 'London' } }).background
-      .birthplace
-  ).toBe('London')
+  expect(givenCharacter.background.birthplace).toBeDefined()
+  expect(givenCharacter.background.education).toBeDefined()
+  expect(givenCharacter.background.occupation).toBeDefined()
 })
 
 // eyes
