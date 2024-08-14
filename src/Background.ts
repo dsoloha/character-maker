@@ -110,7 +110,7 @@ export interface ILocation {
 export interface IOccupation {
   /** The character's weekly income in the local currency. */
   income: number
-  /** How many months the character has had this occupation. */
+  /** How many years the character has had this occupation. */
   length: number
   /** The character's current occupation. */
   type: string
