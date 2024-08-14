@@ -104,12 +104,16 @@ export default class Build implements IBuild {
 }
 
 export interface IBuild {
-  /** How tall the character is, in cm. */
+  /** How tall the character is, in cm.
+   *  Global average height is roughly 170cm.
+   */
   height?: number
   /** How muscular the character is, on a scale from 1 to 100 (1 being no visible muscle mass, 100 being bodybuilder-like musculature). */
   muscles?: number
   /** The character's build type (lithe, stocky, etc). */
   type?: string
-  /** How much the character weighs, in kg. */
+  /** How much the character weighs, in kg.
+   *  Healthy weight for average height is roughly 60kg.
+   */
   weight?: number
 }
