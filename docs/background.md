@@ -29,11 +29,11 @@ console.log(background.nationality) // expected output: "Ukrainian"
 
 ## Properties
 
-| Property     | Type               | Description                                          | Optional |
-|:-------------|:-------------------|:-----------------------------------------------------|:---------|
-| `birthplace` | `object`           | The character's birthplace.                          | No       |
-| `education`  | `object` or `null` | Properties pertaining to the character's education.  | No       |
-| `occupation` | `object`           | Properties pertaining to the character's occupation. | No       |
+| Property     | Type     | Description                                          | Optional |
+|:-------------|:---------|:-----------------------------------------------------|:---------|
+| `birthplace` | `object` | The character's birthplace.                          | No       |
+| `education`  | `object` | Properties pertaining to the character's education.  | No       |
+| `occupation` | `object` | Properties pertaining to the character's occupation. | No       |
 
 ### `.birthplace`
 
