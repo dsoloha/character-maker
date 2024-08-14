@@ -77,8 +77,8 @@ export default class Character implements ICharacter {
     return {
       age: this.age.generate(),
       background: this.background.generate(),
-      build: this.build.generate(),
-      arms: this.arms?.generate(this.build.muscles ?? gaussian(0, 100)),
+      build: this.build.generate(this.sex.type),
+      arms: this.arms?.generate(this.sex.type, { size: gaussian(0, 100) }),
       chest: this.chest.generate(),
       crotch: this.crotch.generate(),
       eyes: this.eyes.generate(),

@@ -2,92 +2,102 @@ import { random } from '../lib/number'
 
 export default class Background implements IBackground {
   birthplace: ILocation
-  education: IEducation | null
-  nationality: string
+  education: IEducation
   occupation: IOccupation
 
   constructor(options?: IBackground) {
-    this.birthplace = options?.birthplace ?? { city: '', country: '' }
-    this.education = options?.education ?? null
-    this.nationality = options?.nationality ?? ''
-    this.occupation = options?.occupation ?? {
-      type: options?.occupation?.type ?? '',
-      income: options?.occupation?.income ?? 0,
-      length: options?.occupation?.length ?? 0,
-    }
+    this.birthplace = options?.birthplace ?? this.generateBirthplace()
+    this.education = options?.education ?? this.generateEducation()
+    this.occupation = options?.occupation ?? this.generateOccupation()
   }
 
   /** Generates the location in which the character was born. */
-  generateBirthplace({ city, country } = { city: '', country: '' }): ILocation {
-    city = city || ''
-    country = country || ''
+  private generateBirthplace(
+    { city, country }: ILocation = { city: undefined, country: undefined }
+  ): ILocation {
+    city = city || '' // TODO: hook this up to helper library of cities
+    country = country || '' // TODO: hook this up to helper library of countries
 
     return { city, country }
   }
 
   /** Generates the type and amount of education the character received. */
-  generateEducation(): IEducation | null {
-    const seed = random(1, 100)
-
-    if (seed < 25) return null
+  private generateEducation(
+    { highestLevel, schools }: IEducation = {
+      highestLevel: '',
+      schools: [],
+    }
+  ): IEducation {
+    schools = schools || [
+      { name: 'high school', grade: 0, length: 0 },
+      { name: 'college', grade: 0, length: 0 },
+      { name: 'university', grade: 0, length: 0 },
+    ] // TODO: hook this up to helper library of schools
+    highestLevel = highestLevel || 'ged'
 
     return {
-      school: '',
-      length: 0,
+      highestLevel,
+      schools,
     }
   }
 
-  /** Generates the nationality of the character. */
-  generateNationality(): string {
-    const nationalities: string[] = []
-
-    return nationalities.random()
-  }
-
   /** Generates the character's occupation. */
-  generateOccupation(
-    { type, income, length } = { type: '', income: 0, length: 0 }
+  private generateOccupation(
+    { type, income, length }: IOccupation = {
+      type: '',
+      income: 0,
+      length: 0,
+    }
   ): IOccupation {
-    // TODO: hook this up to a list of potential occupations
-    const types: string[] = []
+    const types: string[] = ['architect', 'artist'] // TODO: hook this up to helper library of occupations
+    type = type || types.random()
     income = income || random(1, 100)
     length = length || random(1, 100)
 
     return {
-      type: type || types.random(),
+      type,
       income,
       length,
     }
   }
 
-  generate(): IBackground {
-    return {
-      birthplace: this.generateBirthplace(),
-      education: this.generateEducation(),
-      nationality: this.generateNationality(),
-      occupation: this.generateOccupation(),
+  generate(
+    { birthplace, education, occupation }: IBackground = {
+      birthplace: { city: '', country: '' },
+      education: { highestLevel: '', schools: [] },
+      occupation: { income: 0, length: 0, type: '' },
     }
+  ): IBackground {
+    birthplace = birthplace || this.generateBirthplace(birthplace)
+    education = education || this.generateEducation(education)
+    occupation = occupation || this.generateOccupation(occupation)
+
+    return {
+      birthplace,
+      education,
+      occupation,
+    }
+  }
+
+  /** Returns the nationality of the character. */
+  get nationality(): string {
+    return this.birthplace.country ?? ''
   }
 }
 
 export interface IBackground {
-  /** The character's birthplace. */
+  /** Properties pertaining to where the character was born. */
   birthplace?: ILocation
-  /** Properties pertaining to the character's education. */
-  education?: IEducation | null
-  /** The character's nationality. */
-  nationality?: string
+  /** Properties pertaining to the character's education, if any. */
+  education?: IEducation
   /** Properties pertaining to the character's occupation. */
   occupation?: IOccupation
 }
 
 export interface IEducation {
-  /** The character's grade-point average at graduation, out of 100. */
-  grade?: number
-  /** How many months the character attended the school. */
-  length?: number
   /** The school the character went to. */
-  school?: string
+  schools: ISchool[]
+  highestLevel: string
 }
 
 export interface ILocation {
@@ -104,4 +114,13 @@ export interface IOccupation {
   length: number
   /** The character's current occupation. */
   type: string
+}
+
+export interface ISchool {
+  /** The name of the school. */
+  name: string
+  /** The character's grade-point average at graduation, out of 100. */
+  grade: number
+  /** How many years the character attended the school. */
+  length: number
 }
