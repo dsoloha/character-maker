@@ -19,6 +19,12 @@ const testCharacter = new Character({
       highestLevel: 'ged',
     },
   },
+  build: {
+    height: 180,
+    muscles: 50,
+    type: 'average',
+    weight: 65,
+  },
   chest: {
     size: 'flat',
   },
@@ -48,6 +54,10 @@ const testCharacter = new Character({
     },
     farsighted: false,
     nearsighted: false,
+  },
+  health: {
+    illnesses: ['minor cold'],
+    injuries: ['bullet wound'],
   },
   hair: {
     arm: {
@@ -85,6 +95,54 @@ const testCharacter = new Character({
       length: 'short',
       style: 'straight',
     },
+  },
+  legs: {
+    left: { foot: { toes: 5 }, size: 'average' },
+    right: { foot: { toes: 5 }, size: 'average' },
+  },
+  mouth: {
+    teeth: {
+      count: 32,
+      description: 'white',
+    },
+    tongue: true,
+  },
+  name: {
+    first: 'Slava',
+    middle: 'Heroyim',
+    last: 'Ukraini',
+  },
+  neck: {
+    larynx: true,
+  },
+  nose: {
+    anosmia: false,
+  },
+  sex: {
+    type: 'male',
+  },
+  sexuality: {
+    gender: 'male',
+    attraction: {
+      male: 0,
+      female: 0,
+    },
+  },
+  shoulders: {
+    width: 'broad',
+  },
+  skin: {
+    color: 'tan',
+    scars: [],
+  },
+  speech: {
+    style: 'normal',
+  },
+  stomach: {
+    shape: 'flat',
+  },
+  waist: {
+    size: 'average',
   },
 })
 
