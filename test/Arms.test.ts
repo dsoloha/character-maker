@@ -16,6 +16,6 @@ test('random arm size', () => {
 })
 
 test('given arm size', () => {
-  expect(givenArms?.left.size).toBeDefined()
-  expect(givenArms?.right.size).toBeDefined()
+  expect(givenArms?.left.size).not.toBeNaN()
+  expect(givenArms?.right.size).not.toBeNaN()
 })
