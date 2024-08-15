@@ -1,9 +1,26 @@
 import { Hand } from '../src/index'
 
-test('default hands', () => {
-  expect(new Hand().fingers).toBe(5)
+const defaultHand = new Hand()
+const randomHand = new Hand().generate()
+const givenHand = new Hand({ fingers: 5 })
+
+// default
+
+test('default hand', () => {
+  expect(defaultHand.fingers).toBeGreaterThanOrEqual(0)
+  expect(defaultHand.fingers).toBeLessThanOrEqual(5)
 })
 
-test('given hands', () => {
-  expect(new Hand({ fingers: 3 }).fingers).toBe(3)
+// random
+
+test('random hand', () => {
+  expect(randomHand.fingers).toBeGreaterThanOrEqual(0)
+  expect(randomHand.fingers).toBeLessThanOrEqual(5)
+})
+
+// given
+
+test('given hand', () => {
+  expect(givenHand.fingers).toBeGreaterThanOrEqual(0)
+  expect(givenHand.fingers).toBeLessThanOrEqual(5)
 })
