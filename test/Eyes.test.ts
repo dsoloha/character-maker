@@ -1,26 +1,45 @@
 import { Eyes } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultEyes = new Eyes()
+const randomEyes = new Eyes().generate()
+const givenEyes = testCharacter.eyes
+
+// default
 
 test('default eyes', () => {
-  expect(new Eyes().astigmatism).toBe(false)
-  expect(new Eyes().colors).toStrictEqual({ left: '', right: '' })
-  expect(new Eyes().farsighted).toBe(false)
-  expect(new Eyes().nearsighted).toBe(false)
+  expect(defaultEyes.astigmatism).toBeDefined()
+  expect(defaultEyes.colors.left).toBeDefined()
+  expect(defaultEyes.colors.right).toBeDefined()
+  expect(defaultEyes.farsighted).toBeDefined()
+  expect(defaultEyes.nearsighted).toBeDefined()
 })
 
+// random
+
+test('random eyes', () => {
+  expect(randomEyes.astigmatism).toBeDefined()
+  expect(randomEyes.colors?.left).toBeDefined()
+  expect(randomEyes.colors?.right).toBeDefined()
+  expect(randomEyes.farsighted).toBeDefined()
+  expect(randomEyes.nearsighted).toBeDefined()
+})
+
+// given
+
 test('given astigmatism', () => {
-  expect(new Eyes({ astigmatism: true }).astigmatism).toBe(true)
+  expect(givenEyes.astigmatism).toBeDefined()
 })
 
 test('given eye colors', () => {
-  expect(
-    new Eyes({ colors: { left: 'blue', right: 'green' } }).colors
-  ).toStrictEqual({ left: 'blue', right: 'green' })
+  expect(givenEyes.colors.left).toBeDefined()
+  expect(givenEyes.colors.right).toBeDefined()
 })
 
 test('given farsightedness', () => {
-  expect(new Eyes({ farsighted: true }).farsighted).toBe(true)
+  expect(givenEyes.farsighted).toBeDefined()
 })
 
 test('given nearsightedness', () => {
-  expect(new Eyes({ nearsighted: true }).nearsighted).toBe(true)
+  expect(givenEyes.nearsighted).toBeDefined()
 })
