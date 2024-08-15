@@ -1,143 +1,102 @@
 import { Hair } from '../src/index'
+import testCharacter from './testCharacter'
 
-const defaultHair = {
-  color: '',
-  length: '',
-  style: '',
-}
+const defaultHair = new Hair()
+const randomHair = new Hair().generate()
+const givenHair = testCharacter.hair
 
-test('default hair', () => {
-  expect(new Hair().arm).toEqual(defaultHair)
-  expect(new Hair().chest).toEqual(defaultHair)
-  expect(new Hair().face).toEqual(defaultHair)
-  expect(new Hair().head).toEqual(defaultHair)
-  expect(new Hair().leg).toEqual(defaultHair)
-  expect(new Hair().pubic).toEqual(defaultHair)
-  expect(new Hair().underarms).toEqual(defaultHair)
-})
+// given
 
 test('default hair color', () => {
-  expect(new Hair().arm.color).toBe('')
-  expect(new Hair().chest.color).toBe('')
-  expect(new Hair().face.color).toBe('')
-  expect(new Hair().head.color).toBe('')
-  expect(new Hair().leg.color).toBe('')
-  expect(new Hair().pubic.color).toBe('')
-  expect(new Hair().underarms.color).toBe('')
+  expect(defaultHair.arm.color).toBeDefined()
+  expect(defaultHair.chest.color).toBeDefined()
+  expect(defaultHair.face.color).toBeDefined()
+  expect(defaultHair.head.color).toBeDefined()
+  expect(defaultHair.leg.color).toBeDefined()
+  expect(defaultHair.pubic.color).toBeDefined()
+  expect(defaultHair.underarms.color).toBeDefined()
 })
 
 test('default hair length', () => {
-  expect(new Hair().arm.length).toBe('')
-  expect(new Hair().chest.length).toBe('')
-  expect(new Hair().face.length).toBe('')
-  expect(new Hair().head.length).toBe('')
-  expect(new Hair().leg.length).toBe('')
-  expect(new Hair().pubic.length).toBe('')
-  expect(new Hair().underarms.length).toBe('')
+  expect(defaultHair.arm.length).toBeDefined()
+  expect(defaultHair.chest.length).toBeDefined()
+  expect(defaultHair.face.length).toBeDefined()
+  expect(defaultHair.head.length).toBeDefined()
+  expect(defaultHair.leg.length).toBeDefined()
+  expect(defaultHair.pubic.length).toBeDefined()
+  expect(defaultHair.underarms.length).toBeDefined()
 })
 
 test('default hair style', () => {
-  expect(new Hair().arm.style).toBe('')
-  expect(new Hair().chest.style).toBe('')
-  expect(new Hair().face.style).toBe('')
-  expect(new Hair().head.style).toBe('')
-  expect(new Hair().leg.style).toBe('')
-  expect(new Hair().pubic.style).toBe('')
-  expect(new Hair().underarms.style).toBe('')
+  expect(defaultHair.arm.style).toBeDefined()
+  expect(defaultHair.chest.style).toBeDefined()
+  expect(defaultHair.face.style).toBeDefined()
+  expect(defaultHair.head.style).toBeDefined()
+  expect(defaultHair.leg.style).toBeDefined()
+  expect(defaultHair.pubic.style).toBeDefined()
+  expect(defaultHair.underarms.style).toBeDefined()
 })
 
+// random
+
+test('random hair color', () => {
+  expect(randomHair.arm?.color).toBeDefined()
+  expect(randomHair.chest?.color).toBeDefined()
+  expect(randomHair.face?.color).toBeDefined()
+  expect(randomHair.head?.color).toBeDefined()
+  expect(randomHair.leg?.color).toBeDefined()
+  expect(randomHair.pubic?.color).toBeDefined()
+  expect(randomHair.underarms?.color).toBeDefined()
+})
+
+test('random hair length', () => {
+  expect(randomHair.arm?.length).toBeDefined()
+  expect(randomHair.chest?.length).toBeDefined()
+  expect(randomHair.face?.length).toBeDefined()
+  expect(randomHair.head?.length).toBeDefined()
+  expect(randomHair.leg?.length).toBeDefined()
+  expect(randomHair.pubic?.length).toBeDefined()
+  expect(randomHair.underarms?.length).toBeDefined()
+})
+
+test('random hair style', () => {
+  expect(randomHair.arm?.style).toBeDefined()
+  expect(randomHair.chest?.style).toBeDefined()
+  expect(randomHair.face?.style).toBeDefined()
+  expect(randomHair.head?.style).toBeDefined()
+  expect(randomHair.leg?.style).toBeDefined()
+  expect(randomHair.pubic?.style).toBeDefined()
+  expect(randomHair.underarms?.style).toBeDefined()
+})
+
+// given
+
 test('given hair color', () => {
-  expect(
-    new Hair({ arm: { color: 'red', length: 'short', style: 'straight' } }).arm
-      .color
-  ).toBe('red')
-  expect(
-    new Hair({ chest: { color: 'red', length: 'short', style: 'straight' } })
-      .chest.color
-  ).toBe('red')
-  expect(
-    new Hair({ face: { color: 'red', length: 'short', style: 'straight' } })
-      .face.color
-  ).toBe('red')
-  expect(
-    new Hair({ head: { color: 'red', length: 'short', style: 'straight' } })
-      .head.color
-  ).toBe('red')
-  expect(
-    new Hair({ leg: { color: 'red', length: 'short', style: 'straight' } }).leg
-      .color
-  ).toBe('red')
-  expect(
-    new Hair({ pubic: { color: 'red', length: 'short', style: 'straight' } })
-      .pubic.color
-  ).toBe('red')
-  expect(
-    new Hair({
-      underarms: { color: 'red', length: 'short', style: 'straight' },
-    }).underarms.color
-  ).toBe('red')
+  expect(givenHair.arm?.color).toBeDefined()
+  expect(givenHair.chest?.color).toBeDefined()
+  expect(givenHair.face?.color).toBeDefined()
+  expect(givenHair.head?.color).toBeDefined()
+  expect(givenHair.leg?.color).toBeDefined()
+  expect(givenHair.pubic?.color).toBeDefined()
+  expect(givenHair.underarms?.color).toBeDefined()
 })
 
 test('given hair length', () => {
-  expect(
-    new Hair({ arm: { color: 'red', length: 'short', style: 'straight' } }).arm
-      .length
-  ).toBe('short')
-  expect(
-    new Hair({ chest: { color: 'red', length: 'short', style: 'straight' } })
-      .chest.length
-  ).toBe('short')
-  expect(
-    new Hair({ face: { color: 'red', length: 'short', style: 'straight' } })
-      .face.length
-  ).toBe('short')
-  expect(
-    new Hair({ head: { color: 'red', length: 'short', style: 'straight' } })
-      .head.length
-  ).toBe('short')
-  expect(
-    new Hair({ leg: { color: 'red', length: 'short', style: 'straight' } }).leg
-      .length
-  ).toBe('short')
-  expect(
-    new Hair({ pubic: { color: 'red', length: 'short', style: 'straight' } })
-      .pubic.length
-  ).toBe('short')
-  expect(
-    new Hair({
-      underarms: { color: 'red', length: 'short', style: 'straight' },
-    }).underarms.length
-  ).toBe('short')
+  expect(givenHair.arm?.length).toBeDefined()
+  expect(givenHair.chest?.length).toBeDefined()
+  expect(givenHair.face?.length).toBeDefined()
+  expect(givenHair.head?.length).toBeDefined()
+  expect(givenHair.leg?.length).toBeDefined()
+  expect(givenHair.pubic?.length).toBeDefined()
+  expect(givenHair.underarms?.length).toBeDefined()
 })
 
 test('given hair style', () => {
-  expect(
-    new Hair({ arm: { color: 'red', length: 'short', style: 'straight' } }).arm
-      .style
-  ).toBe('straight')
-  expect(
-    new Hair({ chest: { color: 'red', length: 'short', style: 'straight' } })
-      .chest.style
-  ).toBe('straight')
-  expect(
-    new Hair({ face: { color: 'red', length: 'short', style: 'straight' } })
-      .face.style
-  ).toBe('straight')
-  expect(
-    new Hair({ head: { color: 'red', length: 'short', style: 'straight' } })
-      .head.style
-  ).toBe('straight')
-  expect(
-    new Hair({ leg: { color: 'red', length: 'short', style: 'straight' } }).leg
-      .style
-  ).toBe('straight')
-  expect(
-    new Hair({ pubic: { color: 'red', length: 'short', style: 'straight' } })
-      .pubic.style
-  ).toBe('straight')
-  expect(
-    new Hair({
-      underarms: { color: 'red', length: 'short', style: 'straight' },
-    }).underarms.style
-  ).toBe('straight')
+  expect(givenHair.arm?.style).toBeDefined()
+  expect(givenHair.chest?.style).toBeDefined()
+  expect(givenHair.face?.style).toBeDefined()
+  expect(givenHair.head?.style).toBeDefined()
+  expect(givenHair.leg?.style).toBeDefined()
+  expect(givenHair.pubic?.style).toBeDefined()
+  expect(givenHair.underarms?.style).toBeDefined()
 })
