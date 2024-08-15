@@ -13,12 +13,12 @@ test('default chest', () => {
 
 // random
 
-test('character with random chest', () => {
+test('random chest', () => {
   expect(randomChest.size).toBeDefined()
 })
 
 // given
 
-test('given chest size', () => {
+test('given chest', () => {
   expect(givenChest.size).toBeDefined()
 })
