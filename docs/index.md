@@ -1,6 +1,7 @@
 # character-maker
 
-This is a relatively simple JavaScript library designed to make creating new characters for your next project easier than ever.
+This is a relatively simple JavaScript library designed to make creating new characters for your next project easier
+than ever.
 
 ## Getting Started
 
