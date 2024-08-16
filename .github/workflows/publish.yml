@@ -33,9 +33,9 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Install modules
-        run: npm install
+        run: pnpm install
       - name: Build
-        run: npm run build
+        run: pnpm run build
       - name: Publish to npm
         run: npm publish --access public
         env:
@@ -46,8 +46,8 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@tomchen'
-      - run: npm run addscope
+      - run: pnpm run addscope
       - name: Publish to GitHub Packages
-        run: npm publish
+        run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
