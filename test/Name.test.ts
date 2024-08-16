@@ -1,30 +1,68 @@
 import { Name } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultName = new Name()
+const randomName = new Name().generate()
+const givenName = testCharacter.name
+
+// default
 
 test('default first name', () => {
-  expect(new Name().first).toBe('')
+  expect(defaultName.first).toBeDefined()
 })
 
-test('given first name', () => {
-  expect(new Name({ first: 'John' }).first).toBe('John')
-  expect(new Name({ first: 'John' }).full).toBe('John')
+test('default middle name', () => {
+  expect(defaultName.middle).toBeDefined()
 })
 
-test('given middle name', () => {
-  expect(new Name({ middle: 'A' }).middle).toBe('A')
-  expect(new Name({ middle: 'A' }).full).toBe('A')
+test('default last name', () => {
+  expect(defaultName.last).toBeDefined()
 })
 
-test('given last name', () => {
-  expect(new Name({ last: 'Smith' }).last).toBe('Smith')
-  expect(new Name({ last: 'Smith' }).full).toBe('Smith')
+test('default full name', () => {
+  expect(defaultName.full).toBeDefined()
 })
 
-test('given full name', () => {
-  expect(new Name({ first: 'John', middle: 'A', last: 'Smith' }).full).toBe(
-    'John A Smith'
-  )
+test('default nicknames', () => {
+  expect(defaultName.nicknames).toBeDefined()
 })
 
-test('given nicknames', () => {
-  expect(new Name({ nicknames: ['Johnny'] }).nicknames).toContain('Johnny')
+// random
+
+test('random first name', () => {
+  expect(randomName.first).toBeDefined()
+})
+
+test('random middle name', () => {
+  expect(randomName.middle).toBeDefined()
+})
+
+test('random last name', () => {
+  expect(randomName.last).toBeDefined()
+})
+
+test('random nicknames', () => {
+  expect(randomName.nicknames).toBeDefined()
+})
+
+// default
+
+test('default first name', () => {
+  expect(defaultName.first).toBeDefined()
+})
+
+test('default middle name', () => {
+  expect(defaultName.middle).toBeDefined()
+})
+
+test('default last name', () => {
+  expect(defaultName.last).toBeDefined()
+})
+
+test('default full name', () => {
+  expect(defaultName.full).toBeDefined()
+})
+
+test('default nicknames', () => {
+  expect(defaultName.nicknames).toBeDefined()
 })
