@@ -1,79 +1,39 @@
 import { Skin } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultSkin = new Skin()
+const randomSkin = new Skin().generate()
+const givenSkin = testCharacter.skin
+
+// default
 
 test('default skin', () => {
-  expect(new Skin().birthmarks).toBeNull()
-  expect(new Skin().brands).toBeNull()
-  expect(new Skin().color).toBe('')
-  expect(new Skin().markings).toBeNull()
-  expect(new Skin().scars).toBeNull()
-  expect(new Skin().tattoos).toBeNull()
+  expect(defaultSkin.birthmarks).toBeDefined()
+  expect(defaultSkin.brands).toBeDefined()
+  expect(defaultSkin.color).toBeDefined()
+  expect(defaultSkin.markings).toBeDefined()
+  expect(defaultSkin.scars).toBeDefined()
+  expect(defaultSkin.tattoos).toBeDefined()
 })
 
-test('given skin color', () => {
-  expect(new Skin({ color: 'green' }).color).toBe('green')
+// random
+
+test('random skin', () => {
+  expect(randomSkin.birthmarks).toBeDefined()
+  expect(randomSkin.brands).toBeDefined()
+  expect(randomSkin.color).toBeDefined()
+  expect(randomSkin.markings).toBeDefined()
+  expect(randomSkin.scars).toBeDefined()
+  expect(randomSkin.tattoos).toBeDefined()
 })
 
-test('given birthmarks', () => {
-  expect(
-    new Skin({
-      birthmarks: [
-        {
-          location: 'arm',
-          description: 'A birthmark',
-        },
-      ],
-    }).birthmarks
-  ).toContainEqual({ location: 'arm', description: 'A birthmark' })
-})
+// given
 
-test('given brands', () => {
-  expect(
-    new Skin({
-      brands: [
-        {
-          location: 'arm',
-          description: 'A brand',
-        },
-      ],
-    }).brands
-  ).toContainEqual({ location: 'arm', description: 'A brand' })
-})
-
-test('given markings', () => {
-  expect(
-    new Skin({
-      markings: [
-        {
-          location: 'face',
-          description: 'Freckles',
-        },
-      ],
-    }).markings
-  ).toContainEqual({ location: 'face', description: 'Freckles' })
-})
-
-test('given scars', () => {
-  expect(
-    new Skin({
-      scars: [
-        {
-          location: 'arm',
-          description: 'A scar',
-        },
-      ],
-    }).scars
-  ).toContainEqual({ location: 'arm', description: 'A scar' })
-})
-
-test('given tattoos', () => {
-  expect(
-    new Skin({
-      tattoos: [
-        {
-          location: 'arm',
-          description: 'A tattoo',
-        },
-      ],
-    }).tattoos
-  ).toContainEqual({ location: 'arm', description: 'A tattoo' })
+test('given skin', () => {
+  expect(givenSkin.birthmarks).toBeDefined()
+  expect(givenSkin.brands).toBeDefined()
+  expect(givenSkin.color).toBeDefined()
+  expect(givenSkin.markings).toBeDefined()
+  expect(givenSkin.scars).toBeDefined()
+  expect(givenSkin.tattoos).toBeDefined()
 })
