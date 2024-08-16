@@ -45,24 +45,24 @@ test('random nicknames', () => {
   expect(randomName.nicknames).toBeDefined()
 })
 
-// default
+// given
 
-test('default first name', () => {
-  expect(defaultName.first).toBeDefined()
+test('given first name', () => {
+  expect(givenName.first).toBeDefined()
 })
 
-test('default middle name', () => {
-  expect(defaultName.middle).toBeDefined()
+test('given middle name', () => {
+  expect(givenName.middle).toBeDefined()
 })
 
-test('default last name', () => {
-  expect(defaultName.last).toBeDefined()
+test('given last name', () => {
+  expect(givenName.last).toBeDefined()
 })
 
-test('default full name', () => {
-  expect(defaultName.full).toBeDefined()
+test('given full name', () => {
+  expect(givenName.full).toBeDefined()
 })
 
-test('default nicknames', () => {
-  expect(defaultName.nicknames).toBeDefined()
+test('given nicknames', () => {
+  expect(givenName.nicknames).toBeDefined()
 })
