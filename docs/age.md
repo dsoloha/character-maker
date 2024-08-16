@@ -1,6 +1,6 @@
 # `.age`
 
-`class Age`
+*`class Age`*
 
 ## Description
 
