@@ -1,6 +1,6 @@
 # `.background`
 
-`class Background`
+*`class Background`*
 
 ## Description
 
@@ -35,7 +35,7 @@ console.log(background.nationality) // expected output: "Ukrainian"
 | `education`  | `object` | Properties pertaining to the character's education.  | No       |
 | `occupation` | `object` | Properties pertaining to the character's occupation. | No       |
 
-### `.birthplace`
+### `.birthplace` *`object`*
 
 #### Description
 
@@ -48,7 +48,7 @@ Properties pertaining to where the character was born.
 | `city`    | `string` | The name of the city.    | Yes      |
 | `country` | `string` | The name of the country. | No       |
 
-### `.education`
+### `.education` *`object`*
 
 #### Description
 
@@ -62,7 +62,7 @@ Properties pertaining to the character's education, if any.
 | `length` | `number` | How many years the character attended the school.              | No       |
 | `school` | `string` | The school the character went to.                              | No       |
 
-### `.occupation`
+### `.occupation` *`object`*
 
 #### Description
 
@@ -75,3 +75,9 @@ Properties pertaining to the character's occupation.
 | `type`   | `string` | The character's current occupation.                    | No       |
 | `income` | `number` | The character's weekly income in the local currency.   | No       |
 | `length` | `number` | How many months the character has had this occupation. | No       |
+
+## Methods
+
+### `.nationality` *`string`*
+
+Returns the character's nationality.
