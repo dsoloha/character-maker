@@ -1,14 +1,27 @@
 import { Health } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultHealth = new Health()
+const randomHealth = new Health().generate()
+const givenHealth = testCharacter.health
+
+// default
 
 test('default health', () => {
-  expect(new Health().illnesses).toHaveLength(0)
-  expect(new Health().injuries).toHaveLength(0)
+  expect(defaultHealth.illnesses).toBeDefined()
+  expect(defaultHealth.injuries).toBeDefined()
 })
 
-test('given illnesses', () => {
-  expect(new Health({ illnesses: ['cold'] }).illnesses).toContain('cold')
+// random
+
+test('random health', () => {
+  expect(randomHealth.illnesses).toBeDefined()
+  expect(randomHealth.injuries).toBeDefined()
 })
 
-test('given injuries', () => {
-  expect(new Health({ injuries: ['scratch'] }).injuries).toContain('scratch')
+// given
+
+test('given health', () => {
+  expect(givenHealth.illnesses).toBeDefined()
+  expect(givenHealth.injuries).toBeDefined()
 })

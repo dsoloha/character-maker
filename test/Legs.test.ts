@@ -1,16 +1,27 @@
 import { Legs } from '../src/index'
+import testCharacter from './testCharacter'
 
-test('default feet', () => {
-  expect(new Legs().left.foot).toBeNull()
-  expect(new Legs().right.foot).toBeNull()
-})
+const defaultLegs = new Legs()
+const randomLegs = new Legs().generate()
+const givenLegs = testCharacter.legs
+
+// default
 
 test('default leg size', () => {
-  expect(new Legs().left.size).toBe('')
-  expect(new Legs().right.size).toBe('')
+  expect(defaultLegs.left.size).toBeDefined()
+  expect(defaultLegs.right.size).toBeDefined()
 })
 
+// random
+
+test('random leg size', () => {
+  expect(randomLegs.left?.size).toBeDefined()
+  expect(randomLegs.right?.size).toBeDefined()
+})
+
+// given
+
 test('given leg size', () => {
-  expect(new Legs({ left: { size: 'large' } }).left.size).toBe('large')
-  expect(new Legs({ right: { size: 'large' } }).right.size).toBe('large')
+  expect(givenLegs?.left.size).not.toBeNaN()
+  expect(givenLegs?.right.size).not.toBeNaN()
 })

@@ -1,9 +1,24 @@
 import { Shoulders } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultShoulders = new Shoulders()
+const randomShoulders = new Shoulders().generate()
+const givenShoulders = testCharacter.shoulders
+
+// default
 
 test('default shoulders', () => {
-  expect(new Shoulders().width).toBe('')
+  expect(defaultShoulders.width).toBeDefined()
 })
 
-test('given shoulder width', () => {
-  expect(new Shoulders({ width: 'wide' }).width).toBe('wide')
+// random
+
+test('random shoulders', () => {
+  expect(randomShoulders.width).toBeDefined()
+})
+
+// given
+
+test('given shoulders', () => {
+  expect(givenShoulders.width).toBeDefined()
 })

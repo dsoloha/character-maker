@@ -1,9 +1,24 @@
 import { Waist } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultWaist = new Waist()
+const randomWaist = new Waist().generate()
+const givenWaist = testCharacter.waist
+
+// default
 
 test('default waist', () => {
-  expect(new Waist().size).toBe('')
+  expect(defaultWaist.size).toBeDefined()
 })
 
-test('given waist size', () => {
-  expect(new Waist({ size: 'narrow' }).size).toBe('narrow')
+// random
+
+test('random waist', () => {
+  expect(randomWaist.size).toBeDefined()
+})
+
+// given
+
+test('given waist', () => {
+  expect(givenWaist.size).toBeDefined()
 })

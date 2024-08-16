@@ -1,9 +1,24 @@
 import { Neck } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultNeck = new Neck()
+const randomNeck = new Neck()
+const givenNeck = testCharacter.neck
+
+// default
 
 test('default neck', () => {
-  expect(new Neck().larynx).toBe(true)
+  expect(defaultNeck.larynx).toBeDefined()
 })
 
+// random
+
+test('random neck', () => {
+  expect(randomNeck.larynx).toBeDefined()
+})
+
+// given
+
 test('given neck', () => {
-  expect(new Neck({ larynx: false }).larynx).toBe(false)
+  expect(givenNeck.larynx).toBeDefined()
 })

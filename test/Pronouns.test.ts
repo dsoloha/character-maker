@@ -1,33 +1,66 @@
 import { Pronouns } from '../src/index'
 
-test('default subject', () => {
-  expect(new Pronouns('male').subject).toBe('he')
-  expect(new Pronouns('female').he).toBe('she')
-  expect(new Pronouns('male').She).toBe('He')
+const femalePronouns = new Pronouns('female')
+const malePronouns = new Pronouns('male')
+
+// female
+
+test('female noun', () => {
+  expect(femalePronouns.noun).toBe('woman')
 })
 
-test('default object', () => {
-  expect(new Pronouns('male').Him).toBe('Him')
-  expect(new Pronouns('female').object).toBe('her')
+test('female object', () => {
+  expect(femalePronouns.object).toBe('her')
+  expect(femalePronouns.her).toBe('her')
+  expect(femalePronouns.Her).toBe('Her')
 })
 
-test('default possessive', () => {
-  expect(new Pronouns('male').His).toBe('His')
-  expect(new Pronouns('female').hers).toBe('her')
-  expect(new Pronouns('male').Hers).toBe('His')
+test('female possessive', () => {
+  expect(femalePronouns.hers).toBe('her')
+  expect(femalePronouns.Hers).toBe('Her')
 })
 
-test('default possessivePronoun', () => {
-  expect(new Pronouns('male').possessivePronoun).toBe('his')
+test('female possessivePronoun', () => {
+  expect(femalePronouns.possessivePronoun).toBe('hers')
 })
 
-test('default noun', () => {
-  expect(new Pronouns('male').noun).toBe('man')
+test('female reflexive', () => {
+  expect(femalePronouns.reflexive).toBe('herself')
 })
 
-test('default reflexive', () => {
-  expect(new Pronouns('male').himself).toBe('himself')
-  expect(new Pronouns('female').reflexive).toBe('herself')
+test('female subject', () => {
+  expect(femalePronouns.subject).toBe('she')
+  expect(femalePronouns.she).toBe('she')
+  expect(femalePronouns.She).toBe('She')
+})
 
-  expect(new Pronouns('male').Himself).toBe('Himself')
+// male
+
+test('male noun', () => {
+  expect(malePronouns.noun).toBe('man')
+})
+
+test('male object', () => {
+  expect(malePronouns.object).toBe('him')
+  expect(malePronouns.him).toBe('him')
+  expect(malePronouns.Him).toBe('Him')
+})
+
+test('male possessive', () => {
+  expect(malePronouns.his).toBe('his')
+  expect(malePronouns.His).toBe('His')
+})
+
+test('male possessivePronoun', () => {
+  expect(malePronouns.possessivePronoun).toBe('his')
+})
+
+test('male reflexive', () => {
+  expect(malePronouns.reflexive).toBe('himself')
+})
+
+test('male subject', () => {
+  expect(malePronouns.subject).toBe('he')
+  expect(malePronouns.he).toBe('he')
+  expect(malePronouns.He).toBe('He')
 })

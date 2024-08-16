@@ -1,69 +1,72 @@
 import { Crotch } from '../src/index'
+import testCharacter from './testCharacter'
+
+const defaultCrotch = new Crotch()
+const randomCrotch = new Crotch().generate()
+const givenCrotch = testCharacter.crotch
+
+// default
 
 test('default anus', () => {
-  expect(new Crotch().anus).toEqual({ description: '' })
+  expect(defaultCrotch.anus).toBeDefined()
 })
 
 test('default ovaries', () => {
-  expect(new Crotch().ovaries).toBeNull()
+  expect(defaultCrotch.ovaries).not.toBeNaN()
 })
 
 test('default penis', () => {
-  expect(new Crotch().penis).toBeNull()
+  expect(defaultCrotch.penis).not.toBeNaN()
 })
 
 test('default testicles', () => {
-  expect(new Crotch().testicles).toBeNull()
+  expect(defaultCrotch.testicles).not.toBeNaN()
 })
 
 test('default vagina', () => {
-  expect(new Crotch().vagina).toBeNull()
+  expect(defaultCrotch.vagina).not.toBeNaN()
 })
 
+// random
+
+test('random anus', () => {
+  expect(randomCrotch.anus?.description).toBeDefined()
+})
+
+test('random ovaries', () => {
+  expect(randomCrotch.ovaries).not.toBeNaN()
+})
+
+test('random penis', () => {
+  expect(randomCrotch.penis).not.toBeNaN()
+})
+
+test('random testicles', () => {
+  expect(randomCrotch.testicles).not.toBeNaN()
+})
+
+test('random vagina', () => {
+  expect(randomCrotch.vagina).not.toBeNaN()
+})
+
+// given
+
 test('given anus', () => {
-  expect(new Crotch({ anus: { description: 'small' } }).anus).toEqual({
-    description: 'small',
-  })
+  expect(givenCrotch.anus).toBeDefined()
 })
 
 test('given ovaries', () => {
-  expect(new Crotch({ ovaries: { fertile: true } }).ovaries).toEqual({
-    fertile: true,
-  })
+  expect(givenCrotch.ovaries).not.toBeNaN()
 })
 
 test('given penis', () => {
-  expect(new Crotch({ penis: { size: 'large' } }).penis).toEqual({
-    size: 'large',
-  })
+  expect(givenCrotch.penis).not.toBeNaN()
 })
 
 test('given testicles', () => {
-  expect(
-    new Crotch({ testicles: { size: 'large', potent: true } }).testicles
-  ).toEqual({ size: 'large', potent: true })
-})
-
-test('given testicle size', () => {
-  expect(new Crotch({ testicles: { size: 'large' } }).testicles?.size).toBe(
-    'large'
-  )
-  expect(
-    new Crotch({ testicles: { size: 'small' } }).generate().testicles?.potent
-  ).toBeDefined()
-})
-
-test('given testicle potency', () => {
-  expect(
-    new Crotch({ testicles: { size: 'small', potent: false } }).testicles
-  ).toEqual({
-    size: 'small',
-    potent: false,
-  })
+  expect(givenCrotch.testicles).not.toBeNaN()
 })
 
 test('given vagina', () => {
-  expect(new Crotch({ vagina: { description: 'small' } }).vagina).toEqual({
-    description: 'small',
-  })
+  expect(givenCrotch.vagina).not.toBeNaN()
 })

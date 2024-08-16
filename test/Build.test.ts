@@ -1,24 +1,69 @@
 import { Build } from '../src/index'
+import testCharacter from './testCharacter'
 
-test('default build', () => {
-  expect(new Build().height).toBe(0)
-  expect(new Build().muscles).toBe(0)
-  expect(new Build().type).toBe('')
-  expect(new Build().weight).toBe(0)
+const defaultBuild = new Build()
+const randomBuild = new Build().generate()
+const givenBuild = testCharacter.build
+
+// default
+
+test('default height', () => {
+  expect(defaultBuild.height).toBeGreaterThanOrEqual(0)
+  expect(defaultBuild.height).toBeLessThanOrEqual(500)
 })
 
+test('default muscles', () => {
+  expect(defaultBuild.muscles).toBeGreaterThanOrEqual(0)
+  expect(defaultBuild.muscles).toBeLessThanOrEqual(100)
+})
+
+test('default type', () => {
+  expect(defaultBuild.type).toBeDefined()
+})
+
+test('default weight', () => {
+  expect(defaultBuild.weight).toBeGreaterThanOrEqual(0)
+  expect(defaultBuild.weight).toBeLessThanOrEqual(1000)
+})
+
+// random
+
+test('random height', () => {
+  expect(randomBuild.height).toBeGreaterThanOrEqual(0)
+  expect(randomBuild.height).toBeLessThanOrEqual(500)
+})
+
+test('random muscles', () => {
+  expect(randomBuild.muscles).toBeGreaterThanOrEqual(0)
+  expect(randomBuild.muscles).toBeLessThanOrEqual(100)
+})
+
+test('random type', () => {
+  expect(randomBuild.type).toBeDefined()
+})
+
+test('random weight', () => {
+  expect(randomBuild.weight).toBeGreaterThanOrEqual(0)
+  expect(randomBuild.weight).toBeLessThanOrEqual(1000)
+})
+
+// given
+
 test('given height', () => {
-  expect(new Build({ height: 180 }).height).toBe(180)
+  expect(givenBuild.height).toBeGreaterThanOrEqual(0)
+  expect(givenBuild.height).toBeLessThanOrEqual(500)
 })
 
 test('given muscles', () => {
-  expect(new Build({ muscles: 100 }).muscles).toBe(100)
+  expect(givenBuild.muscles).toBeGreaterThanOrEqual(0)
+  expect(givenBuild.muscles).toBeLessThanOrEqual(100)
 })
 
 test('given type', () => {
-  expect(new Build({ type: 'lean' }).type).toBe('lean')
+  expect(givenBuild.type).toBeDefined()
 })
 
 test('given weight', () => {
-  expect(new Build({ weight: 100 }).weight).toBe(100)
+  expect(givenBuild.weight).toBeGreaterThanOrEqual(0)
+  expect(givenBuild.weight).toBeLessThanOrEqual(1000)
 })

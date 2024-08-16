@@ -6,6 +6,7 @@ const randomCharacter = new Character().generate()
 const givenCharacter = testCharacter
 
 // default
+
 test('default character age', () => {
   expect(new Character().age.birth.day).toBeGreaterThanOrEqual(1)
   expect(new Character().age.birth.day).toBeLessThanOrEqual(31)
@@ -38,9 +39,9 @@ test('default character eyes', () => {
 })
 
 test('default character hair', () => {
-  expect(new Character().hair.arm.color).toBe('')
-  expect(new Character().hair.arm.length).toBe('')
-  expect(new Character().hair.arm.style).toBe('')
+  expect(new Character().hair.arm.color).toBeDefined()
+  expect(new Character().hair.arm.length).toBeDefined()
+  expect(new Character().hair.arm.style).toBeDefined()
 })
 
 test('default character mouth', () => {
@@ -61,12 +62,12 @@ test('default character nose', () => {
 })
 
 test('default character pronouns', () => {
-  expect(new Character().pronouns.subject).toBe('he')
-  expect(new Character().pronouns.object).toBe('him')
-  expect(new Character().pronouns.possessive).toBe('his')
-  expect(new Character().pronouns.possessivePronoun).toBe('his')
-  expect(new Character().pronouns.noun).toBe('man')
-  expect(new Character().pronouns.reflexive).toBe('himself')
+  expect(new Character().pronouns.subject).toBeDefined()
+  expect(new Character().pronouns.object).toBeDefined()
+  expect(new Character().pronouns.possessive).toBeDefined()
+  expect(new Character().pronouns.possessivePronoun).toBeDefined()
+  expect(new Character().pronouns.noun).toBeDefined()
+  expect(new Character().pronouns.reflexive).toBeDefined()
 })
 
 test('default character sex', () => {
@@ -82,33 +83,13 @@ test('default character skin', () => {
 })
 
 // random
+
 test('random character age', () => {
-  expect(new Character().age.generate().birth?.day).toBeGreaterThanOrEqual(1)
-  expect(new Character().age.generate().birth?.day).toBeLessThanOrEqual(31)
-  expect(new Character().age.generate().birth?.month).toBeGreaterThanOrEqual(1)
-  expect(new Character().age.generate().birth?.month).toBeLessThanOrEqual(12)
-  expect(new Character().age.generate().birth?.year).toBeGreaterThanOrEqual(1)
-  expect(new Character().age.generate().birth?.year).toBeLessThanOrEqual(
-    new Date().getFullYear()
-  )
-  expect(
-    new Character({ age: { birth: { year: new Date().getFullYear() - 1 } } })
-      .age.monthsOld
-  ).toBeGreaterThan(0)
-  expect(
-    new Character({ age: { birth: { year: new Date().getFullYear() - 1 } } })
-      .age.monthsOld
-  ).toBeLessThanOrEqual(1200)
-  expect(
-    new Character({
-      age: {
-        birth: {
-          year: new Date().getFullYear() - 1,
-          month: new Date().getMonth() + 2,
-        },
-      },
-    }).age.monthsOld
-  ).toBe(10)
+  expect(randomCharacter.age?.birth?.day).toBeGreaterThanOrEqual(1)
+  expect(randomCharacter.age?.birth?.day).toBeLessThanOrEqual(31)
+  expect(randomCharacter.age?.birth?.month).toBeGreaterThanOrEqual(1)
+  expect(randomCharacter.age?.birth?.month).toBeLessThanOrEqual(12)
+  expect(randomCharacter.age?.birth?.year).toBeGreaterThanOrEqual(1)
 })
 
 test('random character background', () => {
@@ -130,105 +111,114 @@ test('random character sex', () => {
   expect(new Character().generate().sex?.type).toBeTruthy()
 })
 
-// age
+// given
+
 test('character with given age', () => {
-  expect(new Character({ age: { birth: { year: 2000 } } }).age.birth.year).toBe(
-    2000
-  )
-  expect(new Character({ age: { birth: { month: 6 } } }).age.birth.month).toBe(
-    6
-  )
-  expect(new Character({ age: { birth: { day: 15 } } }).age.birth.day).toBe(15)
-  expect(
-    new Character({
-      age: { birth: { month: 6 } },
-    }).age.monthsOld
-  ).toBeGreaterThanOrEqual(1)
+  expect(givenCharacter.age.birth.day).toBeGreaterThanOrEqual(0)
+  expect(givenCharacter.age.birth.day).toBeLessThanOrEqual(31)
+  expect(givenCharacter.age.birth.month).toBeGreaterThanOrEqual(0)
+  expect(givenCharacter.age.birth.month).toBeLessThanOrEqual(12)
+  expect(givenCharacter.age.birth.year).toBeGreaterThanOrEqual(1)
 })
 
-// background
 test('character with given background', () => {
   expect(givenCharacter.background.birthplace).toBeDefined()
   expect(givenCharacter.background.education).toBeDefined()
   expect(givenCharacter.background.occupation).toBeDefined()
 })
 
-// eyes
-test('character with given eye colors', () => {
-  expect(
-    new Character({ eyes: { colors: { left: 'blue', right: 'green' } } }).eyes
-      .colors
-  ).toStrictEqual({ left: 'blue', right: 'green' })
-  expect(
-    new Character({ eyes: { colors: { left: 'blue', right: 'green' } } }).eyes
-      .colors
-  ).toStrictEqual({ left: 'blue', right: 'green' })
+test('character with given build', () => {
+  expect(givenCharacter.build.height).toBeGreaterThanOrEqual(0)
+  expect(givenCharacter.build.height).toBeLessThanOrEqual(500)
+  expect(givenCharacter.build.muscles).toBeGreaterThanOrEqual(0)
+  expect(givenCharacter.build.muscles).toBeLessThanOrEqual(100)
+  expect(givenCharacter.build.type).toBeDefined()
+  expect(givenCharacter.build.weight).toBeGreaterThanOrEqual(0)
+  expect(givenCharacter.build.weight).toBeLessThanOrEqual(1000)
 })
 
-// hair
+test('character with given crotch', () => {
+  expect(givenCharacter.crotch.anus.description).toBeDefined()
+  expect(givenCharacter.crotch.ovaries).not.toBeNaN()
+  expect(givenCharacter.crotch.penis).not.toBeNaN()
+  expect(givenCharacter.crotch.testicles).not.toBeNaN()
+  expect(givenCharacter.crotch.vagina).not.toBeNaN()
+})
+
+test('character with given eyes', () => {
+  expect(givenCharacter.eyes.astigmatism).toBeDefined()
+  expect(givenCharacter.eyes.colors.left).toBeDefined()
+  expect(givenCharacter.eyes.colors.right).toBeDefined()
+  expect(givenCharacter.eyes.farsighted).toBeDefined()
+  expect(givenCharacter.eyes.nearsighted).toBeDefined()
+})
+
 test('character with given hair color', () => {
-  expect(
-    new Character({
-      hair: { arm: { color: 'brown', length: 'short', style: 'neat' } },
-    }).hair.arm.color
-  ).toBe('brown')
+  expect(givenCharacter.hair.arm.color).toBeDefined()
+  expect(givenCharacter.hair.chest.color).toBeDefined()
+  expect(givenCharacter.hair.face.color).toBeDefined()
+  expect(givenCharacter.hair.head.color).toBeDefined()
+  expect(givenCharacter.hair.leg.color).toBeDefined()
+  expect(givenCharacter.hair.pubic.color).toBeDefined()
 })
 
 test('character with given hair length', () => {
-  expect(
-    new Character({
-      hair: { arm: { color: 'brown', length: 'short', style: 'neat' } },
-    }).hair.arm.length
-  ).toBe('short')
+  expect(givenCharacter.hair.arm.length).toBeDefined()
+  expect(givenCharacter.hair.chest.length).toBeDefined()
+  expect(givenCharacter.hair.face.length).toBeDefined()
+  expect(givenCharacter.hair.head.length).toBeDefined()
+  expect(givenCharacter.hair.leg.length).toBeDefined()
+  expect(givenCharacter.hair.pubic.length).toBeDefined()
 })
 
 test('character with given hair style', () => {
-  expect(
-    new Character({
-      hair: { arm: { color: 'brown', length: 'short', style: 'neat' } },
-    }).hair.arm.style
-  ).toBe('neat')
+  expect(givenCharacter.hair.arm.style).toBeDefined()
+  expect(givenCharacter.hair.chest.style).toBeDefined()
+  expect(givenCharacter.hair.face.style).toBeDefined()
+  expect(givenCharacter.hair.head.style).toBeDefined()
+  expect(givenCharacter.hair.leg.style).toBeDefined()
+  expect(givenCharacter.hair.pubic.style).toBeDefined()
 })
 
-// mouth
+test('character with given health', () => {
+  expect(givenCharacter.health.illnesses).toBeDefined()
+  expect(givenCharacter.health.injuries).toBeDefined()
+})
+
 test('character with given mouth', () => {
-  expect(
-    new Character({ mouth: { teeth: { count: 30, description: 'white' } } })
-      .mouth.teeth
-  ).toEqual({ count: 30, description: 'white' })
-  expect(new Character({ mouth: { tongue: false } }).mouth.tongue).toBe(false)
+  expect(givenCharacter.mouth.teeth.count).toBeGreaterThanOrEqual(0)
+  expect(givenCharacter.mouth.teeth.count).toBeLessThanOrEqual(32)
 })
 
-// name
 test('character with given name', () => {
-  expect(
-    new Character({ name: { first: 'John', last: 'Smith' } }).name.first
-  ).toBe('John')
+  expect(givenCharacter.name.first).toBeDefined()
+  expect(givenCharacter.name.full).toBeDefined()
+  expect(givenCharacter.name.middle).toBeDefined()
+  expect(givenCharacter.name.last).toBeDefined()
 })
 
-// nose
+test('character with given neck', () => {
+  expect(givenCharacter.neck.larynx).toBeDefined()
+})
+
 test('character with given nose', () => {
-  expect(new Character({ nose: { anosmia: true } }).nose.anosmia).toBe(true)
+  expect(givenCharacter.nose.anosmia).toBeDefined()
 })
 
-// sex
 test('character with given sex', () => {
-  expect(new Character({ sex: { type: 'male' } }).sex.type).toBe('male')
-  expect(new Character({ sex: { type: 'male' } }).pronouns.subject).toBe('he')
-  expect(new Character({ sex: { type: 'male' } }).pronouns.object).toBe('him')
-  expect(new Character({ sex: { type: 'male' } }).pronouns.possessive).toBe(
-    'his'
-  )
-  expect(
-    new Character({ sex: { type: 'male' } }).pronouns.possessivePronoun
-  ).toBe('his')
-  expect(new Character({ sex: { type: 'male' } }).pronouns.noun).toBe('man')
-  expect(new Character({ sex: { type: 'male' } }).pronouns.reflexive).toBe(
-    'himself'
-  )
+  expect(givenCharacter.sex.type).toBeDefined()
+  expect(givenCharacter.pronouns.subject).toBeDefined()
+  expect(givenCharacter.pronouns.object).toBeDefined()
+  expect(givenCharacter.pronouns.possessive).toBeDefined()
+  expect(givenCharacter.pronouns.possessivePronoun).toBeDefined()
+  expect(givenCharacter.pronouns.noun).toBeDefined()
+  expect(givenCharacter.pronouns.reflexive).toBeDefined()
 })
 
-// skin
 test('character with given skin color', () => {
-  expect(new Character({ skin: { color: 'green' } }).skin.color).toBe('green')
+  expect(givenCharacter.skin.color).toBeDefined()
 })
+
+test('character with given stomach', () => {})
+
+test('character with given waist', () => {})

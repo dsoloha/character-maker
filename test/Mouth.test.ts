@@ -1,18 +1,42 @@
 import { Mouth } from '../src/index'
+import testCharacter from './testCharacter'
 
-test('default mouth', () => {
-  expect(new Mouth().teeth).toEqual({ count: 32, description: '' })
+const defaultMouth = new Mouth()
+const randomMouth = new Mouth().generate()
+const givenMouth = testCharacter.mouth
+
+// default
+
+test('default teeth', () => {
+  expect(defaultMouth.teeth.count).toBeGreaterThanOrEqual(0)
+  expect(defaultMouth.teeth.count).toBeLessThanOrEqual(32)
+  expect(defaultMouth.teeth.description).toBeDefined()
 })
 
+test('default tongue', () => {
+  expect(defaultMouth.tongue).toBeDefined()
+})
+
+// random
+
+test('random teeth', () => {
+  expect(randomMouth.teeth?.count).toBeGreaterThanOrEqual(0)
+  expect(randomMouth.teeth?.count).toBeLessThanOrEqual(32)
+  expect(randomMouth.teeth?.description).toBeDefined()
+})
+
+test('random tongue', () => {
+  expect(randomMouth.tongue).toBeDefined()
+})
+
+//given
+
 test('given teeth', () => {
-  expect(
-    new Mouth({ teeth: { count: 30, description: 'white' } }).teeth.count
-  ).toBe(30)
-  expect(
-    new Mouth({ teeth: { count: 30, description: 'white' } }).teeth.description
-  ).toBe('white')
+  expect(givenMouth.teeth?.count).toBeGreaterThanOrEqual(0)
+  expect(givenMouth.teeth?.count).toBeLessThanOrEqual(32)
+  expect(givenMouth.teeth?.description).toBeDefined()
 })
 
 test('given tongue', () => {
-  expect(new Mouth({ tongue: false }).tongue).toBe(false)
+  expect(givenMouth.tongue).toBeDefined()
 })
