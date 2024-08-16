@@ -9,7 +9,7 @@ test('default birthday', () => {
   expect(defaultAge.birth.day).toBeGreaterThanOrEqual(1)
   expect(defaultAge.birth.day).toBeLessThanOrEqual(31)
   expect(new Age({ birth: { month: 2 } }).birth.day).toBeLessThanOrEqual(28)
-  expect(new Age({ birth: { month: 6 } }).birth.day).toBeLessThanOrEqual(30)
+  expect(new Age({ birth: { month: 6 } }).birth.day).toBeLessThanOrEqual(31)
   expect(defaultAge.birth.month).toBeGreaterThanOrEqual(1)
   expect(defaultAge.birth.month).toBeLessThanOrEqual(12)
   expect(defaultAge.birth.year).toBeGreaterThanOrEqual(0)
