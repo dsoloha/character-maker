@@ -67,6 +67,7 @@ export default class Age implements IAge {
     }
   }
 
+  /** Returns the character's age, in months. */
   get monthsOld(): number {
     const birthYear = this.birth.year
     const birthMonth = this.birth.month
