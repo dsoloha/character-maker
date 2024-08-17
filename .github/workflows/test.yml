@@ -27,7 +27,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 20.x
+          version: 9.7.1
   test:
     runs-on: ${{ matrix.os }}
     strategy:
