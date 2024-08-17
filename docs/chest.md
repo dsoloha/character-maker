@@ -2,7 +2,7 @@
 
 `class Chest`
 
-## Usage
+## Description
 
 Properties pertaining to the character's chest.
 
