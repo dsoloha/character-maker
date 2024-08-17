@@ -15,11 +15,7 @@ import { Age } from '@dsoloha/character-maker'
 const age = new Age()
 
 // with parameters:
-const age = new Age({
-  birth: {
-    day: 1,
-  }
-})
+const age = new Age({ birth: { day: 1, } })
 
 // generate a random instance:
 const age = new Age().generate()
