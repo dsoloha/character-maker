@@ -25,7 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4
+        with:
+          node-version: '20.x'
   test:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -34,17 +36,19 @@ jobs:
           - ubuntu-latest
           - windows-latest
         node:
-          - 14.x
           - 16.x
           - 18.x
           - 20.x
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: ${{ matrix.node }}
-      - name: Install modules
-        run: pnpm i
-      - name: Run tests
-        run: pnpm test
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
