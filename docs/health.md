@@ -23,6 +23,6 @@ const health = new Health({
 ## Properties
 
 | Property    | Type       | Description                                | Optional |
-| :---------- | :--------- | :----------------------------------------- | :------- |
+|:------------|:-----------|:-------------------------------------------|:---------|
 | `illnesses` | `string[]` | Any illnesses the character currently has. | Yes      |
 | `injuries`  | `string[]` | Any injuries the character currently has.  | Yes      |
