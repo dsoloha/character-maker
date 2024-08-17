@@ -10,7 +10,7 @@
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
   "types": "dist/types/index.d.ts",
-  "packageManager": "9.7.1",
+  "packageManager": "pnpm@9.7.1",
   "scripts": {
     "addscope": "node tools/packagejson name @dsoloha/character-maker",
     "build:cjs": "node tools/cleanup cjs && tsc -p config/tsconfig.cjs.json",
