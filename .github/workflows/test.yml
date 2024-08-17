@@ -21,6 +21,12 @@ on:
       - master
 
 jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup pnpm
+    uses: pnpm/action-setup@v3
   test:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -28,8 +34,11 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-        node: [14.x, 16.x]
-
+        node:
+          - 14.x
+          - 16.x
+          - 18.x
+          - 20.x
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
