@@ -1,11 +1,16 @@
 {
   "name": "@dsoloha/character-maker",
   "version": "0.2.18",
-  "description": "A tool for creating realistic characters.",
+  "description": "A tool for creating realistic characters",
+  "engines": {
+    "node": ">=12",
+    "pnpm": ">=8",
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
   "types": "dist/types/index.d.ts",
+  "packageManager": "9.7.1",
   "scripts": {
     "addscope": "node tools/packagejson name @dsoloha/character-maker",
     "build:cjs": "node tools/cleanup cjs && tsc -p config/tsconfig.cjs.json",
