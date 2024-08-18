@@ -6,22 +6,23 @@
 
 Properties pertaining to the character's stomach.
 
-## Declaration
+## Usage
 
 ```js
 import { Stomach } from '@dsoloha/character-maker'
 
+// create a blank instance:
 const stomach = new Stomach()
 
-// or optionally with parameters:
+// with parameters:
+const stomach = new Stomach({ shape: 'flat' })
 
-const stomach = new Stomach({
-  shape: 'flat',
-})
+// generate a random instance:
+const stomach = new Stomach().generate()
 ```
 
 ## Properties
 
 | Property | Type     | Description                           | Optional |
-| :------- | :------- | :------------------------------------ | :------- |
+|:---------|:---------|:--------------------------------------|:---------|
 | `shape`  | `string` | The shape of the character's stomach. | Yes      |
