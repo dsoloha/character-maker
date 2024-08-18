@@ -23,8 +23,8 @@ const background = new Background({
 const background = new Background().generate()
 
 // get the character's nationality:
-const background = new Background({ birthplace: { city: "Kyiv" } })
-console.log(background.nationality) // expected output: "Ukrainian"
+const background = new Background({ birthplace: { city: 'Kyiv' } })
+console.log(background.nationality) // expected output: 'Ukrainian'
 ```
 
 ## Properties

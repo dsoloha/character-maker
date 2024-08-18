@@ -6,7 +6,7 @@
 
 Properties pertaining to the character's biological sex.
 
-## Declaration
+## Usage
 
 ```js
 import { Sex } from '@dsoloha/character-maker'
