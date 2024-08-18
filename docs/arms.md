@@ -15,10 +15,7 @@ import { Arms } from '@dsoloha/character-maker'
 const arms = new Arms()
 
 // with parameters:
-const arms = new Arms({
-  left: { fingers: 5 },
-  right: { fingers: 5 }
-})
+const arms = new Arms({ left: { fingers: 4 } })
 
 // generate a random instance:
 const arms = new Arms().generate()
@@ -44,6 +41,10 @@ Properties pertaining to the character's left arm.
 | `hand`   | `object` | Properties pertaining to the hand on the arm. | Yes      |
 | `size`   | `string` | Properties pertaining to the arm's size.      | Yes      |
 
+### `.left.hand` *`object`*
+
+See [`Hand`](./hand) for properties pertaining to the `Hand` class.
+
 ### `.right` *`object`*
 
 #### Description
@@ -57,6 +58,6 @@ Properties pertaining to the character's right arm.
 | `hand`   | `object` | Properties pertaining to the hand on the arm. | Yes      |
 | `size`   | `string` | Properties pertaining to the arm's size.      | Yes      |
 
-### `.hand`
+### `.right.hand` *`object`*
 
-See [`Hand`](./hand) for properties relating to the `Hand` class.
+See [`Hand`](./hand) for properties pertaining to the `Hand` class.
