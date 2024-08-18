@@ -138,11 +138,11 @@ test('character with given build', () => {
 })
 
 test('character with given crotch', () => {
-  expect(givenCharacter.crotch.anus.description).toBeDefined()
-  expect(givenCharacter.crotch.ovaries).not.toBeNaN()
-  expect(givenCharacter.crotch.penis).not.toBeNaN()
-  expect(givenCharacter.crotch.testicles).not.toBeNaN()
-  expect(givenCharacter.crotch.vagina).not.toBeNaN()
+  expect(givenCharacter.crotch.anus).toBeObject()
+  expect(givenCharacter.crotch.ovaries).toBeObject()
+  expect(givenCharacter.crotch.penis).toBeObject()
+  expect(givenCharacter.crotch.testicles).toBeObject()
+  expect(givenCharacter.crotch.vagina).toBeObject()
 })
 
 test('character with given eyes', () => {

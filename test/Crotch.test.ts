@@ -1,72 +1,96 @@
 import { Crotch } from '../src/index'
 import testCharacter from './testCharacter'
+import { SexType } from '../src/Sex'
+
+const sexes: SexType[] = ['male', 'female']
+const randomSex = sexes.random()
 
 const defaultCrotch = new Crotch()
-const randomCrotch = new Crotch().generate()
+const randomCrotch = new Crotch().generate(randomSex)
 const givenCrotch = testCharacter.crotch
 
 // default
 
 test('default anus', () => {
-  expect(defaultCrotch.anus).toBeDefined()
+  expect(defaultCrotch.anus).toBeObject()
 })
 
 test('default ovaries', () => {
-  expect(defaultCrotch.ovaries).not.toBeNaN()
+  expect(defaultCrotch.ovaries).toBeNil()
 })
 
 test('default penis', () => {
-  expect(defaultCrotch.penis).not.toBeNaN()
+  expect(defaultCrotch.penis).toBeNil()
 })
 
 test('default testicles', () => {
-  expect(defaultCrotch.testicles).not.toBeNaN()
+  expect(defaultCrotch.testicles).toBeNil()
 })
 
 test('default vagina', () => {
-  expect(defaultCrotch.vagina).not.toBeNaN()
+  expect(defaultCrotch.vagina).toBeNil()
 })
 
 // random
 
 test('random anus', () => {
-  expect(randomCrotch.anus?.description).toBeDefined()
+  expect(randomCrotch.anus).toBeObject()
 })
 
 test('random ovaries', () => {
-  expect(randomCrotch.ovaries).not.toBeNaN()
+  if (randomSex === 'male') {
+    expect(randomCrotch.ovaries).toBeNil()
+  }
+  if (randomSex === 'female') {
+    expect(randomCrotch.ovaries).toBeObject()
+  }
 })
 
 test('random penis', () => {
-  expect(randomCrotch.penis).not.toBeNaN()
+  if (randomSex === 'male') {
+    expect(randomCrotch.penis).toBeObject()
+  }
+  if (randomSex === 'female') {
+    expect(randomCrotch.penis).toBeNil()
+  }
 })
 
 test('random testicles', () => {
-  expect(randomCrotch.testicles).not.toBeNaN()
+  if (randomSex === 'male') {
+    expect(randomCrotch.testicles).toBeObject()
+  }
+  if (randomSex === 'female') {
+    expect(randomCrotch.testicles).toBeNil()
+  }
 })
 
 test('random vagina', () => {
-  expect(randomCrotch.vagina).not.toBeNaN()
+  if (randomSex === 'male') {
+    expect(randomCrotch.vagina).toBeNil()
+  }
+  if (randomSex === 'female') {
+    expect(randomCrotch.vagina).toBeObject()
+  }
 })
 
 // given
 
 test('given anus', () => {
-  expect(givenCrotch.anus).toBeDefined()
+  expect(givenCrotch.anus).toBeObject()
 })
 
 test('given ovaries', () => {
-  expect(givenCrotch.ovaries).not.toBeNaN()
+  expect(givenCrotch.ovaries).toBeObject()
 })
 
 test('given penis', () => {
-  expect(givenCrotch.penis).not.toBeNaN()
+  expect(givenCrotch.penis).toBeObject()
 })
 
 test('given testicles', () => {
-  expect(givenCrotch.testicles).not.toBeNaN()
+  expect(givenCrotch.testicles).toBeObject()
 })
 
 test('given vagina', () => {
-  expect(givenCrotch.vagina).not.toBeNaN()
+  expect(givenCrotch.vagina).toBeObject()
 })
