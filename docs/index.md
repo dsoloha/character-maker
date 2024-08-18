@@ -1,6 +1,7 @@
 # character-maker
 
-This is a relatively simple JavaScript library designed to make creating new characters for your next project easier
+This is a relatively simple JavaScript library designed to make creating realistic characters for your next project
+easier
 than ever.
 
 ## Getting Started
@@ -20,15 +21,50 @@ import { Character } from '@dsoloha/character-maker'
 const character = new Character()
 
 // create a new character with given parameters:
-const character = new Character({
-  name: {
-    first: 'John',
-    last: 'Smith',
-  }
-})
+const character = new Character({ age: { birth: { year: 2000 } } })
 
 // create a new fully-randomized character:
 const character = new Character().generate()
+```
+
+## Structure
+
+The `Character` class follows a top-down structure, with more specific subclasses nested inside more generalized
+subclasses. For example, a `Toe`class would be found in the `Foot` class, which itself would be found in the `Leg`
+class, and so on. The full structure is as follows:
+
+```
+Character
+\_ Physical
+  \_ Sex
+  \_ Build
+  \_ Head
+    \_ Eyes
+    \_ Mouth
+      \_ Teeth
+      \_ Tongue
+    \_ Nose
+    \_ Neck
+  \_ Upper
+    \_ Chest
+    \_ Shoulders
+    \_ Arm
+      \_ Hand
+  \_ Lower
+    \_ Crotch
+      \_ Butt
+        \_ Anus
+      \_ Vagina
+        \_ Ovaries
+      \_ Penis
+        \_ Testicles
+    \_ Leg
+      \_ Foot
+\_ Mental
+  \_ Background
+  \_ Speech
+  \_ Personality
+  \_ Sexuality
 ```
 
 ## API Reference

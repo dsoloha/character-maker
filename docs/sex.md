@@ -6,22 +6,23 @@
 
 Properties pertaining to the character's biological sex.
 
-## Declaration
+## Usage
 
 ```js
 import { Sex } from '@dsoloha/character-maker'
 
+// create a blank instance:
 const sex = new Sex()
 
-// or optionally with parameters:
+// with parameters:
+const sex = new Sex({ type: 'male' })
 
-const sex = new Sex({
-  type: 'male',
-})
+// generate a random instance:
+const sex = new Sex().generate()
 ```
 
 ## Properties
 
-| Property | Type                                | Description                          | Optional |
-| :------- | :---------------------------------- | :----------------------------------- | :------- |
-| `type`   | `'male'|'female'|'plural'|'neuter'` | The biological sex of the character. | Yes      |
+| Property | Type                   | Description                          | Optional |
+|:---------|:-----------------------|:-------------------------------------|:---------|
+| `type`   | `'male'` or `'female'` | The biological sex of the character. | Yes      |

@@ -11,17 +11,18 @@ Properties pertaining to the hand on the arm.
 ```js
 import { Hand } from '@dsoloha/character-maker'
 
+// create a blank instance:
 const hand = new Hand()
 
-// or optionally with parameters:
+// with parameters:
+const hand = new Hand({ fingers: 4 })
 
-const hand = new Hand({
-  fingers: 4,
-})
+// generate a random instance:
+const hand = new Hand().generate()
 ```
 
 ## Properties
 
 | Property  | Type     | Description                    | Optional |
-| :-------- | :------- | :----------------------------- | :------- |
+|:----------|:---------|:-------------------------------|:---------|
 | `fingers` | `number` | How many fingers the hand has. | Yes      |
