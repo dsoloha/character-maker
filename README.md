@@ -25,55 +25,78 @@ import { Character } from '@dsoloha/character-maker'
 const character = new Character()
 
 // create a new character with given parameters:
-const character = new Character({
-  name: {
-    first: 'John',
-    last: 'Smith',
-  }
-})
+const character = new Character({ age: { birth: { year: 2000 } } })
 
 // create a new fully-randomized character:
 const character = new Character().generate()
 ```
 
-All parameters available can be found [here](https://dsoloha.github.io/character-maker/).
+## Structure
+
+The `Character` class follows a top-down structure, with more specific subclasses nested inside more generalized
+subclasses. For example, a `Toe`class would be found in the `Foot` class, which itself would be found in the `Leg`
+class, and so on. The full structure is as follows:
+
+```
+Character
+\_ Physical
+  \_ Sex
+  \_ Build
+  \_ Head
+    \_ Eyes
+    \_ Mouth
+      \_ Teeth
+      \_ Tongue
+    \_ Nose
+    \_ Neck
+  \_ Upper
+    \_ Chest
+    \_ Shoulders
+    \_ Arm
+      \_ Hand
+  \_ Lower
+    \_ Crotch
+      \_ Butt
+        \_ Anus
+      \_ Vagina
+        \_ Ovaries
+      \_ Penis
+        \_ Testicles
+    \_ Leg
+      \_ Foot
+\_ Mental
+  \_ Background
+  \_ Speech
+  \_ Personality
+  \_ Sexuality
+  \_ Relations
+```
 
 ## API Reference
 
-All parameters listed here are optional.
+Here are all properties available on a given instance of the `Character` class:
 
-The following properties are available on an instance of the `Character` class:
-
-- `.age`
-- `.arms`
-- `.background`
-- `.build`
-- `.chest`
-- `.crotch`
-- `.eyes`
-- `.hair`
-- `.health`
-- `.height`
-- `.legs`
-- `.mouth`
-- `.muscles`
-- `.name`
-- `.neck`
-- `.nose`
-- `.pronouns`
-- `.sex`
-- `.sexuality`
-- `.shoulders`
-- `.skin`
-- `.speech`
-- `.stomach`
-- `.waist`
-- `.weight`
+- [`.age`](./docs/age.md)
+- [`.arms`](./docs/arms.md)
+- [`.background`](./docs/background.md)
+- [`.build`](./docs/build.md)
+- [`.chest`](./docs/chest.md)
+- [`.crotch`](./docs/crotch.md)
+- [`.eyes`](./docs/eyes.md)
+- [`.hair`](./docs/hair.md)
+- [`.health`](./docs/health.md)
+- [`.legs`](./docs/legs.md)
+- [`.mouth`](./docs/mouth.md)
+- [`.name`](./docs/name.md)
+- [`.neck`](./docs/neck.md)
+- [`.nose`](./docs/nose.md)
+- [`.pronouns`](./docs/pronouns.md)
+- [`.sex`](./docs/sex.md)
+- [`.sexuality`](./docs/sexuality.md)
+- [`.shoulders`](./docs/shoulders.md)
+- [`.skin`](./docs/skin.md)
+- [`.speech`](./docs/speech.md)
+- [`.stomach`](./docs/stomach.md)
+- [`.waist`](./docs/waist.md)
 
 View all sub-properties and more documentation [here](https://dsoloha.github.io/character-maker/).
-
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
