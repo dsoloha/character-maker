@@ -33,95 +33,13 @@ const eyes = new Eyes().generate()
 | `arm`       | `object` | The hair on the character's arms.         | Yes      |
 | `leg`       | `object` | The hair on the character's legs.         | Yes      |
 
+**All properties on the `Hair` class are objects with the following structure:**
+
 ### `.head` *`object`*
 
 #### Description
 
 The hair on the character's head.
-
-#### Properties
-
-| Property | Type     | Description             | Optional |
-|:---------|:---------|:------------------------|:---------|
-| `color`  | `string` | The color of the hair.  | No       |
-| `length` | `string` | The length of the hair. | No       |
-| `style`  | `string` | The style of the hair.  | No       |
-
-### `.face` *`object`*
-
-#### Description
-
-The hair on the character's face.
-
-#### Properties
-
-| Property | Type     | Description             | Optional |
-|:---------|:---------|:------------------------|:---------|
-| `color`  | `string` | The color of the hair.  | No       |
-| `length` | `string` | The length of the hair. | No       |
-| `style`  | `string` | The style of the hair.  | No       |
-
-### `.underarms` *`object`*
-
-#### Description
-
-The hair on the character's underarms.
-
-#### Properties
-
-| Property | Type     | Description             | Optional |
-|:---------|:---------|:------------------------|:---------|
-| `color`  | `string` | The color of the hair.  | No       |
-| `length` | `string` | The length of the hair. | No       |
-| `style`  | `string` | The style of the hair.  | No       |
-
-### `.chest` *`object`*
-
-#### Description
-
-The hair on the character's chest.
-
-#### Properties
-
-| Property | Type     | Description             | Optional |
-|:---------|:---------|:------------------------|:---------|
-| `color`  | `string` | The color of the hair.  | No       |
-| `length` | `string` | The length of the hair. | No       |
-| `style`  | `string` | The style of the hair.  | No       |
-
-### `.pubic` *`object`*
-
-#### Description
-
-The hair on the character's pubic region.
-
-#### Properties
-
-| Property | Type     | Description             | Optional |
-|:---------|:---------|:------------------------|:---------|
-| `color`  | `string` | The color of the hair.  | No       |
-| `length` | `string` | The length of the hair. | No       |
-| `style`  | `string` | The style of the hair.  | No       |
-
-### `.arm` *`object`*
-
-#### Description
-
-The hair on the character's arms.
-
-#### Properties
-
-| Property | Type     | Description             | Optional |
-|:---------|:---------|:------------------------|:---------|
-| `color`  | `string` | The color of the hair.  | No       |
-| `length` | `string` | The length of the hair. | No       |
-| `style`  | `string` | The style of the hair.  | No       |
-
-### `.leg` *`object`*
-
-#### Description
-
-The hair on the character's legs.
 
 #### Properties
 
