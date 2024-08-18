@@ -6,22 +6,23 @@
 
 Properties pertaining to the foot on the leg.
 
-## Declaration
+## Usage
 
 ```js
 import { Foot } from '@dsoloha/character-maker'
 
+// create a blank instance:
 const foot = new Foot()
 
-// or optionally with parameters:
+// with parameters:
+const foot = new Foot({ toes: 4 })
 
-const foot = new Legs({
-  toes: 4,
-})
+// generate a random instance:
+const foot = new Foot().generate()
 ```
 
 ## Properties
 
 | Property | Type     | Description                 | Optional |
-| :------- | :------- | :-------------------------- | :------- |
+|:---------|:---------|:----------------------------|:---------|
 | `toes`   | `number` | How many toes the foot has. | Yes      |
