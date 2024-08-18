@@ -70,6 +70,7 @@ Character
   \_ Personality
   \_ Sexuality
   \_ Relations
+  \_ Skills 
 ```
 
 ## API Reference
