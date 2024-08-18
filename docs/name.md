@@ -6,26 +6,26 @@
 
 Properties pertaining to the character's name.
 
-## Declaration
+## Usage
 
 ```js
 import { Name } from '@dsoloha/character-maker'
 
+// create a blank instance:
 const name = new Name()
 
-// or optionally with parameters:
+// with parameters:
+const name = new Name({ first: 'Name' })
 
-const name = new Name({
-  first: 'John',
-  last: 'Smith',
-})
+// generate a random instance:
+const name = new Name().generate()
 ```
 
 ## Properties
 
-| Property    | Type          | Description                          | Optional |
-| :---------- | :------------ | :----------------------------------- | :------- |
-| `first`     | `string`      | The character's first name.          | Yes      |
-| `middle`    | `string|null` | The character's middle name, if any. | Yes      |
-| `last`      | `string|null` | The character's last name, if any.   | Yes      |
-| `nicknames` | `string[]`    | Any nicknames the character has.     | Yes      |
+| Property    | Type               | Description                          | Optional |
+|:------------|:-------------------|:-------------------------------------|:---------|
+| `first`     | `string`           | The character's first name.          | Yes      |
+| `middle`    | `string` or `null` | The character's middle name, if any. | Yes      |
+| `last`      | `string` or `null` | The character's last name, if any.   | Yes      |
+| `nicknames` | `string[]`         | Any nicknames the character has.     | Yes      |
