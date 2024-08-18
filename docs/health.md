@@ -6,18 +6,19 @@
 
 Properties pertaining to the character's overall health.
 
-## Declaration
+## Usage
 
 ```js
 import { Health } from '@dsoloha/character-maker'
 
+// create a blank instance:
 const health = new Health()
 
-// or optionally with parameters:
+// with parameters:
+const health = new Health({ illnesses: ['common cold'] })
 
-const health = new Health({
-  illnesses: ['common cold'],
-})
+// generate a random instance:
+const health = new Health().generate()
 ```
 
 ## Properties
