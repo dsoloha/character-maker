@@ -22,6 +22,6 @@ test('random arm size', () => {
 // given
 
 test('given arm size', () => {
-  expect(givenArms?.left.size).not.toBeNaN()
-  expect(givenArms?.right.size).not.toBeNaN()
+  expect(givenArms?.left.size).toBeNil()
+  expect(givenArms?.right.size).toBeNil()
 })

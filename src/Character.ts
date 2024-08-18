@@ -75,12 +75,13 @@ export default class Character implements ICharacter {
 
   generate(): ICharacter {
     return {
+      sex: this.sex.generate(),
       age: this.age.generate(),
       background: this.background.generate(),
       build: this.build.generate(),
       arms: this.arms?.generate(this.build.muscles ?? gaussian(0, 100)),
       chest: this.chest.generate(),
-      crotch: this.crotch.generate(),
+      crotch: this.crotch.generate(this.sex.type),
       eyes: this.eyes.generate(),
       health: this.health.generate(),
       hair: this.hair.generate(),
@@ -89,7 +90,6 @@ export default class Character implements ICharacter {
       name: this.name.generate(),
       neck: this.neck.generate(),
       nose: this.nose.generate(),
-      sex: this.sex.generate(),
       shoulders: this.shoulders.generate(),
       skin: this.skin.generate(),
       speech: this.speech.generate(),

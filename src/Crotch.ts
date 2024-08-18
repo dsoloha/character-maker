@@ -1,5 +1,6 @@
 import '../lib/array'
 import { gaussian } from '../lib/number'
+import { SexType } from './Sex'
 
 export default class Crotch implements ICrotch {
   anus: {
@@ -45,9 +46,9 @@ export default class Crotch implements ICrotch {
     let fertile: boolean
 
     if (options) {
-      if (options.age > 45) fertile = gaussian(1, 100) > 65 ? true : false
+      if (options.age > 45) fertile = gaussian(1, 100) > 65
       else if (options.age > 40) fertile = false
-      else fertile = gaussian(1, 100) > 75 ? true : false
+      else fertile = gaussian(1, 100) > 75
     } else {
       fertile = false
     }
@@ -91,13 +92,29 @@ export default class Crotch implements ICrotch {
     }
   }
 
-  generate(): ICrotch {
+  generate(sex: SexType): ICrotch {
+    const anus = this.generateAnus()
+    let ovaries: IOvaries | null = null
+    let penis: IPenis | null = null
+    let testicles: ITesticles | null = null
+    let vagina: IVagina | null = null
+
+    if (sex === 'male') {
+      penis = this.generatePenis()
+      testicles = this.generateTesticles()
+    }
+
+    if (sex === 'female') {
+      ovaries = this.generateOvaries()
+      vagina = this.generateVagina()
+    }
+
     return {
-      anus: this.generateAnus(),
-      ovaries: this.generateOvaries(),
-      penis: this.generatePenis(),
-      testicles: this.generateTesticles(),
-      vagina: this.generateVagina(),
+      anus,
+      ovaries,
+      penis,
+      testicles,
+      vagina,
     }
   }
 }
