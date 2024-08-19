@@ -137,7 +137,7 @@ Character
   ∟ Skills
 ```
 
-**Note:** Although the classes listed above are all capitalized, it's worth noting that they are referenced with
+**Note:** Although the classes listed above are all capitalized, it is worth noting that they are referenced with
 lowercase notation (e.g. `character.leg.foot` rather than `character.Leg.Foot`).
 
 ## API Reference
