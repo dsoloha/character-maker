@@ -38,5 +38,5 @@ Properties pertaining to the character's attraction to different sexes.
 
 | Property | Type     | Description                                                       | Optional |
 |:---------|:---------|:------------------------------------------------------------------|:---------|
-| `male`   | `number` | How attracted the character is to males, on a scale of 0 - 100.   | Yes      |
 | `female` | `number` | How attracted the character is to females, on a scale of 0 - 100. | Yes      |
+| `male`   | `number` | How attracted the character is to males, on a scale of 0 - 100.   | Yes      |
