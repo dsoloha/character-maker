@@ -7,12 +7,6 @@ class, and so on. The full structure (including properties) is as follows:
 ```
 Character
 ∟ .id
-∟ Health
-  ∟ .energy
-  ∟ Genes
-    ∟ .type
-  ∟ .illnesses
-  ∟ .injuries
 ∟ Physical
   ∟ Age
     ∟ .birth
@@ -35,6 +29,12 @@ Character
     ∟ .muscles
     ∟ .type
     ∟ .weight
+  ∟ Health
+    ∟ .energy
+    ∟ Genes
+      ∟ .type
+    ∟ .illnesses
+    ∟ .injuries
   ∟ Head
     ∟ Eyes
       ∟ .astigmatism
