@@ -6,9 +6,30 @@ class, and so on. The full structure (including properties) is as follows:
 
 ```
 Character
+∟ .id
+∟ Health
+  ∟ .energy
+  ∟ Genes
+    ∟ .type
+  ∟ .illnesses
+  ∟ .injuries
 ∟ Physical
+  ∟ Age
+    ∟ .birth
+      ∟ .day
+      ∟ .month
+      ∟ .year
+    ∟ .puberty
   ∟ Sex
     ∟ .type
+  ∟ Skin
+    ∟ .birthmarks
+    ∟ .brands
+    ∟ .color
+    ∟ .markings
+    ∟ .piercings
+    ∟ .scars
+    ∟ .tattoos
   ∟ Build
     ∟ .height
     ∟ .muscles
@@ -17,16 +38,22 @@ Character
   ∟ Head
     ∟ Eyes
       ∟ .astigmatism
-      ∟ .farsighted
       ∟ .colors
         ∟ .left
         ∟ .right
+      ∟ .farsighted
+      ∟ .nearsighted
+    ∟ Face
+      ∟ .attractiveness
+      ∟ .description
     ∟ Mouth
       ∟ Teeth
         ∟ .count
         ∟ .description
       ∟ Tongue
         ∟ .ageusia
+        ∟ .description
+      ∟ Lips
         ∟ .description
     ∟ Nose
       ∟ .anosmia
@@ -36,6 +63,11 @@ Character
   ∟ Upper
     ∟ Chest
       ∟ .description
+      ∟ Nipples
+        ∟ Areolae
+          ∟ .description
+        ∟ .description
+        ∟ .lactating
     ∟ Shoulders
       ∟ .description
     ∟ Arm
@@ -44,35 +76,46 @@ Character
         ∟ Hand
           ∟ .description
           ∟ .fingers
+          ∟ .nails
       ∟ .right
         ∟ .size
         ∟ Hand
+          ∟ .description
           ∟ .fingers
-          ∟ .description
+          ∟ .nails
   ∟ Lower
-    ∟ Crotch
-      ∟ Butt
-        ∟ .description
-      ∟ Vagina
-        ∟ .description
-        ∟ Ovaries
-          ∟ .fertile
-      ∟ Penis
-        ∟ .description
-        ∟ Testicles
+    ∟ Waist
+      ∟ Hips
+      ∟ Crotch
+        ∟ Butt
           ∟ .description
-          ∟ .potent
+          ∟ Anus
+            ∟ .prostate
+        ∟ Vagina
+          ∟ .clitoris
+          ∟ .description
+          ∟ .labia
+          ∟ Ovaries
+            ∟ .fertile
+        ∟ Penis
+          ∟ .description
+          ∟ .foreskin
+          ∟ Testicles
+            ∟ .description
+            ∟ .potent
     ∟ Leg
       ∟ .left
-        ∟ .size
         ∟ Foot
-          ∟ .toes
           ∟ .description
+          ∟ .toes
+          ∟ .nails
+        ∟ .size
       ∟ .right
-        ∟ .size
         ∟ Foot
-          ∟ .toes
           ∟ .description
+          ∟ .toes
+          ∟ .nails
+        ∟ .size
 ∟ Mental
   ∟ Background
     ∟ .birthplace
@@ -83,25 +126,56 @@ Character
       ∟ .length
       ∟ .school
     ∟ .occupation
-      ∟ .type
       ∟ .income
       ∟ .length
+      ∟ .type
   ∟ Speech
     ∟ .type
     ∟ .languages
+    ∟ .voice
   ∟ Personality
     ∟ .type
+    ∟ .intelligence
   ∟ Sexuality
-    ∟ .drive
-    ∟ .gender
     ∟ .attraction
       ∟ .female
       ∟ .male
+    ∟ .fetishes
+    ∟ .gender
+    ∟ .libido
+    ∟ .paraphilias
   ∟ Relations
+    ∟ .all
     ∟ .family
-      ∟ .parents
+      ∟ .father
+      ∟ .mother
       ∟ .siblings
+    ∟ .friends
+    ∟ .partners
+    ∟ .rivals
   ∟ Skills
+    ∟ .acrobatics
+    ∟ .art
+    ∟ .bartering
+    ∟ .blacksmithing
+    ∟ .carpentry
+    ∟ .cartography
+    ∟ .cooking
+    ∟ .combat 
+    ∟ .diplomacy
+    ∟ .engineering
+    ∟ .farming
+    ∟ .firemaking
+    ∟ .fishing
+    ∟ .hacking
+    ∟ .herbalism
+    ∟ .hunting
+    ∟ .medicine
+    ∟ .mining
+    ∟ .research
+    ∟ .sailing
+    ∟ .stealth
+    ∟ .swimming
 ```
 
 **Note:** Although the classes listed above are all capitalized, it is worth noting that they are referenced with
