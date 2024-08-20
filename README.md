@@ -36,7 +36,7 @@ const character = new Character().generate()
 The base `Character` class follows a top-down structure, with more specific subclasses nested inside more generalized
 subclasses. The full structure can be found [here.](./docs/structure.md)
 
-## API Reference
+## Reference
 
 A full list of all available classes, properties, and methods can be
 found [here.](https://dsoloha.github.io/character-maker/)
