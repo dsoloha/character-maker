@@ -16,6 +16,15 @@ Character
     ∟ .puberty
   ∟ Sex
     ∟ .type
+  ∟ Build
+    ∟ .height
+    ∟ .muscles
+    ∟ .type
+    ∟ .weight
+  ∟ Health
+    ∟ .energy
+    ∟ .illnesses
+    ∟ .injuries
   ∟ Skin
     ∟ .birthmarks
     ∟ .brands
@@ -24,17 +33,6 @@ Character
     ∟ .piercings
     ∟ .scars
     ∟ .tattoos
-  ∟ Build
-    ∟ .height
-    ∟ .muscles
-    ∟ .type
-    ∟ .weight
-  ∟ Health
-    ∟ .energy
-    ∟ Genes
-      ∟ .type
-    ∟ .illnesses
-    ∟ .injuries
   ∟ Head
     ∟ Eyes
       ∟ .astigmatism
@@ -129,6 +127,8 @@ Character
       ∟ .income
       ∟ .length
       ∟ .type
+  ∟ Health
+    ∟ .illnesses
   ∟ Speech
     ∟ .type
     ∟ .languages
