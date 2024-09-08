@@ -25,6 +25,7 @@ const characters = new Characters().generate()
 
 | Property     | Type     | Description                                          | Optional |
 |:-------------|:---------|:-----------------------------------------------------|:---------|
+| `id`         | `number` | The character's unique ID.                           | Yes      |
 | `age`        | `object` | Properties pertaining to the character's age.        | Yes      |
 | `arms`       | `object` | Properties pertaining to the character's arms.       | Yes      |
 | `background` | `object` | Properties pertaining to the character's background. | Yes      |
@@ -54,7 +55,7 @@ See [`Age`](./age.md) for properties relating to the `Age` class.
 
 ### `.arms` *`object`*
 
-See [`Arms`](./arms.md) for properties relating to the `Arms` class.
+See [`Arms`](./arm.md) for properties relating to the `Arms` class.
 
 ### `.background` *`object`*
 
@@ -86,7 +87,7 @@ See [`Health`](./health.md) for properties relating to the `Health` class.
 
 ### `.legs` *`object`*
 
-See [`Legs`](./legs.md) for properties relating to the `Legs` class.
+See [`Legs`](./leg.md) for properties relating to the `Legs` class.
 
 ### `.mouth` *`object`*
 
