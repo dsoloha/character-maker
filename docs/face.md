@@ -26,4 +26,4 @@ const face = new Face().generate()
 | Property         | Type     | Description                                            | Optional |
 |:-----------------|:---------|:-------------------------------------------------------|:---------|
 | `attractiveness` | `number` | The character's attractiveness, on a scale from 1-100. | Yes      |
-| `description`    | `object` | The description of the character's face.               | Yes      |
+| `description`    | `string` | A description of the character's face.                 | Yes      |

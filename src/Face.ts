@@ -4,7 +4,7 @@ export default class Face implements IFace {
 
   constructor() {
     this.attractiveness = 50
-    this.description = 'normal'
+    this.description = 'average'
   }
 }
 
