@@ -28,7 +28,7 @@ export default class Mouth implements IMouth {
   }
 
   generateTongue(): boolean {
-    return gaussian(1, 100) > 99 ? false : true
+    return gaussian(1, 100) <= 99
   }
 
   generate(): IMouth {
