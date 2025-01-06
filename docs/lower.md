@@ -15,7 +15,7 @@ import { Lower } from '@dsoloha/character-maker'
 const lower = new Lower()
 
 // with parameters:
-const lower = new Lower({ attractiveness: 75 })
+const lower = new Lower({ waist: { size: 'small' } })
 
 // generate a random instance:
 const lower = new Lower().generate()
