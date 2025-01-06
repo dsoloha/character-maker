@@ -33,4 +33,4 @@ const penis = new Penis().generate()
 
 ### `.testicles` *`object`*
 
-See [Testicles](./testicles) for properties relating to the `Testicles` class.
+See [Testicles](./testicles) for properties pertaining to the `Testicles` class.

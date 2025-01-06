@@ -43,7 +43,7 @@ Properties pertaining to the character's left leg.
 
 ### `.left.foot` *`object`*
 
-See [`Foot`](./foot) for properties relating to the `Foot` class.
+See [`Foot`](./foot) for properties pertaining to the `Foot` class.
 
 ### `.right` *`object`*
 
@@ -60,4 +60,4 @@ Properties pertaining to the character's right leg.
 
 ### `.right.foot` *`object`*
 
-See [`Foot`](./foot) for properties relating to the `Foot` class.
+See [`Foot`](./foot) for properties pertaining to the `Foot` class.

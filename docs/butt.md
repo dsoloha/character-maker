@@ -32,4 +32,4 @@ const butt = new Butt().generate()
 
 #### Description
 
-See [`Anus`](./anus) for properties relating to the `Anus` class.
+See [`Anus`](./anus) for properties pertaining to the `Anus` class.

@@ -32,4 +32,4 @@ const vagina = new Vagina().generate()
 
 ### `.ovaries` *`object`*
 
-See [`Ovaries`](./ovaries) for properties relating to the `Ovaries` class.
+See [`Ovaries`](./ovaries) for properties pertaining to the `Ovaries` class.

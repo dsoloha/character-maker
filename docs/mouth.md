@@ -31,12 +31,12 @@ const mouth = new Mouth().generate()
 
 ### `.teeth` *`object`*
 
-See [`Teeth`](./teeth.md) for properties relating to the `Teeth` class.
+See [`Teeth`](./teeth.md) for properties pertaining to the `Teeth` class.
 
 ### `.tongue` *`object`*
 
-See [`Tongue`](./tongue.md) for properties relating to the `Tongue` class.
+See [`Tongue`](./tongue.md) for properties pertaining to the `Tongue` class.
 
 ### `.lips` *`object`*
 
-See [`Lips`](./lips.md) for properties relating to the `Lips` class.
+See [`Lips`](./lips.md) for properties pertaining to the `Lips` class.
