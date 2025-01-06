@@ -2,7 +2,9 @@
 
 The `Character` class follows a top-down structure, with more specific subclasses nested inside more generalized
 subclasses. For example, a `Toe` class would be found in the `Foot` class, which itself would be found in the `Leg`
-class, and so on. The full structure (including properties) is as follows:
+class, and so on.
+
+The full structure (including properties) is as follows:
 
 ```
 Character
@@ -34,13 +36,26 @@ Character
     ∟ .scars
     ∟ .tattoos
   ∟ Head
+    ∟ Ears
+      ∟ .left
+        ∟ .description
+        ∟ .hearing
+      ∟ .right
+        ∟ .description
+        ∟ .hearing
     ∟ Eyes
-      ∟ .astigmatism
-      ∟ .colors
-        ∟ .left
-        ∟ .right
-      ∟ .farsighted
-      ∟ .nearsighted
+      ∟ .left
+        ∟ .astigmatism
+        ∟ .color
+        ∟ .description
+        ∟ .farsighted
+        ∟ .nearsighted
+      ∟ .right
+        ∟ .astigmatism
+        ∟ .color
+        ∟ .description
+        ∟ .farsighted
+        ∟ .nearsighted
     ∟ Face
       ∟ .attractiveness
       ∟ .description
@@ -58,6 +73,7 @@ Character
       ∟ .description
     ∟ Neck
       ∟ .description
+      ∟ .larynx
   ∟ Upper
     ∟ Chest
       ∟ .description
@@ -84,6 +100,7 @@ Character
   ∟ Lower
     ∟ Waist
       ∟ Hips
+        ∟ .size
       ∟ Crotch
         ∟ Butt
           ∟ .description
@@ -97,6 +114,8 @@ Character
             ∟ .fertile
         ∟ Penis
           ∟ .description
+          ∟ .girth
+          ∟ .length
           ∟ .foreskin
           ∟ Testicles
             ∟ .description
@@ -129,6 +148,7 @@ Character
       ∟ .type
   ∟ Health
     ∟ .illnesses
+    ∟ .stress
   ∟ Speech
     ∟ .type
     ∟ .languages
@@ -136,6 +156,9 @@ Character
   ∟ Personality
     ∟ .type
     ∟ .intelligence
+    ∟ .likes
+    ∟ .dislikes
+    ∟ .fears
   ∟ Sexuality
     ∟ .attraction
       ∟ .female
@@ -144,15 +167,19 @@ Character
     ∟ .gender
     ∟ .libido
     ∟ .paraphilias
+    ∟ .likes
+    ∟ .dislikes
   ∟ Relations
     ∟ .all
+    ∟ .enemies
     ∟ .family
       ∟ .father
       ∟ .mother
       ∟ .siblings
     ∟ .friends
     ∟ .partners
-    ∟ .rivals
+      ∟ .current
+      ∟ .previous
   ∟ Skills
     ∟ .acrobatics
     ∟ .art
