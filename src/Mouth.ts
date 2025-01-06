@@ -17,7 +17,7 @@ export default class Mouth implements IMouth {
   }
 
   generateTeeth(): ITeeth {
-    const count = gaussian(1, 100) > 95 ? random(1, 32) : 32
+    const count = gaussian(1, 100) > 95 ? gaussian(1, 32, 0.25) : 32
     const descriptions = ['straight', 'yellow', 'white']
     const description = descriptions.random()
 
