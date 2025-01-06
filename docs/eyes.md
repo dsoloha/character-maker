@@ -15,7 +15,7 @@ import { Eyes } from '@dsoloha/character-maker'
 const eyes = new Eyes()
 
 // with parameters:
-const eyes = new Eyes({ astigmatism: true })
+const eyes = new Eyes({ left: { color: 'blue' } })
 
 // generate a random instance:
 const eyes = new Eyes().generate()
@@ -23,22 +23,39 @@ const eyes = new Eyes().generate()
 
 ## Properties
 
-| Property      | Type      | Description                              | Optional |
-|:--------------|:----------|:-----------------------------------------|:---------|
-| `astigmatism` | `boolean` | Whether the character has astigmatism.   | Yes      |
-| `colors`      | `object`  | The character's eye colors if different. | Yes      |
-| `farsighted`  | `boolean` | Whether the character is farsighted.     | Yes      |
-| `nearsighted` | `boolean` | Whether the character is nearsighted.    | Yes      |
+| Property | Type     | Description                                        | Optional |
+|:---------|:---------|:---------------------------------------------------|:---------|
+| `left`   | `object` | Properties pertaining to the character's left eye. | No       |
+| `right`  | `object` | Properties pertaining to the character's left eye. | No       |
 
-### `.colors` *`object`*
+### `.left` *`object`*
 
 #### Description
 
-The character's eye colors if different.
+Properties pertaining to the character's left eye.
 
 #### Properties
 
-| Property | Type     | Description                      | Optional |
-|:---------|:---------|:---------------------------------|:---------|
-| `left`   | `string` | The character's left eye color.  | No       |
-| `right`  | `string` | The character's right eye color. | No       |
+| Property      | Type     | Description                                  | Optional |
+|:--------------|:---------|:---------------------------------------------|:---------|
+| `astigmatism` | `number` | The degree to which the eye has astigmatism. | Yes      |
+| `color`       | `object` | The color of the eye.                        | Yes      |
+| `farsighted`  | `number` | How farsighted the eye is, from 0-100.       | Yes      |
+| `nearsighted` | `number` | How nearsighted the eye is, from 0-100.      | Yes      |
+
+### `.right` *`object`*
+
+#### Description
+
+Properties pertaining to the character's right eye.
+
+#### Properties
+
+| Property      | Type     | Description                                  | Optional |
+|:--------------|:---------|:---------------------------------------------|:---------|
+| `astigmatism` | `number` | The degree to which the eye has astigmatism. | Yes      |
+| `color`       | `object` | The color of the eye.                        | Yes      |
+| `farsighted`  | `number` | How farsighted the eye is, from 0-100.       | Yes      |
+| `nearsighted` | `number` | How nearsighted the eye is, from 0-100.      | Yes      |
+
+

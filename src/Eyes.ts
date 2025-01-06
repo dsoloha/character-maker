@@ -2,74 +2,47 @@ import '../lib/array'
 import { gaussian } from '../lib/number'
 
 export default class Eyes implements IEyes {
-  astigmatism: boolean
-  colors: {
-    left: string
-    right: string
-  }
-  farsighted: boolean
-  nearsighted: boolean
+  left: IEye
+  right: IEye
 
-  constructor(options?: IEyes) {
-    this.astigmatism = options?.astigmatism ?? false
-    this.colors = options?.colors ?? {
-      left: '',
-      right: '',
+  constructor() {
+    this.left = this.generate()
+    this.right = this.generate()
+
+    if (this.left.color !== this.right.color) {
+      if (gaussian(1, 100) < 95) {
+        this.left.color = this.right.color
+      }
     }
-    this.farsighted = options?.farsighted ?? false
-    this.nearsighted = options?.nearsighted ?? false
   }
 
   /** Generates whether the eyes have astigmatism. */
   private generateAstigmatism(): boolean {
-    if (gaussian(1, 100) > 70) return true
-
-    return false
+    return gaussian(1, 100) > 70
   }
 
   // TODO: generate colors based on race
   /** Generates new eye colors for each eye. */
-  private generateColors(): { left: string; right: string } {
+  private generateColor(): string {
     const colors = ['green', 'blue', 'brown']
-    let eyes: [string, string]
 
-    if (gaussian(1, 100, 1.5) > 99) {
-      const left = colors.random()
-      let right: string = colors.random()
-
-      while (right === left) right = colors.random()
-
-      eyes = [left, right]
-    } else {
-      const color = colors.random()
-
-      eyes = [color, color]
-    }
-
-    return {
-      left: eyes[0],
-      right: eyes[1],
-    }
+    return colors.random()
   }
 
-  /** Generates whether the eyes are farsighted. */
+  /** Generates whether the eye is farsighted. */
   private generateFarsighted(): boolean {
-    if (gaussian(1, 100) > 90) return true
-
-    return false
+    return gaussian(1, 100) > 90
   }
 
-  /** Generates whether the eyes are nearsighted. */
+  /** Generates whether the eye is nearsighted. */
   private generateNearsighted(): boolean {
-    if (gaussian(1, 100) > 65) return true
-
-    return false
+    return gaussian(1, 100, 1.5) > 65
   }
 
-  generate(): IEyes {
+  generate(): IEye {
     return {
       astigmatism: this.generateAstigmatism(),
-      colors: this.generateColors(),
+      color: this.generateColor(),
       farsighted: this.generateFarsighted(),
       nearsighted: this.generateNearsighted(),
     }
@@ -77,17 +50,19 @@ export default class Eyes implements IEyes {
 }
 
 export interface IEyes {
-  /** Whether the character has astigmatism. */
+  /** Properties pertaining to character's left eye. */
+  left: IEye
+  /** Properties pertaining to character's right eye. */
+  right: IEye
+}
+
+export interface IEye {
+  /** The degree to which the eye has astigmatism. */
   astigmatism?: boolean
-  /** The character's eye colors, if different. */
-  colors?: {
-    /** The character's left eye color. */
-    left: string
-    /** The character's right eye color. */
-    right: string
-  }
-  /** Whether the character is farsighted. */
+  /** The color of the eye. */
+  color?: string
+  /** How farsighted the eye is. */
   farsighted?: boolean
-  /** Whether the character is nearsighted. */
+  /** How nearsighted the eye is. */
   nearsighted?: boolean
 }
