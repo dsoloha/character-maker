@@ -49,13 +49,6 @@ export default class Eyes implements IEyes {
   }
 }
 
-export interface IEyes {
-  /** Properties pertaining to character's left eye. */
-  left: IEye
-  /** Properties pertaining to character's right eye. */
-  right: IEye
-}
-
 export interface IEye {
   /** The degree to which the eye has astigmatism. */
   astigmatism?: boolean
@@ -65,4 +58,11 @@ export interface IEye {
   farsighted?: boolean
   /** How nearsighted the eye is. */
   nearsighted?: boolean
+}
+
+export interface IEyes {
+  /** Properties pertaining to character's left eye. */
+  left: IEye
+  /** Properties pertaining to character's right eye. */
+  right: IEye
 }
