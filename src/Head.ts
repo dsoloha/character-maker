@@ -21,9 +21,14 @@ export default class Head {
 }
 
 export interface IHead {
+  /** Properties pertaining to the character's eyes. */
   eyes: IEyes
+  /** Properties pertaining to the character's face. */
   face: IFace
+  /** Properties pertaining to the character's mouth. */
   mouth: IMouth
+  /** Properties pertaining to the character's nose. */
   nose: INose
+  /** Properties pertaining to the character's neck. */
   neck: INeck
 }

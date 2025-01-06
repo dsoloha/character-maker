@@ -15,8 +15,12 @@ export default class Vagina {
 }
 
 export interface IVagina {
+  /** How large the character's clitoris is. */
   clitoris: string
+  /** A description of the character's vagina. */
   description: string
+  /** A description of the character's labia. */
   labia: string
+  /** Properties pertaining to the character's ovaries. */
   ovaries: IOvaries
 }
