@@ -29,10 +29,10 @@ export default class Ears implements IEars {
 }
 
 export interface IEar {
-  /** How well the ear can hear, from 0-100. */
-  hearing?: number
   /** A description of the ear. */
   description?: string
+  /** How well the ear can hear, from 0-100. */
+  hearing?: number
 }
 
 export interface IEars {
