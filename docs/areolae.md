@@ -4,7 +4,7 @@
 
 ## Description
 
-Properties pertaining to the areolae on the leg.
+Properties pertaining to the character's areolae.
 
 ## Usage
 
@@ -23,6 +23,6 @@ const areolae = new Areolae().generate()
 
 ## Properties
 
-| Property      | Type     | Description                               | Optional |
-|:--------------|:---------|:------------------------------------------|:---------|
-| `description` | `string` | A description of the character's areolae. | Yes      |
+| Property      | Type     | Description                  | Optional |
+|:--------------|:---------|:-----------------------------|:---------|
+| `description` | `string` | A description of the areola. | Yes      |
