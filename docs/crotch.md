@@ -51,9 +51,9 @@ Properties pertaining to the character's ovaries, if any.
 
 #### Properties
 
-| Property  | Type      | Description                                       | Optional |
-|:----------|:----------|:--------------------------------------------------|:---------|
-| `fertile` | `boolean` | Whether or not the character is sexually fertile. | No       |
+| Property  | Type      | Description                                | Optional |
+|:----------|:----------|:-------------------------------------------|:---------|
+| `fertile` | `boolean` | Whether the character is sexually fertile. | No       |
 
 ### `.penis` *`object`*
 
@@ -75,10 +75,10 @@ Properties pertaining to the character's testicles, if any.
 
 #### Properties
 
-| Property | Type      | Description                                      | Optional |
-|:---------|:----------|:-------------------------------------------------|:---------|
-| `size`   | `string`  | The size of the character's testicles.           | No       |
-| `potent` | `boolean` | Whether or not the character is sexually potent. | Yes      |
+| Property | Type      | Description                               | Optional |
+|:---------|:----------|:------------------------------------------|:---------|
+| `size`   | `string`  | The size of the character's testicles.    | No       |
+| `potent` | `boolean` | Whether the character is sexually potent. | Yes      |
 
 ### `.vagina` *`object`*
 

@@ -23,7 +23,7 @@ const tongue = new Tongue().generate()
 
 ## Properties
 
-| Property      | Type      | Description                                          | Optional |
-|:--------------|:----------|:-----------------------------------------------------|:---------|
-| `ageusia`     | `boolean` | Whether or not the character lacks a sense of taste. | Yes      |
-| `description` | `string`  | A description of the character's tongue.             | Yes      | 
+| Property      | Type      | Description                                   | Optional |
+|:--------------|:----------|:----------------------------------------------|:---------|
+| `ageusia`     | `boolean` | Whether the character lacks a sense of taste. | Yes      |
+| `description` | `string`  | A description of the character's tongue.      | Yes      | 

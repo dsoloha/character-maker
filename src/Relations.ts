@@ -55,7 +55,7 @@ export interface IPartners {
 export interface IRelations {
   /** The ID of every character this character has met. */
   all: number[]
-  /** Whether or not the character has vocal cords. */
+  /** The IDs of this character's enemies. */
   enemies: number[]
   /** Properties pertaining to the character's family. */
   family: IFamily

@@ -26,7 +26,7 @@ const relations = new Relations().generate()
 | Property   | Type       | Description                                        | Optional |
 |:-----------|:-----------|:---------------------------------------------------|:---------|
 | `all`      | `number[]` | The ID of every character this character has met.  | Yes      |
-| `enemies`  | `number[]` | Whether or not the character has vocal cords.      | Yes      |
+| `enemies`  | `number[]` | Whether the character has vocal cords.             | Yes      |
 | `family`   | `object`   | Properties pertaining to the character's family.   | Yes      |
 | `friends`  | `number[]` | The IDs of this character's friends.               | Yes      |
 | `partners` | `object`   | Properties pertaining to the character's partners. | Yes      |

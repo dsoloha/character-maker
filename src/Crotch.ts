@@ -125,7 +125,7 @@ export interface IAnus {
 }
 
 export interface IOvaries {
-  /** Whether or not the character is sexually fertile. */
+  /** Whether the character is sexually fertile. */
   fertile: boolean
 }
 
@@ -137,7 +137,7 @@ export interface IPenis {
 export interface ITesticles {
   /** The size of the character's testicles. */
   size: string
-  /** Whether or not the character is sexually potent. */
+  /** Whether the character is sexually potent. */
   potent?: boolean
 }
 
