@@ -23,6 +23,6 @@ const anus = new Anus().generate()
 
 ## Properties
 
-| Property   | Type      | Description                                  | Optional |
-|:-----------|:----------|:---------------------------------------------|:---------|
-| `prostate` | `boolean` | Whether or not the character has a prostate. | No       |
+| Property   | Type      | Description                           | Optional |
+|:-----------|:----------|:--------------------------------------|:---------|
+| `prostate` | `boolean` | Whether the character has a prostate. | No       |
