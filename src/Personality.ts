@@ -30,6 +30,16 @@ export default class Personality implements IPersonality {
 
     return types.random()
   }
+
+  generate(): IPersonality {
+    return {
+      dislikes: [],
+      fears: [],
+      intelligence: this.generateIntelligence(),
+      likes: [],
+      type: this.generateType(),
+    }
+  }
 }
 
 export interface IPersonality {
