@@ -18,6 +18,7 @@ export default class Sexuality implements ISexuality {
     }
   }
 
+  /** Generates the character's gender. */
   generateGender(options: { sex: SexType } = { sex: 'male' }): string {
     if (gaussian(1, 100, 1.5) > 99) {
       if (options.sex === 'male') return 'female'
@@ -27,6 +28,7 @@ export default class Sexuality implements ISexuality {
     return options.sex
   }
 
+  /** Generates how attracted the character is to other sexes. */
   generateAttraction(options: { sex: SexType } = { sex: 'male' }): IAttraction {
     if (gaussian(1, 100) > 95) {
       if (options.sex === 'male') {
