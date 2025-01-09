@@ -22,6 +22,7 @@ export default class Name implements IName {
     return name.join(' ')
   }
 
+  /** Generates a first name. */
   generateFirst(): string {
     // TODO: hook this up to a database of first names
     const names: string[] = []
@@ -31,6 +32,7 @@ export default class Name implements IName {
     return names.random()
   }
 
+  /** Generates a middle name. */
   generateMiddle(): string {
     // TODO: hook this up to a database of middle names
     const names: string[] = []
@@ -40,6 +42,7 @@ export default class Name implements IName {
     return names.random()
   }
 
+  /** Generates a last name. */
   generateLast(): string {
     // TODO: hook this up to a database of last names
     const names: string[] = []
@@ -49,6 +52,7 @@ export default class Name implements IName {
     return names.random()
   }
 
+  /** Generates a list of nicknames. */
   generateNicknames(): string[] {
     // TODO: hook this up to a database of nicknames based on first name
     const names: string[] = []
