@@ -134,6 +134,11 @@ Character
           ∟ .nails
         ∟ .size
 ∟ Mental
+  ∟ Name
+    ∟ .first
+    ∟ .middle
+    ∟ .last
+    ∟ .nicknames
   ∟ Background
     ∟ .birthplace
       ∟ .city

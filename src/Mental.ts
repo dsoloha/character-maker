@@ -6,10 +6,12 @@ import Sexuality, { ISexuality } from './Sexuality'
 import Skills, { ISkills } from './Skills'
 import Speech, { ISpeech } from './Speech'
 import { SexType } from './Sex'
+import Name, { IName } from './Name'
 
 export default class Mental implements IMental {
   background: IBackground
   health: IHealth
+  name: IName
   personality: IPersonality
   relations: IRelations
   sexuality: ISexuality
@@ -19,6 +21,7 @@ export default class Mental implements IMental {
   constructor(options: { sex: SexType } = { sex: 'male' }) {
     this.background = new Background().generate()
     this.health = new Health().generate()
+    this.name = new Name().generate()
     this.personality = new Personality().generate()
     this.relations = new Relations()
     this.sexuality = new Sexuality(options.sex).generate()
@@ -30,6 +33,7 @@ export default class Mental implements IMental {
 export interface IMental {
   background: IBackground
   health: IHealth
+  name: IName
   personality: IPersonality
   relations: IRelations
   sexuality: ISexuality
