@@ -55,6 +55,7 @@ Properties pertaining to the character's right eye.
 |:--------------|:---------|:---------------------------------------------|:---------|
 | `astigmatism` | `number` | The degree to which the eye has astigmatism. | Yes      |
 | `color`       | `object` | The color of the eye.                        | Yes      |
+| `description` | `string` | A description of the eye.                    | Yes      |
 | `farsighted`  | `number` | How farsighted the eye is, from 0-100.       | Yes      |
 | `nearsighted` | `number` | How nearsighted the eye is, from 0-100.      | Yes      |
 

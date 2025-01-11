@@ -29,20 +29,21 @@ export default class Eyes implements IEyes {
     return colors.random()
   }
 
-  /** Generates whether the eye is farsighted. */
-  private generateFarsighted(): boolean {
-    return gaussian(1, 100) > 90
+  /** Generates how farsighted the eye is. */
+  private generateFarsighted(): number {
+    return gaussian(1, 100, 1.75)
   }
 
-  /** Generates whether the eye is nearsighted. */
-  private generateNearsighted(): boolean {
-    return gaussian(1, 100, 1.5) > 65
+  /** Generates how nearsighted the eye is. */
+  private generateNearsighted(): number {
+    return gaussian(1, 100, 1.75)
   }
 
   generate(): IEye {
     return {
       astigmatism: this.generateAstigmatism(),
       color: this.generateColor(),
+      description: 'average',
       farsighted: this.generateFarsighted(),
       nearsighted: this.generateNearsighted(),
     }
@@ -54,10 +55,12 @@ export interface IEye {
   astigmatism?: boolean
   /** The color of the eye. */
   color?: string
+  /** A description of the eye. */
+  description?: string
   /** How farsighted the eye is. */
-  farsighted?: boolean
+  farsighted?: number
   /** How nearsighted the eye is. */
-  nearsighted?: boolean
+  nearsighted?: number
 }
 
 export interface IEyes {
