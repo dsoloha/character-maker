@@ -6,6 +6,7 @@ export default class Skin implements ISkin {
   birthmarks: IMark[] | null
   brands: IMark[] | null
   markings: IMark[] | null
+  piercings: IMark[] | null
   scars: IMark[] | null
   tattoos: IMark[] | null
 
@@ -14,6 +15,7 @@ export default class Skin implements ISkin {
     this.birthmarks = options?.birthmarks ?? null
     this.brands = options?.brands ?? null
     this.markings = options?.markings ?? null
+    this.piercings = options?.piercings ?? null
     this.scars = options?.scars ?? null
     this.tattoos = options?.tattoos ?? null
   }
@@ -70,6 +72,17 @@ export default class Skin implements ISkin {
     return null
   }
 
+  generatePiercings(): IMark[] | null {
+    const piercings = []
+
+    while (gaussian(1, 100) > 80)
+      piercings.push(this.generateMark({ description: 'a piercing' }))
+
+    if (piercings) return piercings
+
+    return null
+  }
+
   generateScars(): IMark[] | null {
     const scars = []
 
@@ -119,6 +132,8 @@ export interface ISkin {
   brands?: IMark[] | null
   /** Any markings the character has. */
   markings?: IMark[] | null
+  /** Any piercings the character has. */
+  piercings?: IMark[] | null
   /** Any scars the character has. */
   scars?: IMark[] | null
   /** Any tattoos the character has. */
