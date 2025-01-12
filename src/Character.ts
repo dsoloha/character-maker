@@ -17,6 +17,8 @@ export default class Character implements ICharacter {
   generate(): ICharacter {
     return {
       id: 0,
+      mental: new Mental(),
+      physical: new Physical(),
     }
   }
 }
