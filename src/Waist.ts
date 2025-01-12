@@ -1,27 +1,27 @@
 import '../lib/array'
+import Crotch, { ICrotch } from './Crotch'
+import Hips, { IHips } from './Hips'
+import { SexType } from './Sex'
 
 export default class Waist implements IWaist {
-  size: string
+  crotch: ICrotch
+  hips: IHips
 
-  constructor(options?: IWaist) {
-    this.size = options?.size ?? ''
-  }
-
-  generateSize(): string {
-    const sizes = ['small', 'average', 'large']
-    const size = sizes.random()
-
-    return size
+  constructor(sex: SexType, options?: IWaist) {
+    this.crotch = new Crotch().generate(sex)
+    this.hips = new Hips().generate()
   }
 
   generate(): IWaist {
     return {
-      size: this.generateSize(),
+      crotch: new Crotch().generate(sex),
     }
   }
 }
 
 export interface IWaist {
-  /** The size of the character's waist. */
-  size?: string
+  /** Properties pertaining to the character's crotch. */
+  crotch?: ICrotch
+  /** Properties pertaining to the character's hips. */
+  hips?: IHips
 }
