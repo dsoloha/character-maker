@@ -1,148 +1,143 @@
-import { Character } from '../src/index'
+import Character from '../src/index'
 
 // an example character with every possible property listed
 
+const average = 'average'
 const testCharacter = new Character({
-  age: { birth: { day: 1, month: 1, year: 2000 } },
-  arms: {
-    left: { hand: { fingers: 5 }, size: 'large' },
-    right: { hand: { fingers: 5 }, size: 'large' },
-  },
-  background: {
-    birthplace: { city: 'Kyiv', country: 'Ukraine' },
-    education: {
-      schools: [
-        { name: 'elementary school', grade: 100, length: 4 },
-        { name: 'middle school', grade: 100, length: 4 },
-        { name: 'high school', grade: 100, length: 4 },
-      ],
-      highestLevel: 'ged',
+  id: 0,
+  physical: {
+    age: { birth: { day: 1, month: 1, year: 2000 } },
+    sex: {
+      type: 'male',
     },
-  },
-  build: {
-    height: 180,
-    muscles: 50,
-    type: 'average',
-    weight: 65,
-  },
-  chest: {
-    size: 'flat',
-  },
-  crotch: {
-    anus: {
-      description: 'unremarkable',
+    build: {
+      height: 180,
+      muscles: 50,
+      type: average,
+      weight: 65,
     },
-    ovaries: {
-      fertile: false,
+    health: {
+      illnesses: ['minor cold'],
+      injuries: ['bullet wound'],
     },
-    penis: {
-      size: 'average',
-    },
-    testicles: {
-      size: 'average',
-      potent: true,
-    },
-    vagina: {
-      description: 'unremarkable',
-    },
-  },
-  eyes: {
-    astigmatism: false,
-    colors: {
-      left: 'blue',
-      right: 'green',
-    },
-    farsighted: false,
-    nearsighted: false,
-  },
-  health: {
-    illnesses: ['minor cold'],
-    injuries: ['bullet wound'],
-  },
-  hair: {
-    arm: {
-      color: 'black',
-      length: 'short',
-      style: 'straight',
-    },
-    chest: {
-      color: 'black',
-      length: 'short',
-      style: 'straight',
-    },
-    face: {
-      color: 'black',
-      length: 'short',
-      style: 'stubble',
+    skin: {
+      birthmarks: [],
+      brands: [],
+      color: 'tan',
+      markings: [],
+      piercings: [],
+      scars: [],
+      tattoos: [],
     },
     head: {
-      color: 'brown',
-      length: 'short',
-      style: 'straight',
+      ears: {
+        left: {
+          description: average,
+          hearing: 100,
+        },
+        right: {
+          description: average,
+          hearing: 100,
+        },
+      },
+      eyes: {
+        left: {
+          astigmatism: false,
+          color: 'blue',
+          description: average,
+          farsighted: 0,
+          nearsighted: 0,
+        },
+        right: {
+          astigmatism: false,
+          color: 'green',
+          description: average,
+          farsighted: 0,
+          nearsighted: 0,
+        },
+      },
+      face: {
+        attractiveness: 100,
+        description: average,
+      },
+      mouth: {
+        teeth: {
+          count: 32,
+          description: 'straight',
+        },
+        tongue: {
+          ageusia: false,
+          description: average,
+        },
+        lips: {
+          description: average,
+        },
+      },
+      nose: {
+        anosmia: false,
+        description: average,
+      },
+      neck: {
+        description: average,
+        larynx: true,
+      },
     },
-    leg: {
-      color: 'brown',
-      length: 'short',
-      style: 'straight',
+    upper: {
+      chest: {
+        size: average,
+      },
+      shoulders: {
+        width: average,
+      },
+      arm: {
+        left: {
+          size: average,
+        },
+        right: {
+          size: average,
+        },
+      },
     },
-    pubic: {
-      color: 'black',
-      length: 'short',
-      style: 'curly',
-    },
-    underarms: {
-      color: 'brown',
-      length: 'short',
-      style: 'straight',
-    },
-  },
-  legs: {
-    left: { foot: { toes: 5 }, size: 'average' },
-    right: { foot: { toes: 5 }, size: 'average' },
-  },
-  mouth: {
-    teeth: {
-      count: 32,
-      description: 'white',
-    },
-    tongue: true,
-  },
-  name: {
-    first: 'Slava',
-    middle: 'Heroyim',
-    last: 'Ukraini',
-  },
-  neck: {
-    larynx: true,
-  },
-  nose: {
-    anosmia: false,
-  },
-  sex: {
-    type: 'male',
-  },
-  sexuality: {
-    gender: 'male',
-    attraction: {
-      male: 0,
-      female: 0,
+    lower: {
+      waist: {},
+      leg: {
+        left: {
+          size: average,
+        },
+        right: {
+          size: average,
+        },
+      },
     },
   },
-  shoulders: {
-    width: 'broad',
-  },
-  skin: {
-    color: 'tan',
-    scars: [],
-  },
-  speech: {
-    style: 'normal',
-  },
-  stomach: {
-    shape: 'flat',
-  },
-  waist: {
-    size: 'average',
+  mental: {
+    background: {},
+    health: {},
+    name: {},
+    personality: {
+      dislikes: [],
+      fears: [],
+      intelligence: 100,
+      likes: [],
+      type: 'ENFJ',
+    },
+    relations: {
+      all: [],
+      enemies: [],
+      friends: [],
+      family: {
+        father: 0,
+        mother: 0,
+        siblings: [],
+      },
+      partners: {
+        current: [],
+        previous: [],
+      },
+    },
+    sexuality: {},
+    skills: {},
+    speech: {},
   },
 })
 
