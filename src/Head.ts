@@ -3,6 +3,7 @@ import Mouth, { IMouth } from './Mouth'
 import Nose, { INose } from './Nose'
 import Neck, { INeck } from './Neck'
 import Face, { IFace } from './Face'
+import { IEars } from './Ears'
 
 export default class Head {
   eyes: IEyes
@@ -21,6 +22,8 @@ export default class Head {
 }
 
 export interface IHead {
+  /** Properties pertaining to the character's ears. */
+  ears: IEars
   /** Properties pertaining to the character's eyes. */
   eyes: IEyes
   /** Properties pertaining to the character's face. */
