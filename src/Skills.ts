@@ -57,47 +57,47 @@ export default class Skills implements ISkills {
 
 export interface ISkills {
   /** How skilled the character is at acrobatics. */
-  acrobatics: number
+  acrobatics?: number
   /** How skilled the character is in art. */
-  art: number
+  art?: number
   /** How skilled the character is at bartering. */
-  bartering: number
+  bartering?: number
   /** How skilled the character is at blacksmithing. */
-  blacksmithing: number
+  blacksmithing?: number
   /** How skilled the character is at carpentry. */
-  carpentry: number
+  carpentry?: number
   /** How skilled the character is at cartography. */
-  cartography: number
+  cartography?: number
   /** How skilled the character is at cooking. */
-  cooking: number
+  cooking?: number
   /** How skilled the character is at combat. */
-  combat: number
+  combat?: number
   /** How skilled the character is at diplomacy. */
-  diplomacy: number
+  diplomacy?: number
   /** How skilled the character is at engineering. */
-  engineering: number
+  engineering?: number
   /** How skilled the character is at farming. */
-  farming: number
+  farming?: number
   /** How skilled the character is at firemaking. */
-  firemaking: number
+  firemaking?: number
   /** How skilled the character is at fishing. */
-  fishing: number
+  fishing?: number
   /** How skilled the character is at hacking. */
-  hacking: number
+  hacking?: number
   /** How skilled the character is in herbalism. */
-  herbalism: number
+  herbalism?: number
   /** How skilled the character is at hunting. */
-  hunting: number
+  hunting?: number
   /** How skilled the character is at medicine. */
-  medicine: number
+  medicine?: number
   /** How skilled the character is at mining. */
-  mining: number
+  mining?: number
   /** How skilled the character is at researching. */
-  research: number
+  research?: number
   /** How skilled the character is at sailing. */
-  sailing: number
+  sailing?: number
   /** How skilled the character is at stealth. */
-  stealth: number
+  stealth?: number
   /** How skilled the character is at swimming. */
-  swimming: number
+  swimming?: number
 }
