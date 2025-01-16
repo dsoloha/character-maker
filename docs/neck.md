@@ -23,6 +23,7 @@ const neck = new Neck().generate()
 
 ## Properties
 
-| Property | Type      | Description                                   | Optional |
-|:---------|:----------|:----------------------------------------------|:---------|
-| `larynx` | `boolean` | Whether or not the character has vocal cords. | Yes      |
+| Property      | Type      | Description                            | Optional |
+|:--------------|:----------|:---------------------------------------|:---------|
+| `description` | `string`  | A description of the character's neck. | Yes      |
+| `larynx`      | `boolean` | Whether the character has vocal cords. | Yes      |

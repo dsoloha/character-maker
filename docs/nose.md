@@ -23,6 +23,7 @@ const nose = new Nose().generate()
 
 ## Properties
 
-| Property  | Type      | Description                                                  | Optional |
-|:----------|:----------|:-------------------------------------------------------------|:---------|
-| `anosmia` | `boolean` | Whether or not the character has a lack of a sense of smell. | Yes      |
+| Property      | Type      | Description                                   | Optional |
+|:--------------|:----------|:----------------------------------------------|:---------|
+| `anosmia`     | `boolean` | Whether the character lacks a sense of smell. | Yes      |
+| `description` | `string`  | A description of the character's nose.        | Yes      |

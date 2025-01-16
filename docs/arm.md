@@ -1,24 +1,24 @@
-# `.arms`
+# `.arm`
 
-*`class Arms`*
+*`class Arm`*
 
 ## Description
 
-Properties pertaining to the character's arms.
+Properties pertaining to the character's arm.
 
 ## Usage
 
 ```js
-import { Arms } from '@dsoloha/character-maker'
+import { Arm } from '@dsoloha/character-maker'
 
 // create a blank instance:
-const arms = new Arms()
+const arm = new Arm()
 
 // with parameters:
-const arms = new Arms({ left: { fingers: 4 } })
+const arm = new Arm({ left: { fingers: 4 } })
 
 // generate a random instance:
-const arms = new Arms().generate()
+const arm = new Arm().generate()
   ```
 
 ## Properties

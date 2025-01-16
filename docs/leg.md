@@ -1,24 +1,24 @@
-# `.legs`
+# `.leg`
 
-`class Legs`
+`class Leg`
 
 ## Description
 
-Properties pertaining to the character's legs.
+Properties pertaining to the character's leg.
 
 ## Usage
 
 ```js
-import { Legs } from '@dsoloha/character-maker'
+import { Leg } from '@dsoloha/character-maker'
 
 // create a blank instance:
-const legs = new Legs()
+const leg = new Leg()
 
 // with parameters:
-const legs = new Legs({ left: { fingers: 4 } })
+const leg = new Leg({ left: { fingers: 4 } })
 
 // generate a random instance:
-const legs = new Legs().generate()
+const leg = new Leg().generate()
 ```
 
 ## Properties
@@ -43,7 +43,7 @@ Properties pertaining to the character's left leg.
 
 ### `.left.foot` *`object`*
 
-See [`Foot`](./foot) for properties relating to the `Foot` class.
+See [`Foot`](./foot) for properties pertaining to the `Foot` class.
 
 ### `.right` *`object`*
 
@@ -60,4 +60,4 @@ Properties pertaining to the character's right leg.
 
 ### `.right.foot` *`object`*
 
-See [`Foot`](./foot) for properties relating to the `Foot` class.
+See [`Foot`](./foot) for properties pertaining to the `Foot` class.
