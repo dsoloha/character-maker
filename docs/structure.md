@@ -166,8 +166,8 @@ Character
     ∟ .fears
   ∟ Sexuality
     ∟ .attraction
-      ∟ .female
-      ∟ .male
+      ∟ .androphilic
+      ∟ .gynophylic
     ∟ .fetishes
     ∟ .gender
     ∟ .libido

@@ -6,15 +6,15 @@ import { SexType } from './Sex'
 export default class Sexuality implements ISexuality {
   gender: string
   attraction: {
-    male: number
-    female: number
+    androphilic: number
+    gynophylic: number
   }
 
   constructor(sex: SexType, options?: ISexuality) {
     this.gender = options?.gender ?? sex
     this.attraction = options?.attraction ?? {
-      male: options?.attraction?.male ?? 0,
-      female: options?.attraction?.female ?? 0,
+      androphilic: options?.attraction?.androphilic ?? 0,
+      gynophylic: options?.attraction?.gynophylic ?? 0,
     }
   }
 
@@ -33,34 +33,34 @@ export default class Sexuality implements ISexuality {
     if (gaussian(1, 100) > 95) {
       if (options.sex === 'male') {
         return {
-          male: random(65, 100),
-          female: random(0, 35),
+          androphilic: random(65, 100),
+          gynophylic: random(0, 35),
         }
       }
       if (options.sex === 'female') {
         return {
-          male: random(0, 35),
-          female: random(65, 100),
+          androphilic: random(0, 35),
+          gynophylic: random(65, 100),
         }
       }
     } else {
       if (options.sex === 'male') {
         return {
-          male: random(0, 35),
-          female: random(65, 100),
+          androphilic: random(0, 35),
+          gynophylic: random(65, 100),
         }
       }
       if (options.sex === 'female') {
         return {
-          male: random(65, 100),
-          female: random(0, 35),
+          androphilic: random(65, 100),
+          gynophylic: random(0, 35),
         }
       }
     }
 
     return {
-      male: 0,
-      female: 0,
+      androphilic: 0,
+      gynophylic: 0,
     }
   }
 
@@ -73,10 +73,14 @@ export default class Sexuality implements ISexuality {
 }
 
 interface IAttraction {
-  /** How attracted the character is to males, on a scale of 0 - 100. */
-  male: number
-  /** How attracted the character is to females, on a scale of 0 - 100. */
-  female: number
+  /** How attracted the character is to masculinity.
+   * On a scale of 0 - 100, with 0 being completely disinterested and 100 being extremely attracted.
+   */
+  androphilic: number
+  /** How attracted the character is to femininity.
+   * On a scale of 0 - 100, with 0 being completely disinterested and 100 being extremely attracted.
+   */
+  gynophylic: number
 }
 
 export interface ISexuality {
